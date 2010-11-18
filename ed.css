@@ -3,3 +3,8 @@ span.emph { font-style: italic }
 img { padding:5px }
 li { padding:5px }
 .me { text-decoration: underline }
+
+body {
+    font-family: 'Nobile', serif;
+    font-size: 20px;
+}
