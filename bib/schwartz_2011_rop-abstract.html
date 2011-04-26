@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Q: Exploit Hardening Made Easy</title>
+</head>
+<body>
+
+<h1>Q: Exploit Hardening Made Easy</h1>
+
+<p>
+</p>
+
+<p>
+&#8220;Q: Exploit Hardening Made Easy&#8221;
+by Edward J. Schwartz, Thanassis Avgerinos, and David Brumley.
+In <em>Proceedings of the USENIX Security Symposium</em>, 2011.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Prior work has shown that return oriented programming (ROP) can be used to
+bypass WaX, a software defense that stops shellcode, by reusing
+instructions from large libraries such as libc. Modern operating systems
+have since enabled address randomization (ASLR), which randomizes the
+location of libc, making these techniques unusable in practice. However,
+modern implementations leave smaller amounts of executable code
+unrandomized. Since ROP becomes more difficult as the amount of
+unrandomized code decreases, it has been unclear whether existing
+implementations are truly effective. 
+</p>
+
+<p>
+In this paper, we show existing defense implementations can be bypassed by
+developing new techniques for automatically creating ROP payloads from
+these small amounts of unrandomized code. Our techniques include semantic
+program verification for finding gadgets of various functionality, and a
+novel ROP compiler design that is resistant to missing gadget types. To
+demonstrate our techniques we build Q, an end-to-end system that
+automatically generates ROP payloads for a given binary. Q can produce
+payloads for 80% of Linux /usr/bin programs larger than 20K. We also show
+that Q can also automatically perform exploit hardening: given an exploit
+that cannot work with defenses turned on, Q outputs an exploit that
+bypasses both WaX and ASLR. We show that Q can harden nine real-world
+Linux and Windows exploits, allowing an attacker to automatically bypass
+currently implemented defenses.
+
+</p>
+<p>
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{schwartz:2011:rop,
+   author = {Edward J. Schwartz and Thanassis Avgerinos and David Brumley},
+   title = {{Q}: Exploit Hardening Made Easy},
+   booktitle = {Proceedings of the {USENIX} Security Symposium},
+   year = {2011}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>

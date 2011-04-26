@@ -74,7 +74,99 @@ Automated Deduction}}
 Exploits and Emerging Threats}}
 @STRING{acsac = {Proceedings of the Annual Computer Security
 Applications Conference}}
+@STRING{cav = {Proceedings of the Conference on Computer Aided Verification}}
 
+@STRING{papers = {Conference Papers}}
+
+@InProceedings{schwartz:2011:rop,
+  author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
+                  Brumley},
+  title =	 {{Q}: Exploit Hardening Made Easy},
+  booktitle =	 usenixsec,
+  year =	 2011,
+  category =	 papers,
+  abstract =	 {Prior work has shown that return oriented
+                  programming (ROP) can be used to bypass WaX, a
+                  software defense that stops shellcode, by reusing
+                  instructions from large libraries such as
+                  libc. Modern operating systems have since enabled
+                  address randomization (ASLR), which randomizes the
+                  location of libc, making these techniques unusable
+                  in practice. However, modern implementations leave
+                  smaller amounts of executable code
+                  unrandomized. Since ROP becomes more difficult as
+                  the amount of unrandomized code decreases, it has
+                  been unclear whether existing implementations are
+                  truly effective.  \par In this paper, we show
+                  existing defense implementations can be bypassed by
+                  developing new techniques for automatically creating
+                  ROP payloads from these small amounts of
+                  unrandomized code. Our techniques include semantic
+                  program verification for finding gadgets of various
+                  functionality, and a novel ROP compiler design that
+                  is resistant to missing gadget types. To demonstrate
+                  our techniques we build Q, an end-to-end system that
+                  automatically generates ROP payloads for a given
+                  binary. Q can produce payloads for 80% of Linux
+                  /usr/bin programs larger than 20K. We also show that
+                  Q can also automatically perform exploit hardening:
+                  given an exploit that cannot work with defenses
+                  turned on, Q outputs an exploit that bypasses both
+                  WaX and ASLR. We show that Q can harden nine
+                  real-world Linux and Windows exploits, allowing an
+                  attacker to automatically bypass currently
+                  implemented defenses.}
+}
+
+@InProceedings{brumley:2011:bap,
+  author =	 {David Brumley and Ivan Jager and Thanassis Avgerinos
+                  and Edward J. Schwartz},
+  title =	 {BAP: A Binary Analysis Platform},
+  booktitle =	 cav,
+  year =	 2011,
+  category =	 papers,
+  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/cav11.pdf
+                  Paper;http://bap.ece.cmu.edu BAP website},
+  abstract =	 {BAP is a publicly available infrastructure for
+                  performing program verification and analysis tasks
+                  on binary (i.e., executable) code. In this paper, we
+                  describe BAP as well as lessons learned from
+                  previous incarnations of binary analysis
+                  platforms. BAP explicitly represents all side
+                  effects of instructions in an intermediate language
+                  (IL), making syntax-directed analysis possible. We
+                  have used BAP to routinely generate and solve
+                  verification conditions that are hundreds of
+                  megabytes in size and encompass 100,000s of assembly
+                  instructions.}
+}
+
+@InProceedings{schwartz:2010:anonymity,
+  author =	 {Edward J. Schwartz and David Brumley and Jonathan
+                  M. McCune},
+  title =	 {A Contractual Anonymity System},
+  booktitle =	 ndss,
+  year =	 2010,
+  category =	 papers,
+  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/ndss10.pdf
+                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/ndss10.pdf
+                  Slides},
+  abstract =	 {We propose, develop, and implement techniques for
+                  achieving contractual anonymity. In contractual
+                  anonymity, a user and service provider enter into
+                  an anonymity contract. The user is guaranteed
+                  anonymity and message unlinkability from the
+                  contractual anonymity system unless she breaks the
+                  contract. The service provider is guaranteed that it
+                  can identify users who break the contract. The
+                  significant advantages of our system are that 1) the
+                  service provider is not able to take any action
+                  toward a particular user (such as revealing her
+                  identity or blacklisting her future authentications)
+                  unless she violates her contract, 2) our system
+                  can enforce a variety of policies, and 3) our system
+                  is efficient.}
+}
 
 @InProceedings{schwartz:2010:dynamic,
   author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
@@ -83,14 +175,28 @@ Applications Conference}}
                   Analysis and Forward Symbolic Execution (but might
                   have been afraid to ask)},
   booktitle =	 oakland,
-  year =	 2010
+  year =	 2010,
+  category =	 papers,
+  downloads =
+                  {http://www.ece.cmu.edu/~ejschwar/papers/oakland10.pdf
+                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/oakland10.pdf
+                  Slides},
+  abstract =	 {Dynamic taint analysis and forward symbolic
+                  execution are quickly becoming staple techniques in
+                  security analyses. Example applications of dynamic
+                  taint analysis and forward symbolic execution
+                  include malware analysis, input filter generation,
+                  test case generation, and vulnerability discovery.
+                  Despite the widespread usage of these two
+                  techniques, there has been little effort to formally
+                  define the algorithms and summarize the critical
+                  issues that arise when these techniques are used in
+                  typical security contexts.  \par The contributions
+                  of this paper are two-fold. First, we precisely
+                  describe the algorithms for dynamic taint analysis
+                  and forward symbolic execution as extensions to the
+                  runtime semantics of a general language. Second, we
+                  highlight important implementation choices, common
+                  pitfalls, and considerations when using these
+                  techniques in a security context.}
 }
-
-@InProceedings{schwartz:2010:anonymity,
-  author =	 {Edward J. Schwartz and David Brumley and Jonathan
-                  M. McCune},
-  title =	 {A Contractual Anonymity System},
-  booktitle =	 ndss,
-  year =	 2010
-}
-
