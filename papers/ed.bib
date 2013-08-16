@@ -78,6 +78,54 @@ Applications Conference}}
 
 @STRING{papers = {Conference Papers}}
 
+@InProceedings{schwartz:2013,
+  author =	 {Edward J. Schwartz and JongHyup Lee and Maverick Woo
+                  and David Brumley},
+  title =	 {Native {x86} Decompilation using
+                  Semantics-Preserving Structural Analysis and
+                  Iterative Control-Flow Structuring},
+  booktitle =	 usenixsec,
+  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf
+                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pdf
+                  PDF
+                  Slides;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pptx
+                  PPTX
+                  Slides},
+  year =	 2013,
+  category =	 papers,
+  abstract =	 {There are many security tools and techniques for
+                  analyzing software, but many of them require access
+                  to source code. We propose leveraging decompilation,
+                  the study of recovering abstractions from compiled
+                  code, to apply existing source-based tools and
+                  techniques to compiled programs. A decompiler should
+                  focus on two properties to be used for
+                  security. First, it should recover abstractions as
+                  much as possible to minimize the complexity that
+                  must be handled by the security analysis that
+                  follows. Second, it should aim to recover these
+                  abstractions correctly.  \par Previous work in
+                  control-ﬂow structuring, an abstraction recovery
+                  problem used in decompilers, does not provide either
+                  of these properties. Speciﬁcally, existing
+                  structuring algorithms are not semantics-preserving,
+                  which means that they cannot safely be used for
+                  decompilation without modiﬁcation. Existing
+                  structural algorithms also miss opportunities for
+                  recovering control ﬂow structure.  We propose a new
+                  structuring algorithm in this paper that addresses
+                  these problems.  \par We evaluate our decompiler,
+                  Phoenix, and our new structuring algorithm, on a set
+                  of 107 real world programs from GNU coreutils. Our
+                  evaluation is an order of magnitude larger than
+                  previous systematic studies of endto-end
+                  decompilers. We show that our decompiler outperforms
+                  the de facto industry standard decompiler Hex-Rays
+                  in correctness by 114\%, and recovers 3 more control-
+                  ﬂow structure than existing structuring algorithms
+                  in the literature.}
+}
+
 @InProceedings{schwartz:2011:rop,
   author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
                   Brumley},

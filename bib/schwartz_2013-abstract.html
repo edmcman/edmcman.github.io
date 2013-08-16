@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Native x86 Decompilation using Semantics-Preserving Structural Analysis and Iterative Control-Flow Structuring</title>
+</head>
+<body>
+
+<h1>Native x86 Decompilation using Semantics-Preserving Structural Analysis and Iterative Control-Flow Structuring</h1>
+
+<p>
+<b>Download:</b>
+<a href="http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf">Paper</a>,
+<a href="http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pdf">PDF Slides</a>,
+<a href="http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pptx">PPTX Slides</a>.
+</p>
+
+<p>
+&#8220;Native x86 Decompilation using Semantics-Preserving Structural
+Analysis and Iterative Control-Flow Structuring&#8221;
+by Edward J. Schwartz, JongHyup Lee, Maverick Woo, and David Brumley.
+In <em>Proceedings of the USENIX Security Symposium</em>, 2013.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+There are many security tools and techniques for analyzing software, but
+many of them require access to source code. We propose leveraging
+decompilation, the study of recovering abstractions from compiled code, to
+apply existing source-based tools and techniques to compiled programs. A
+decompiler should focus on two properties to be used for security. First,
+it should recover abstractions as much as possible to minimize the
+complexity that must be handled by the security analysis that follows.
+Second, it should aim to recover these abstractions correctly. 
+</p>
+
+<p>
+Previous work in control-&iuml;&not;‚ow structuring, an abstraction
+recovery problem used in decompilers, does not provide either of these
+properties. Speci&iuml;&not;cally, existing structuring algorithms are
+not semantics-preserving, which means that they cannot safely be used for
+decompilation without modi&iuml;&not;cation. Existing structural
+algorithms also miss opportunities for recovering control &iuml;&not;‚ow
+structure. We propose a new structuring algorithm in this paper that
+addresses these problems. 
+</p>
+
+<p>
+We evaluate our decompiler, Phoenix, and our new structuring algorithm, on
+a set of 107 real world programs from GNU coreutils. Our evaluation is an
+order of magnitude larger than previous systematic studies of endto-end
+decompilers. We show that our decompiler outperforms the de facto industry
+standard decompiler Hex-Rays in correctness by 114%, and recovers 3 more
+control- &iuml;&not;‚ow structure than existing structuring algorithms in
+the literature.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf">Paper</a>,
+<a href="http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pdf">PDF Slides</a>,
+<a href="http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pptx">PPTX Slides</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{schwartz:2013,
+   author = {Edward J. Schwartz and JongHyup Lee and Maverick Woo and
+	David Brumley},
+   title = {Native {x86} Decompilation using Semantics-Preserving
+	Structural Analysis and Iterative Control-Flow Structuring},
+   booktitle = {Proceedings of the {USENIX} Security Symposium},
+   year = {2013}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
