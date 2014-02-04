@@ -79,16 +79,16 @@ Applications Conference}}
 @STRING{papers = {Conference Papers}}
 
 @InProceedings{brumley:2011:bap,
-  author =	 {David Brumley and Ivan Jager and Thanassis Avgerinos
+  author =       {David Brumley and Ivan Jager and Thanassis Avgerinos
                   and Edward J. Schwartz},
-  title =	 {BAP: A Binary Analysis Platform},
-  booktitle =	 cav,
-  year =	 2011,
-  category =	 papers,
-  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/cav11.pdf
+  title =        {BAP: A Binary Analysis Platform},
+  booktitle =    cav,
+  year =         2011,
+  category =     papers,
+  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/cav11.pdf
                   Paper;http://www.ece.cmu.edu/~ejschwar/pres/cav11.pdf
                   Slides;http://bap.ece.cmu.edu BAP website},
-  abstract =	 {BAP is a publicly available infrastructure for
+  abstract =     {BAP is a publicly available infrastructure for
                   performing program verification and analysis tasks
                   on binary (i.e., executable) code. In this paper, we
                   describe BAP as well as lessons learned from
@@ -103,56 +103,81 @@ Applications Conference}}
 }
 
 @Article{brumley:2014:aeg,
-  author =       {Thanassis Avgerinos and Sang Kil Cha and Alexandre Rebert and Edward J. Schwartz and Maverick Woo and David Brumley},
+  author =       {Thanassis Avgerinos and Sang Kil Cha and Alexandre
+                  Rebert and Edward J. Schwartz and Maverick Woo and
+                  David Brumley},
   title =        {Automatic Exploit Generation},
   journal =      cacm,
   year =         2014,
-  volume =    57,
-  number =    2,
-  pages =     {74--84},
-  month =     {February}}
+  volume =       57,
+  category =     papers,
+  abstract =     {Attackers commonly exploit buggy programs to break
+                  into computers. Security-critical bugs pave the way
+                  for attackers to install trojans, propagate worms,
+                  and use victim computers to send spam and launch
+                  denial-of-service attacks. A direct way, therefore,
+                  to make computers more secure is to find security-
+                  critical bugs before they are exploited by
+                  attackers.  \par Unfortunately, bugs are
+                  plentiful. For example, the Ubuntu Linux
+                  bug-management database listed more than 103,000
+                  open bugs as of January 2013. Specific widely used
+                  programs (such as the Firefox Web browser and the
+                  Linux 3.x kernel) list 7,597 and 1,293 open bugs in
+                  their public bug trackers, respectively.a Other
+                  projects, including those that are closed-source,
+                  likely involve similar statistics. These are just
+                  the bugs we know; there is always the persistent
+                  threat of zero-day exploits, or attacks against
+                  previously unknown bugs.  \par Among the thousands
+                  of known bugs, which should software developers fix
+                  first? Which are exploitable?},
+  number =       2,
+  pages =        {74--84},
+  month =        {February}
+}
 
 @InProceedings{schwartz:2010:anonymity,
-  author =	 {Edward J. Schwartz and David Brumley and Jonathan
+  author =       {Edward J. Schwartz and David Brumley and Jonathan
                   M. McCune},
-  title =	 {A Contractual Anonymity System},
-  booktitle =	 ndss,
-  year =	 2010,
-  category =	 papers,
-  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/ndss10.pdf
+  title =        {A Contractual Anonymity System},
+  booktitle =    ndss,
+  year =         2010,
+  category =     papers,
+  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/ndss10.pdf
                   Paper;http://www.ece.cmu.edu/~ejschwar/pres/ndss10.pdf
                   Slides},
-  abstract =	 {We propose, develop, and implement techniques for
+  abstract =     {We propose, develop, and implement techniques for
                   achieving contractual anonymity. In contractual
-                  anonymity, a user and service provider enter into
-                  an anonymity contract. The user is guaranteed
-                  anonymity and message unlinkability from the
-                  contractual anonymity system unless she breaks the
-                  contract. The service provider is guaranteed that it
-                  can identify users who break the contract. The
-                  significant advantages of our system are that 1) the
-                  service provider is not able to take any action
-                  toward a particular user (such as revealing her
-                  identity or blacklisting her future authentications)
-                  unless she violates her contract, 2) our system
-                  can enforce a variety of policies, and 3) our system
-                  is efficient.}
+                  anonymity, a user and service provider enter into an
+                  anonymity contract. The user is guaranteed anonymity
+                  and message unlinkability from the contractual
+                  anonymity system unless she breaks the contract. The
+                  service provider is guaranteed that it can identify
+                  users who break the contract. The significant
+                  advantages of our system are that 1) the service
+                  provider is not able to take any action toward a
+                  particular user (such as revealing her identity or
+                  blacklisting her future authentications) unless she
+                  violates her contract, 2) our system can enforce a
+                  variety of policies, and 3) our system is
+                  efficient.}
 }
 
 @InProceedings{schwartz:2010:dynamic,
-  author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
+  author =       {Edward J. Schwartz and Thanassis Avgerinos and David
                   Brumley},
-  title =	 {All You Ever Wanted to Know About Dynamic Taint
+  title =        {All You Ever Wanted to Know About Dynamic Taint
                   Analysis and Forward Symbolic Execution (but might
                   have been afraid to ask)},
-  booktitle =	 oakland,
-  year =	 2010,
-  category =	 papers,
+  booktitle =    oakland,
+  year =         2010,
+  category =     papers,
   downloads =
                   {http://www.ece.cmu.edu/~ejschwar/papers/oakland10.pdf
                   Paper;http://www.ece.cmu.edu/~ejschwar/pres/oakland10.pdf
                   Slides},
-  abstract =	 {Dynamic taint analysis and forward symbolic
+  abstract =     {Dynamic taint analysis and forward symbolic
                   execution are quickly becoming staple techniques in
                   security analyses. Example applications of dynamic
                   taint analysis and forward symbolic execution
@@ -173,11 +198,11 @@ Applications Conference}}
 }
 
 @InProceedings{schwartz:2011:rop,
-  author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
+  author =       {Edward J. Schwartz and Thanassis Avgerinos and David
                   Brumley},
-  title =	 {{Q}: Exploit Hardening Made Easy},
-  booktitle =	 usenixsec,
-  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/usenix11.pdf
+  title =        {{Q}: Exploit Hardening Made Easy},
+  booktitle =    usenixsec,
+  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/usenix11.pdf
                   Paper;http://www.ece.cmu.edu/~ejschwar/papers/usenix11-update.pdf
                   Update
                   Note;http://www.ece.cmu.edu/~ejschwar/pres/usenix11.pdf
@@ -187,9 +212,9 @@ Applications Conference}}
                   Slides;http://www.usenix.org/events/sec11/stream/schwartz/index.html
                   Video;http://www.ece.cmu.edu/~ejschwar/pres/usenix11.mp3
                   Audio},
-  year =	 2011,
-  category =	 papers,
-  abstract =	 {Prior work has shown that return oriented
+  year =         2011,
+  category =     papers,
+  abstract =     {Prior work has shown that return oriented
                   programming (ROP) can be used to bypass W^X, a
                   software defense that stops shellcode, by reusing
                   instructions from large libraries such as
@@ -222,21 +247,20 @@ Applications Conference}}
 }
 
 @InProceedings{schwartz:2013,
-  author =	 {Edward J. Schwartz and JongHyup Lee and Maverick Woo
+  author =       {Edward J. Schwartz and JongHyup Lee and Maverick Woo
                   and David Brumley},
-  title =	 {Native {x86} Decompilation using
+  title =        {Native {x86} Decompilation using
                   Semantics-Preserving Structural Analysis and
                   Iterative Control-Flow Structuring},
-  booktitle =	 usenixsec,
-  downloads =	 {http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf
+  booktitle =    usenixsec,
+  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf
                   Paper;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pdf
                   PDF
                   Slides;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pptx
-                  PPTX
-                  Slides},
-  year =	 2013,
-  category =	 papers,
-  abstract =	 {There are many security tools and techniques for
+                  PPTX Slides},
+  year =         2013,
+  category =     papers,
+  abstract =     {There are many security tools and techniques for
                   analyzing software, but many of them require access
                   to source code. We propose leveraging decompilation,
                   the study of recovering abstractions from compiled
@@ -268,4 +292,3 @@ Applications Conference}}
                   control-flow structure than existing structuring
                   algorithms in the literature.}
 }
-
