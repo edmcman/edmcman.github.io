@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Abstraction Recovery for Scalable Static Binary Analysis</title>
+</head>
+<body>
+
+<h1>Abstraction Recovery for Scalable Static Binary Analysis</h1>
+
+<p>
+<b>Download:</b>
+<a href="http://users.ece.cmu.edu/~ejschwar/papers/arthesis14.pdf">Paper</a>.
+</p>
+
+<p>
+&#8220;Abstraction Recovery for Scalable Static Binary Analysis&#8221;
+by Edward J. Schwartz.
+Ph.D. dissertation, Carnegie Mellon University, 2014.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Many source code tools help software programmers analyze programs as they
+are being developed, but such tools can no longer be applied once the
+final programs are shipped to the user. This greatly limits users,
+security experts, and anyone other than the programmer who wishes to
+perform additional testing and program analysis. This dissertation is
+concerned with the development of scalable techniques for statically
+analyzing binary programs, which can be employed by anyone who has access
+to the binary. Unfortunately, static binary analysis is often more
+difficult than static source code analysis because the abstractions that
+are the basis of source code programs, such as variables, types,
+functions, and control flow structure, are not explicitly present in
+binary programs. Previous approaches work around the the lack of
+abstractions by reasoning about the program at a lower level, but this
+approach has not scaled as well as equivalent source code techniques that
+use abstractions. 
+</p>
+
+<p>
+This dissertation investigates an alternative approach to static binary
+analysis which is called abstraction recovery. The premise of abstraction
+recovery is that since many binaries are actually compiled from an
+abstract source language which is more suitable for analysis, the first
+step of static binary analysis should be to recover such abstractions.
+Abstraction recovery is shown to be feasible in two real-world
+applications. First, C abstractions are recovered by a newly developed
+decompiler. The second application recovers gadget abstractions to
+automatically generate return-oriented programming (ROP) attacks.
+Experiments using the decompiler demonstrate that recovering C
+abstractions improves scalability over low-level analysis, with
+applications such as verification and detection of buffer overflows seeing
+an average of 17x improvement. Similarly, gadget abstractions speed up
+automated ROP attacks by 99x. Though some binary analysis problems do not
+lend themselves to abstraction recovery because they reason about
+low-level or syntactic details, abstraction recovery is an attractive
+alternative to conventional low-level analysis when users are interested
+in the behavior of the original abstract program from which a binary was
+compiled, which is often the case.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="http://users.ece.cmu.edu/~ejschwar/papers/arthesis14.pdf">Paper</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@phdthesis{schwartz:2014:phd,
+   author = {Edward J. Schwartz},
+   title = {Abstraction Recovery for Scalable Static Binary Analysis},
+   school = {Carnegie Mellon University},
+   type = {{Ph.D.}},
+   year = {2014}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
