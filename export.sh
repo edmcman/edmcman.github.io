@@ -1,4 +1,5 @@
 #!/bin/sh
+# Note: Log in to grey and run kinit before running script.
 
 mkdir -p /tmp/webpage
 git archive master | tar -xv -C /tmp/webpage
