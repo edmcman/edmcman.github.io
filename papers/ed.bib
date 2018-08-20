@@ -87,8 +87,8 @@ Applications Conference}}
   booktitle =    cav,
   year =         2011,
   category =     papers,
-  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/cav11.pdf
-                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/cav11.pdf
+  downloads =    {http://edmcman.github.io/papers/cav11.pdf
+                  Paper;http://edmcman.github.io/pres/cav11.pdf
                   Slides;http://bap.ece.cmu.edu BAP website},
   abstract =     {BAP is a publicly available infrastructure for
                   performing program verification and analysis tasks
@@ -142,6 +142,101 @@ Applications Conference}}
   month =        {February}
 }
 
+@InProceedings{gennari:2018,
+  author =       {Jeffrey Gennari and Arie Gurfinkel and Temesghen
+                  Kahsai and Jorge A. Navas and Edward J. Schwartz},
+  title =        {Executable Counterexamples in Software Model
+                  Checking},
+  booktitle =    {Proceedings of the Working Conference on Verified
+                  Software: Theories, Tools, and Experiments},
+  year =         2018,
+  category =     papers,
+  downloads =    {http://edmcman.github.io/papers/vstte18.pdf
+                  Paper;http://edmcman.github.io/pres/vstte18.pdf PDF
+                  Slides},
+  abstract =     {Counterexamples --- execution traces of the system
+                  that illustrate how an error state can be reached
+                  from the initial state --- are essential for
+                  understanding verification failures. They are one of
+                  the most salient features of Model Checkers, which
+                  distinguish them from Abstract Interpretation and
+                  other Static Analysis techniques by providing a user
+                  with information on how to debug their system and/or
+                  the specification.  While in Hardware and Protocol
+                  verification, the counterexamples can be replayed in
+                  the system, in Software Model Checking (SMC)
+                  counterexamples take the form of a textual or
+                  semi-structured report. This is problematic since it
+                  complicates the debugging process by preventing
+                  developers from using existing processes and tools
+                  such as debuggers, fault localization, and fault
+                  minimization. \par In this paper, we argue that for
+                  SMC the most useful form of a counterexample is an
+                  executable mock environment that can be linked with
+                  the code under analysis (CUA) to produce an
+                  executable that exhibits the fault witnessed by the
+                  counterexample. A mock environment is different from
+                  a unit test since it can interface with the CUA at
+                  the function level, potentially allowing it to
+                  bypass complex logic that interprets program
+                  inputs. This makes mock environments easier to
+                  construct than unit tests. In this paper, we
+                  describe the automatic environment generation
+                  process that we have developed in the SeaHorn
+                  verification framework.  We identify key challenges
+                  for generating mock environments from SMC
+                  counterexamples of complex memory manipulating
+                  programs that use many external libraries and
+                  function calls. We validate our prototype on the
+                  verification benchmarks from Linux Device Drivers in
+                  SV-COMP.  Finally, we discuss open challenges and
+                  suggests avenues for future work.}
+}
+
+@InProceedings{jaffe:2018,
+  author =       {Alan Jaffe and Jeremy Lacomis and Edward J. Schwartz
+                  and Claire Le Goues and Bogdan Vasilescu},
+  title =        {Meaningful Variable Names for Decompiled Code: A
+                  Machine Translation Approach},
+  booktitle =    {Proceedings of the {IEEE/ACM} International Conference
+                  on Program Comprehension},
+  year =         2018,
+  category =     papers,
+  abstract =     {When code is compiled, information is lost,
+                  including some of the structure of the original
+                  source code as well as local identifier names.
+                  Existing decompilers can reconstruct much of the
+                  original source code, but typically use meaningless
+                  placeholder variables for identifier names. Using
+                  variable names which are more natural in the given
+                  context can make the code much easier to interpret,
+                  despite the fact that variable names have no effect
+                  on the execution of the program. In theory, it is
+                  impossible to recover the original identifier names
+                  since that information has been lost. However, most
+                  code is natural: it is highly repetitive and
+                  predictable based on the context.  In this paper we
+                  propose a technique that assigns variables
+                  meaningful names by taking advantage of this
+                  naturalness property. We consider decompiler output
+                  to be a noisy distortion of the original source
+                  code, where the original source code is transformed
+                  into the decompiler output. Using this noisy channel
+                  model, we apply standard statistical machine
+                  translation approaches to choose natural
+                  identifiers, combining a translation model trained
+                  on a parallel corpus with a language model trained
+                  on unmodified C code. We generate a large parallel
+                  corpus from 1.2 TB of C source code obtained from
+                  GitHub. Under the most conservative assumptions, our
+                  technique is still able to recover the original
+                  variable names up to 16.2\% of the time, which
+                  represents a lower bound for performance.},
+  downloads =    {https://edmcman.github.io/papers/icpc18.pdf
+                  Paper;https://edmcman.github.io/pres/icpc18.pdf PDF
+                  Slides}
+}
+
 @InProceedings{nord:2016,
   author =       {Robert L. Nord and Ipek Ozkaya and Edward
                   J. Schwartz and Forrest Shull and Rick Kazman},
@@ -152,7 +247,7 @@ Applications Conference}}
   year =         2016,
   category =     papers,
   downloads =
-                  {http://www.ece.cmu.edu/~ejschwar/papers/cset16.pdf
+                  {http://edmcman.github.io/papers/cset16.pdf
                   Paper},
   abstract =     {Software vulnerabilities originating from design
                   decisions are hard to find early and time consuming
@@ -184,8 +279,8 @@ Applications Conference}}
   booktitle =    ndss,
   year =         2010,
   category =     papers,
-  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/ndss10.pdf
-                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/ndss10.pdf
+  downloads =    {http://edmcman.github.io/papers/ndss10.pdf
+                  Paper;http://edmcman.github.io/pres/ndss10.pdf
                   Slides},
   abstract =     {We propose, develop, and implement techniques for
                   achieving contractual anonymity. In contractual
@@ -214,8 +309,8 @@ Applications Conference}}
   year =         2010,
   category =     papers,
   downloads =
-                  {http://www.ece.cmu.edu/~ejschwar/papers/oakland10.pdf
-                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/oakland10.pdf
+                  {http://edmcman.github.io/papers/oakland10.pdf
+                  Paper;http://edmcman.github.io/pres/oakland10.pdf
                   Slides},
   abstract =     {Dynamic taint analysis and forward symbolic
                   execution are quickly becoming staple techniques in
@@ -242,15 +337,15 @@ Applications Conference}}
                   Brumley},
   title =        {{Q}: Exploit Hardening Made Easy},
   booktitle =    usenixsec,
-  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/usenix11.pdf
-                  Paper;http://www.ece.cmu.edu/~ejschwar/papers/usenix11-update.pdf
+  downloads =    {http://edmcman.github.io/papers/usenix11.pdf
+                  Paper;http://edmcman.github.io/papers/usenix11-update.pdf
                   Update
-                  Note;http://www.ece.cmu.edu/~ejschwar/pres/usenix11.pdf
+                  Note;http://edmcman.github.io/pres/usenix11.pdf
                   PDF
-                  Slides;http://www.ece.cmu.edu/~ejschwar/pres/usenix11.pptx
+                  Slides;http://edmcman.github.io/pres/usenix11.pptx
                   PPTX
                   Slides;http://www.usenix.org/events/sec11/stream/schwartz/index.html
-                  Video;http://www.ece.cmu.edu/~ejschwar/pres/usenix11.mp3
+                  Video;http://edmcman.github.io/pres/usenix11.mp3
                   Audio},
   year =         2011,
   category =     papers,
@@ -293,10 +388,10 @@ Applications Conference}}
                   Semantics-Preserving Structural Analysis and
                   Iterative Control-Flow Structuring},
   booktitle =    usenixsec,
-  downloads =    {http://www.ece.cmu.edu/~ejschwar/papers/usenix13.pdf
-                  Paper;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pdf
+  downloads =    {http://edmcman.github.io/papers/usenix13.pdf
+                  Paper;http://edmcman.github.io/pres/usenix13.pdf
                   PDF
-                  Slides;http://www.ece.cmu.edu/~ejschwar/pres/usenix13.pptx
+                  Slides;http://edmcman.github.io/pres/usenix13.pptx
                   PPTX Slides},
   year =         2013,
   category =     papers,
@@ -391,3 +486,43 @@ Applications Conference}}
                   behavior of the original abstract program from which
                   a binary was compiled, which is often the case.}
 }
+
+@InProceedings{schwartz:2018,
+  author =       {Edward J. Schwartz and Cory F. Cohen and Michael
+                  Duggan and Jeffrey Gennari and Jeffrey S. Havrilla
+                  and Charles Hines},
+  title =        {Using Logic Programming to Recover {C++} Classes and
+                  Methods from Compiled Executables},
+  booktitle =    ccs,
+  year =         2018,
+  category =     papers,
+  abstract =     {High-level C++ source code abstractions such as
+                  classes and methods greatly assist human analysts
+                  and automated algorithms alike when analyzing C++
+                  programs. Unfortunately, these abstractions are lost
+                  when compiling C++ source code, which impedes the
+                  understanding of C++ executables. In this paper, we
+                  propose a system, OOAnalyzer, that uses an
+                  innovative new design to statically recover detailed
+                  C++ abstractions from executables in a scalable
+                  manner. \par OOAnalyzer's design is motivated by the
+                  observation that many human analysts reason about
+                  C++ programs by recognizing simple patterns in
+                  binary code and then combining these findings using
+                  logical inference, domain knowledge, and
+                  intuition. We codify this approach by combining a
+                  lightweight symbolic analysis with a flexible
+                  Prolog-based reasoning system. Unlike most existing
+                  work, OOAnalyzer is able to recover both polymorphic
+                  and non-polymorphic C++ classes. We show in our
+                  evaluation that OOAnalyzer assigns over 78\% of
+                  methods to the correct class on our test corpus,
+                  which includes both malware and real-world software
+                  such as Firefox and MySQL. These recovered
+                  abstractions can help analysts understand the
+                  behavior of C++ malware and cleanware, and can also
+                  improve the precision of program analyses on C++
+                  executables.},
+  downloads =    {https://edmcman.github.io/papers/ccs18.pdf Paper}
+}
+
