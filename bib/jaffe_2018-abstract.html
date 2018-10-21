@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Meaningful Variable Names for Decompiled Code: A Machine Translation Approach</title>
+</head>
+<body>
+
+<h1>Meaningful Variable Names for Decompiled Code: A Machine Translation Approach</h1>
+
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/icpc18.pdf">Paper</a>,
+<a href="https://edmcman.github.io/pres/icpc18.pdf">PDF Slides</a>.
+</p>
+
+<p>
+&#8220;Meaningful Variable Names for Decompiled Code: A Machine
+Translation Approach&#8221;
+by Alan Jaffe, Jeremy Lacomis, Edward J. Schwartz, Claire Le Goues, and Bogdan Vasilescu.
+In <em>Proceedings of the IEEE/ACM International Conference on Program
+Comprehension</em>, 2018.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+When code is compiled, information is lost, including some of the
+structure of the original source code as well as local identifier names.
+Existing decompilers can reconstruct much of the original source code, but
+typically use meaningless placeholder variables for identifier names.
+Using variable names which are more natural in the given context can make
+the code much easier to interpret, despite the fact that variable names
+have no effect on the execution of the program. In theory, it is
+impossible to recover the original identifier names since that information
+has been lost. However, most code is natural: it is highly repetitive and
+predictable based on the context. In this paper we propose a technique
+that assigns variables meaningful names by taking advantage of this
+naturalness property. We consider decompiler output to be a noisy
+distortion of the original source code, where the original source code is
+transformed into the decompiler output. Using this noisy channel model, we
+apply standard statistical machine translation approaches to choose
+natural identifiers, combining a translation model trained on a parallel
+corpus with a language model trained on unmodified C code. We generate a
+large parallel corpus from 1.2 TB of C source code obtained from GitHub.
+Under the most conservative assumptions, our technique is still able to
+recover the original variable names up to 16.2% of the time, which
+represents a lower bound for performance.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/icpc18.pdf">Paper</a>,
+<a href="https://edmcman.github.io/pres/icpc18.pdf">PDF Slides</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{jaffe:2018,
+   author = {Alan Jaffe and Jeremy Lacomis and Edward J. Schwartz and
+	Claire Le Goues and Bogdan Vasilescu},
+   title = {Meaningful Variable Names for Decompiled Code: A Machine
+	Translation Approach},
+   booktitle = {Proceedings of the {IEEE/ACM} International Conference on
+	Program Comprehension},
+   year = {2018}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>

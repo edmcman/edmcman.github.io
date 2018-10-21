@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Executable Counterexamples in Software Model Checking</title>
+</head>
+<body>
+
+<h1>Executable Counterexamples in Software Model Checking</h1>
+
+<p>
+<b>Download:</b>
+<a href="http://edmcman.github.io/papers/vstte18.pdf">Paper</a>,
+<a href="http://edmcman.github.io/pres/vstte18.pdf">PDF Slides</a>.
+</p>
+
+<p>
+&#8220;Executable Counterexamples in Software Model Checking&#8221;
+by Jeffrey Gennari, Arie Gurfinkel, Temesghen Kahsai, Jorge A. Navas, and Edward J. Schwartz.
+In <em>Proceedings of the Working Conference on Verified Software:
+Theories, Tools, and Experiments</em>, 2018.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Counterexamples  &mdash;  execution traces of the system that illustrate
+how an error state can be reached from the initial state  &mdash;  are
+essential for understanding verification failures. They are one of the
+most salient features of Model Checkers, which distinguish them from
+Abstract Interpretation and other Static Analysis techniques by providing
+a user with information on how to debug their system and/or the
+specification. While in Hardware and Protocol verification, the
+counterexamples can be replayed in the system, in Software Model Checking
+(SMC) counterexamples take the form of a textual or semi-structured
+report. This is problematic since it complicates the debugging process by
+preventing developers from using existing processes and tools such as
+debuggers, fault localization, and fault minimization. 
+</p>
+
+<p>
+In this paper, we argue that for SMC the most useful form of a
+counterexample is an executable mock environment that can be linked with
+the code under analysis (CUA) to produce an executable that exhibits the
+fault witnessed by the counterexample. A mock environment is different
+from a unit test since it can interface with the CUA at the function
+level, potentially allowing it to bypass complex logic that interprets
+program inputs. This makes mock environments easier to construct than unit
+tests. In this paper, we describe the automatic environment generation
+process that we have developed in the SeaHorn verification framework. We
+identify key challenges for generating mock environments from SMC
+counterexamples of complex memory manipulating programs that use many
+external libraries and function calls. We validate our prototype on the
+verification benchmarks from Linux Device Drivers in SV-COMP. Finally, we
+discuss open challenges and suggests avenues for future work.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="http://edmcman.github.io/papers/vstte18.pdf">Paper</a>,
+<a href="http://edmcman.github.io/pres/vstte18.pdf">PDF Slides</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{gennari:2018,
+   author = {Jeffrey Gennari and Arie Gurfinkel and Temesghen Kahsai and
+	Jorge A. Navas and Edward J. Schwartz},
+   title = {Executable Counterexamples in Software Model Checking},
+   booktitle = {Proceedings of the Working Conference on Verified
+	Software: Theories, Tools, and Experiments},
+   year = {2018}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
