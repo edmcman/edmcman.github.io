@@ -1,2 +1,0 @@
-papers/** filter=lfs diff=lfs merge=lfs -text
-pres/** filter=lfs diff=lfs merge=lfs -text
