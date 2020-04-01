@@ -498,17 +498,17 @@ But it really bugged me one day, so I started investigating.</p>
 <p>It took me a while, but eventually I realized that running weechat
 with a fresh configuration did not exhibit the problem.  From there,
 it was straight-forward (but annoying) to isolate the problematic
-configuration option.  It turned out to be an option called eat<em>newline</em>glitch.</p>
+configuration option.  It turned out to be an option called eat_newline_glitch.</p>
 <p>According to the weechat user manual:</p>
 <blockquote>
-<p>if set, the eat<em>newline</em>glitch will be set to 0; this is used to not add new line char at end of each line, and then not break text when you copy/paste text from WeeChat to another application (this option is disabled by default because it can cause serious display bugs)</p>
+<p>if set, the eat_newline_glitch will be set to 0; this is used to not add new line char at end of each line, and then not break text when you copy/paste text from WeeChat to another application (this option is disabled by default because it can cause serious display bugs)</p>
 </blockquote>
-<p>If eat<em>newline</em>glitch is not turned on, then links to wrap from one
+<p>If eat_newline_glitch is not turned on, then links to wrap from one
 line to another are not properly detected by gnome-terminal.  It will
 detect the portion on the first line as a link only.  In the modern
 days of long, automatically generated URLs, this is really annoying to
 say the least.</p>
-<p>Anyway, at some point I must have turned eat<em>newline</em>glitch on and
+<p>Anyway, at some point I must have turned eat_newline_glitch on and
 forgot about it, and never associated it with the screen corruption.
 I could have just turned the option off, but I <del>obsess over things
 like this</del> like to know why things don't work. 😀</p>
@@ -577,7 +577,7 @@ commands<span class="token punctuation">.</span>append<span class="token punctua
     </span></p>
 <p>Now that I could reliably replicate the problem, how to figure out
 what was going on?  Weechat uses the ncurses library to write the UI
-to the screen.  And interestingly, eat<em>newline</em>glitch corresponds to
+to the screen.  And interestingly, eat_newline_glitch corresponds to
 a capability name in
 <a href="https://pubs.opengroup.org/onlinepubs/007908799/xcurses/terminfo.html">terminfo</a>,
 which is used by ncurses to draw the screen.  The official description
@@ -666,7 +666,7 @@ effect.</p>
 <blockquote>
 <p>Enable checking to see if doupdate and friends are tracking the true cursor position correctly.  NOTE: this is a debugging hack which will work ONLY on ANSI-compatible terminals!</p>
 </blockquote>
-<p>Since eat<em>newline</em>glitch was related to the cursor position, this sounded promising!  And indeed, with this option turned on, the trace log contained the following messages:</p>
+<p>Since eat_newline_glitch was related to the cursor position, this sounded promising!  And indeed, with this option turned on, the trace log contained the following messages:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">position seen (10, 188) doesn&#39;t match expected one (11, 0) in wrap_cursor
 position seen (11, 188) doesn&#39;t match expected one (12, 0) in wrap_cursor</code></pre></div>
 <p>Not only does it tell us that something is wrong, but also the
@@ -710,37 +710,37 @@ function it is in, wrap_cursor (with some debug code removed):</p>
 		   SP_PARM<span class="token operator">-></span>_curscol<span class="token punctuation">,</span>
 		   <span class="token string">"wrap_cursor"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>The explanation of xenl (the capability name for eat<em>newline</em>glitch)
+<p>The explanation of xenl (the capability name for eat_newline_glitch)
 is the best I've ever seen.  Basically, it means that the cursor's
 location is unknown as soon as the right-most column is output.
 Ncurses handles this by marking the cursor location as unknown, which
 then forces a conservative mechanism to reset the cursor location the
 next time it is moved.  OK, that makes sense, but then why are we
-getting screen corruption when we set eat<em>newline</em>glitch in weechat?</p>
-<p>Because setting weechat's eat<em>newline</em>glitch to <code class="language-text">x</code> sets ncurses'
-eat<em>newline</em>glitch to <code class="language-text">!x</code>.  I'm embarrassed to admit this took me
+getting screen corruption when we set eat_newline_glitch in weechat?</p>
+<p>Because setting weechat's eat_newline_glitch to <code class="language-text">x</code> sets ncurses'
+eat_newline_glitch to <code class="language-text">!x</code>.  I'm embarrassed to admit this took me
 quite a long time to notice.</p>
-<p>Ok, so to refresh, I set eat<em>newline</em>glitch to <code class="language-text">true</code> in weechat,
+<p>Ok, so to refresh, I set eat_newline_glitch to <code class="language-text">true</code> in weechat,
 which sets it to <code class="language-text">false</code> in ncurses.  So when we execute wrap<em>cursor,
 we take the branch for `else if (auto</em>right_margin)`, which assumes
 that the terminal moves the cursor to the left-most column of the next
 row.  Since this is not what gnome-terminal does, screen corruption
 results!</p>
 <p>So where is the bug?  Weechat surely has a bug, in that screen
-corruption can occur when you set eat<em>newline</em>glitch.  But they do
+corruption can occur when you set eat_newline_glitch.  But they do
 warn you about this in a very vague way.  In my opinion, ncurses does
 not have a <em>bug</em>.  My terminal has weird behavior when reaching the
 right-most column, and thus it is no surprise that when we effectively
 tell ncurses the glitch does not exist, it results in screen
 corruption.</p>
 <p>That being said, I think there is some room for improvement.  The
-problem with eat<em>newline</em>glitch is that the behavior is ambiguous by
+problem with eat_newline_glitch is that the behavior is ambiguous by
 definition; it describes two types of behaviors.  If ncurses knew the
 actual behavior of the terminal, it wouldn't need to manually move the
 cursor or insert a line break, which wouldn't interfere with the
 terminal's ability to detect a wrapped URL.  So one solution would be
 to create two capabilities based on the two different behaviors that
-comprise eat<em>newline</em>glitch.</p>
+comprise eat_newline_glitch.</p>
 <p>Another option would be to query for the cursor's location the first
 time wrap_cursor is invoked, and use the result to predict the cursor
 location in the future.</p>
