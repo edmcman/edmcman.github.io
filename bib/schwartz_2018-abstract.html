@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Using Logic Programming to Recover C++ Classes and Methods from Compiled Executables</title>
+</head>
+<body>
+
+<h1>Using Logic Programming to Recover C++ Classes and Methods from Compiled Executables</h1>
+
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/ccs18.pdf">Paper</a>,
+<a href="https://edmcman.github.io/pres/ccs18.pdf">PDF Slides</a>,
+<a href="https://edmcman.github.io/pres/ccs18.pptx">PPTX Slides</a>,
+<a href="https://www.youtube.com/watch?v=hnM252gU-g4">Video</a>.
+</p>
+
+<p>
+&#8220;Using Logic Programming to Recover C++ Classes and Methods from
+Compiled Executables&#8221;
+by Edward J. Schwartz, Cory F. Cohen, Michael Duggan, Jeffrey Gennari, Jeffrey S. Havrilla, and Charles Hines.
+In <em>Proceedings of the ACM Conference on Computer and Communications
+Security</em>, 2018.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+High-level C++ source code abstractions such as classes and methods
+greatly assist human analysts and automated algorithms alike when
+analyzing C++ programs. Unfortunately, these abstractions are lost when
+compiling C++ source code, which impedes the understanding of C++
+executables. In this paper, we propose a system, OOAnalyzer, that uses an
+innovative new design to statically recover detailed C++ abstractions from
+executables in a scalable manner. 
+</p>
+
+<p>
+OOAnalyzer's design is motivated by the observation that many human
+analysts reason about C++ programs by recognizing simple patterns in
+binary code and then combining these findings using logical inference,
+domain knowledge, and intuition. We codify this approach by combining a
+lightweight symbolic analysis with a flexible Prolog-based reasoning
+system. Unlike most existing work, OOAnalyzer is able to recover both
+polymorphic and non-polymorphic C++ classes. We show in our evaluation
+that OOAnalyzer assigns over 78% of methods to the correct class on our
+test corpus, which includes both malware and real-world software such as
+Firefox and MySQL. These recovered abstractions can help analysts
+understand the behavior of C++ malware and cleanware, and can also improve
+the precision of program analyses on C++ executables.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/ccs18.pdf">Paper</a>,
+<a href="https://edmcman.github.io/pres/ccs18.pdf">PDF Slides</a>,
+<a href="https://edmcman.github.io/pres/ccs18.pptx">PPTX Slides</a>,
+<a href="https://www.youtube.com/watch?v=hnM252gU-g4">Video</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{schwartz:2018,
+   author = {Edward J. Schwartz and Cory F. Cohen and Michael Duggan and
+	Jeffrey Gennari and Jeffrey S. Havrilla and Charles Hines},
+   title = {Using Logic Programming to Recover {C++} Classes and Methods
+	from Compiled Executables},
+   booktitle = {Proceedings of the {ACM} Conference on Computer and
+	Communications Security},
+   year = {2018}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>

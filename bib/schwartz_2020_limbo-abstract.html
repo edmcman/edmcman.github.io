@@ -10,6 +10,8 @@
 <h1>A Generic Technique for Automatically Finding Defense-Aware Code Reuse Attacks</h1>
 
 <p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/ccs20.pdf">Paper</a>.
 </p>
 
 <p>
@@ -25,7 +27,7 @@ Security</em>, 2020.
 <p>
 Code reuse attacks have been the subject of a substantial amount of
 research during the past decade. This research largely resulted from early
-work on Return Oriented Programming (ROP), which showed that the then
+work on Return-Oriented Programming (ROP), which showed that the then
 newly proposed Non-Executable Memory (NX) defense could be bypassed. More
 recently, the research community has been simultaneously investigating new
 defenses that are believed to thwart code reuse attacks, such as Control
@@ -44,21 +46,23 @@ is complex and cannot be used to consider other defenses.
 In this paper, we propose a generic framework for automatically
 discovering defense-aware code reuse attacks in executables. Unlike
 existing work, which utilizes hard-coded strategies for specific defenses,
-our framework is able to produce attacks for multiple defenses by
-analyzing the runtime implementation of the defense. The high-level
-insight behind our framework is that code reuse attacks can be defined as
-a state reachability problem, and that defenses prevent some of these
-transitions. We implement our framework as a tool named Limbo, which
-employs an existing binary concolic executor to solve the reachability
-problem. We evaluate Limbo and show that it excels when there is little
-code available for reuse, making it complementary to existing techniques.
-We show that, in such scenarios, Limbo outperforms existing systems that
-automate ROP attacks, as well as systems that automate DOP attacks in the
-presence of fine-grained CFI, despite having no special knowlede about ROP
-or DOP attacks.
+our framework can produce attacks for multiple defenses by analyzing the
+runtime behavior of the defense. The high-level insight behind our
+framework is that code reuse attacks can be defined as a state
+reachability problem, and that defenses prevent some transitions between
+states. We implement our framework as a tool named Limbo, which employs an
+existing binary concolic executor to solve the reachability problem. We
+evaluate Limbo and show that it excels when there is little code available
+for reuse, making it complementary to existing techniques. We show that,
+in such scenarios, Limbo outperforms existing systems that automate ROP
+attacks, as well as systems that automate DOP attacks in the presence of
+fine-grained CFI, despite having no special knowledge about ROP or DOP
+attacks.
 
 </p>
 <p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/ccs20.pdf">Paper</a>.
 </p>
 
 <p>
