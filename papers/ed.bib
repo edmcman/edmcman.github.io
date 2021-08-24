@@ -144,6 +144,40 @@ Applications Conference}}
   month =        {February}
 }
 
+@InProceedings{chen:2022:usenix,
+  author =       {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz
+                  and Claire Le Goues and Graham Neubig and Bogdan
+                  Vasilescu},
+  title =        {Augmenting Decompiler Output with Learned Variable
+                  Names and Types},
+  category =     papers,
+  booktitle =    usenixsec,
+  year =         2022,
+  abstract =     {A common tool used by security professionals for
+                  reverse-engineering binaries found in the wild is
+                  the decompiler. A decompiler attempts to reverse
+                  compilation, transforming a binary to a higher-level
+                  language such as C. High-level languages ease
+                  reasoning about programs by providing useful
+                  abstractions such as loops, typed variables, and
+                  comments, but these abstractions are lost during
+                  compilation. Decompilers are able to
+                  deterministically reconstruct structural properties
+                  of code, but comments, variable names, and custom
+                  variable types are technically impossible to
+                  recover.  \par In this paper we present DIRTY
+                  (DecompIled variable ReTYper), a novel technique for
+                  improving the quality of decompiler output that
+                  automatically generates meaningful variable names
+                  and types. Empirical evaluation on a novel dataset
+                  of C code mined from GitHub shows that DIRTY
+                  outperforms prior work approaches by a sizable
+                  margin, recovering the original names written by
+                  developers 66.4\% of the time and the original types
+                  75.8\% of the time.},
+  downloads =    {https://edmcman.github.io/papers/usenix22.pdf Paper}
+}
+
 @InProceedings{gennari:2018,
   author =       {Jeffrey Gennari and Arie Gurfinkel and Temesghen
                   Kahsai and Jorge A. Navas and Edward J. Schwartz},
@@ -686,4 +720,3 @@ Applications Conference}}
                   Download PPTX Slides;https://youtu.be/I9l4WL2OCms
                   Video}
 }
-
