@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>VarCLR: Variable Semantic Representation Pre-training via Contrastive Learning</title>
+</head>
+<body>
+
+<h1>VarCLR: Variable Semantic Representation Pre-training via Contrastive Learning</h1>
+
+<p>
+</p>
+
+<p>
+&#8220;VarCLR: Variable Semantic Representation Pre-training via
+Contrastive Learning&#8221;
+by Qibin Chen, Jeremy Lacomis, Edward J. Schwartz, Graham Neubig, Bogdan Vasilescu, and Claire Le Goues.
+In <em>Proceedings of the International Conference on Software
+Engineering</em>, 2022.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Variable names are critical for conveying intended program behavior.
+Machine learning-based program analysis methods use variable name
+representations for a wide range of tasks, such as suggesting new variable
+names and bug detection. Ideally, such methods could capture semantic
+relationships between names beyond syntactic similarity, e.g., the fact
+that the names average and mean are similar. Unfortunately, previous work
+has found that even the best of previous representation approaches
+primarily capture &acirc;€œrelatedness&acirc;€ (whether two variables are
+linked at all), rather than &acirc;€œsimilarity&acirc;€ (whether they
+actually have the same meaning). 
+</p>
+
+<p>
+We propose VarCLR, a new approach for learning semantic representations of
+variable names that effectively captures variable similarity in this
+stricter sense. We observe that this problem is an excellent fit for
+contrastive learning, which aims to minimize the distance between
+explicitly similar inputs, while maximizing the distance between
+dissimilar inputs. This requires labeled training data, and thus we
+construct a novel, weakly-supervised variable renaming dataset mined from
+GitHub edits. We show that VarCLR enables the effective application of
+sophisticated, general-purpose language models like BERT, to variable name
+representation and thus also to related downstream tasks like variable
+name similarity search or spelling correction. VarCLR produces models that
+significantly outperform the state-of-the-art on IdBench, an existing
+benchmark that explicitly captures variable similarity (as distinct from
+relatedness). Finally, we contribute a release of all data, code, and
+pre-trained models, aiming to provide a plug-in replacement for variable
+representations used in either existing or future program analyses that
+rely on variable names.
+
+</p>
+<p>
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{chen:2022:icse,
+   author = {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz and
+	Graham Neubig and Bogdan Vasilescu and Claire Le Goues},
+   title = {VarCLR: Variable Semantic Representation Pre-training via
+	Contrastive Learning},
+   booktitle = {Proceedings of the International Conference on Software
+	Engineering},
+   year = {2022}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
