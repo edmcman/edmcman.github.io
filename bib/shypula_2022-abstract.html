@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Learning to Superoptimize Real-World Programs</title>
+</head>
+<body>
+
+<h1>Learning to Superoptimize Real-World Programs</h1>
+
+<p>
+<b>Download:</b>
+<a href="https://arxiv.org/abs/2109.13498">Paper</a>.
+</p>
+
+<p>
+&#8220;Learning to Superoptimize Real-World Programs&#8221;
+by Alexander G. Shypula, Pengcheng Yin, Jeremy Lacomis, Claire Le Goues, and Edward Schwartz an Graham&nbsp;Neubig.
+In <em>Deep Learning for Code Workshop at the International Conference on
+Learning Representations</em>, 2022.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Program optimization is the process of modifying software to execute more
+efficiently. Superoptimizers attempt to find the optimal program by
+employing significantly more expensive search and constraint solving
+techniques. Generally, these methods do not scale well to programs in real
+development scenarios, and as a result, superoptimization has largely been
+confined to small-scale, domain-specific, and/or synthetic program
+benchmarks. In this paper, we propose a framework to learn to
+superoptimize real-world programs by using neural sequence-to-sequence
+models. We created a dataset consisting of over 25K real-world x86-64
+assembly functions mined from open-source projects and propose an
+approach, Self Imitation Learning for Optimization (SILO) that is easy to
+implement and outperforms a standard policy gradient learning approach on
+our dataset. Our method, SILO, superoptimizes 5.9% of our test set when
+compared with the gcc version 10.3 compiler's aggressive optimization
+level -O3. We also report that SILO's rate of superoptimization on our
+test set is over five times that of a standard policy gradient approach
+and a model pre-trained on compiler optimization demonstration.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="https://arxiv.org/abs/2109.13498">Paper</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{shypula:2022,
+   author = {Alexander G. Shypula and Pengcheng Yin and Jeremy Lacomis and
+	Claire Le Goues and an Graham Neubig, Edward Schwartz},
+   title = {Learning to Superoptimize Real-World Programs},
+   booktitle = {Deep Learning for Code Workshop at the International
+	Conference on Learning Representations},
+   year = {2022}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
