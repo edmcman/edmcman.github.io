@@ -82,44 +82,6 @@ Applications Conference}}
 @STRING{thesis = {Thesis}}
 @STRING{articles = {Magazine Articles}}
 
-@InProceedings{shypula:2022,
-  author =       {Alexander G. Shypula and Pengcheng Yin and Jeremy
-                  Lacomis and Claire Le Goues and Edward Schwartz an
-                  Graham Neubig},
-  title =        {Learning to Superoptimize Real-World Programs},
-  booktitle =    {Deep Learning for Code Workshop at the International
-                  Conference on Learning Representations},
-  year =         2022,
-  category =     papers,
-  downloads =    {https://arxiv.org/abs/2109.13498 Paper},
-  abstract =     {Program optimization is the process of modifying
-                  software to execute more
-                  efficiently. Superoptimizers attempt to find the
-                  optimal program by employing significantly more
-                  expensive search and constraint solving
-                  techniques. Generally, these methods do not scale
-                  well to programs in real development scenarios, and
-                  as a result, superoptimization has largely been
-                  confined to small-scale, domain-specific, and/or
-                  synthetic program benchmarks. In this paper, we
-                  propose a framework to learn to superoptimize
-                  real-world programs by using neural
-                  sequence-to-sequence models. We created a dataset
-                  consisting of over 25K real-world x86-64 assembly
-                  functions mined from open-source projects and
-                  propose an approach, Self Imitation Learning for
-                  Optimization (SILO) that is easy to implement and
-                  outperforms a standard policy gradient learning
-                  approach on our dataset. Our method, SILO,
-                  superoptimizes 5.9\% of our test set when compared
-                  with the gcc version 10.3 compiler's aggressive
-                  optimization level -O3. We also report that SILO's
-                  rate of superoptimization on our test set is over
-                  five times that of a standard policy gradient
-                  approach and a model pre-trained on compiler
-                  optimization demonstration.}
-}
-
 @InProceedings{brumley:2011:bap,
   author =       {David Brumley and Ivan Jager and Thanassis Avgerinos
                   and Edward J. Schwartz},
@@ -227,7 +189,11 @@ Applications Conference}}
                   release of all data, code, and pre-trained models,
                   aiming to provide a plug-in replacement for variable
                   representations used in either existing or future
-                  program analyses that rely on variable names.}
+                  program analyses that rely on variable names.},
+  downloads =    {https://edmcman.github.io/papers/icse22.pdf
+                  Paper;https://doi.org/10.1145/3510003.3510162 ACM
+                  Link;https://www.youtube.com/watch?v=WyB49EIcctY
+                  Video}
 }
 
 @InProceedings{chen:2022:usenix,
@@ -263,6 +229,15 @@ Applications Conference}}
                   75.8\% of the time.},
   downloads =    {https://edmcman.github.io/papers/usenix22.pdf Paper}
 }
+
+@Article{dramko:2020,
+  author =       {Luke Dramko and Jeremy Lacomis and Pengching Yin and Edward J. Schwartz and Miltiadis Allamanis and Graham Neubig and Bogdan Vasilescu and Claire Le Goues},
+  title =        {{DIRE} and its Data: Neural Decompiled Variable Renamings with Respect to Software Class},
+  journal =      tse,
+  year =         2022,
+  category = articles,
+  downloads = {https://dl.acm.org/doi/10.1145/3546946 ACM Link;https://edmcman.github.io/papers/tse22.pdf PDF},
+  note =      {Issue TBD}}
 
 @InProceedings{gennari:2018,
   author =       {Jeffrey Gennari and Arie Gurfinkel and Temesghen
@@ -808,3 +783,42 @@ Applications Conference}}
                   Download PPTX Slides;https://youtu.be/I9l4WL2OCms
                   Video}
 }
+
+@InProceedings{shypula:2022,
+  author =       {Alexander G. Shypula and Pengcheng Yin and Jeremy
+                  Lacomis and Claire Le Goues and Edward Schwartz an
+                  Graham Neubig},
+  title =        {Learning to Superoptimize Real-World Programs},
+  booktitle =    {Deep Learning for Code Workshop at the International
+                  Conference on Learning Representations},
+  year =         2022,
+  category =     papers,
+  downloads =    {https://arxiv.org/abs/2109.13498 Paper},
+  abstract =     {Program optimization is the process of modifying
+                  software to execute more
+                  efficiently. Superoptimizers attempt to find the
+                  optimal program by employing significantly more
+                  expensive search and constraint solving
+                  techniques. Generally, these methods do not scale
+                  well to programs in real development scenarios, and
+                  as a result, superoptimization has largely been
+                  confined to small-scale, domain-specific, and/or
+                  synthetic program benchmarks. In this paper, we
+                  propose a framework to learn to superoptimize
+                  real-world programs by using neural
+                  sequence-to-sequence models. We created a dataset
+                  consisting of over 25K real-world x86-64 assembly
+                  functions mined from open-source projects and
+                  propose an approach, Self Imitation Learning for
+                  Optimization (SILO) that is easy to implement and
+                  outperforms a standard policy gradient learning
+                  approach on our dataset. Our method, SILO,
+                  superoptimizes 5.9\% of our test set when compared
+                  with the gcc version 10.3 compiler's aggressive
+                  optimization level -O3. We also report that SILO's
+                  rate of superoptimization on our test set is over
+                  five times that of a standard policy gradient
+                  approach and a model pre-trained on compiler
+                  optimization demonstration.}
+}
+
