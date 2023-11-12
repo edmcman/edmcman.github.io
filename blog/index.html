@@ -1356,7 +1356,7 @@ omnidirectional rover that they built (at 2am the night before, naturally).</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Started the open source repo for our space hardware development platform <a href="https://t.co/cRzHZkM6Gg">https://t.co/cRzHZkM6Gg</a><br><br>Had a blast presenting with <a href="https://twitter.com/Nick_elzer?ref_src=twsrc%5Etfw">@Nick_elzer</a> for <a href="https://twitter.com/quubspace?ref_src=twsrc%5Etfw">@quubspace</a>!<br><br>Thank you <a href="https://twitter.com/CPOSC?ref_src=twsrc%5Etfw">@CPOSC</a> for having us! <a href="https://t.co/eRoHm5ea2u">pic.twitter.com/eRoHm5ea2u</a></p>&mdash; Nathaniel Evry (@NathanielEvry) <a href="https://twitter.com/NathanielEvry/status/1642204542921064452?ref_src=twsrc%5Etfw">April 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Finally, I gave a tutorial presentation called "Introduction to Exploiting Stack
 Buffer Overflow Vulnerabilities".  If you want, you can follow along
-<a href="https://github.com/edmcman/cposc-exploit">here</a>. <figure class="gatsby-resp-image-figure" style="">
+<a href="https://github.com/edmcman/cposc-exploit">here</a> and the videos below. <figure class="gatsby-resp-image-figure" style="">
     <span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
@@ -1407,13 +1407,17 @@ Buffer Overflow Vulnerabilities".  If you want, you can follow along
         </picture>
     </span>
     <figcaption class="gatsby-resp-image-figcaption">Me speaking</figcaption>
-  </figure>  In
-theory, there are supposed to be videos of all three talks eventually.  I'll
-post them when they are made available.</p>
+  </figure></p>
 <p>After a few years of hiatus, it was great to have CPOSC 2023 be back in person
 again.  I saw a number of great presentations, and met a lot of interesting and
 smart people.  It's always surprising how many technical people work in an area
-that is known for its rural farming!</p></div></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2023-01-24--initial-thoughts-on-rust/">Initial thoughts on Rust</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>4<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/programming/">programming</a></div></div></div></div><div class="content markdown"><div><p>Last December, I did most of <a href="https://adventofcode.com/">Advent of Code</a> in
+that is known for its rural farming!</p>
+<h3 id="videos" style="position:relative;"><a href="#videos" aria-label="videos permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Videos</h3>
+<ul>
+<li><a href="https://youtu.be/OJ_EOayG6yI?si=3KUimEyhBWpfBy9W">Machine Learning Techniques to Improve Users Music Listening - Samantha Noggle &#x26; Stephanie Schwartz</a></li>
+<li><a href="https://youtu.be/YG8MjD9wr4o?si=ZHcBqlGsWBywl6M2">SpaceHeX Beta1.0 Release - Nathaniel Evry &#x26; Nick Elzer</a></li>
+<li><a href="https://youtu.be/sSY20rCKcDk?si=wcXnC1PlYOX7LtWt">Introduction to Exploiting Stack Buffer Overflow Vulnerabilities - Edward Schwartz</a></li>
+</ul></div></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2023-01-24--initial-thoughts-on-rust/">Initial thoughts on Rust</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>4<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/programming/">programming</a></div></div></div></div><div class="content markdown"><div><p>Last December, I did most of <a href="https://adventofcode.com/">Advent of Code</a> in
 Rust, which I had never used before.  You can find my solutions
 <a href="https://github.com/edmcman/advent-of-code-2022">here</a>.</p>
 <h2 id="the-good" style="position:relative;"><a href="#the-good" aria-label="the good permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Good</h2>
