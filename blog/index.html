@@ -478,7 +478,7 @@ show off the fruits of my labor.</p>
     </span>
     <figcaption class="gatsby-resp-image-figcaption">A wide picture</figcaption>
   </figure></div></div>
-<p>Go ahead, click on it, I dare you!  <a href="https://unsplash.com/photos/sand-desert-qWQGk5mdVBU">src</a></p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2023-11-14--debugging-the-ghidra-decompiler/">Debugging the Ghidra Decompiler</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>16<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/ghidra/">ghidra</a></div></div></div></div><div class="content markdown"><p>I&#x27;m trying to document a few things that I infrequently enough that I tend to
+<p>Go ahead, click on it, I dare you!  <a href="https://unsplash.com/photos/sand-desert-qWQGk5mdVBU">src</a></p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2023-11-14--debugging-the-ghidra-decompiler/">Debugging the Ghidra Decompiler</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>16<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/ghidra/">ghidra</a></div></div></div></div><div class="content markdown"><p>I&#x27;m trying to document a few things that I do infrequently enough that I tend to
 forget how to do them, and need to rediscover the process each time.  Next in
 this series is debugging the Ghidra decompiler.
 <a href="https://github.com/NationalSecurityAgency/ghidra/issues/720">This</a> is one of
@@ -487,8 +487,10 @@ the only resources I know of that discusses this!</p>
 <ol>
 <li><code class="language-text">cd /path/to/ghidra/Ghidra/Features/Decompiler/src/decompile/cpp</code></li>
 <li><code class="language-text">make decomp_dbg</code></li>
-<li>Inside of Ghidra, right click on the &quot;Debug Function Decompilation&quot; menu item and save the XML file somewhere.
-<img src="/9ab54e98e2ee15c996e811e6bcf9cde5/anim.gif" width="100%"/></li>
+<li>
+<div>Inside of Ghidra, right click on the &quot;Debug Function Decompilation&quot; menu item and save the XML file somewhere.
+<div style="cursor:pointer;position:relative"><img src="/9ab54e98e2ee15c996e811e6bcf9cde5/anim.gif" width="100%"/></div></div>
+</li>
 <li>Run <code class="language-text">SLEIGHHOME=/path/to/ghidra ./decomp_dbg</code>. You should now be in the
 <code class="language-text">decomp_dbg</code> interpreter.</li>
 <li>Use <code class="language-text">restore /path/to/debug.xml</code></li>
