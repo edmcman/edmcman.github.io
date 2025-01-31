@@ -267,6 +267,62 @@ Applications Conference}}
                fidelity issues in decompiled code.}
 }
 
+@misc{dramko:2025:codealign,
+  title         = {Fast, Fine-Grained Equivalence Checking for Neural Decompilers},
+  author        = {Luke Dramko and Claire Le Goues and Edward J. Schwartz},
+  year          = 2025,
+  category      = papers,
+  eprint        = {2501.04811},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2501.04811},
+  abstract      = {Neural decompilers are machine learning models that reconstruct the source code from an
+                   executable program. Critical to the lifecycle of any machine learning
+                   model is an evaluation of its effectiveness. However, existing techniques
+                   for evaluating neural decompilation models have substantial weaknesses,
+                   especially when it comes to showing the correctness of the neural
+                   decompiler's predictions. To address this, we introduce codealign, a novel
+                   instruction-level code equivalence technique designed for neural
+                   decompilers. We provide a formal definition of a relation between
+                   equivalent instructions, which we term an equivalence alignment. We show
+                   how codealign generates equivalence alignments, then evaluate codealign by
+                   comparing it with symbolic execution. Finally, we show how the information
+                   codealign provides-which parts of the functions are equivalent and how
+                   well the variable names match-is substantially more detailed than existing
+                   state-of-the-art evaluation metrics, which report unitless numbers
+                   measuring similarity.},
+  downloads     = {https://arxiv.org/abs/2501.04811 arXiv Link}
+}
+
+@misc{green:2024:stride,
+  title         = {STRIDE: Simple Type Recognition In Decompiled Executables},
+  author        = {Harrison Green and Edward J. Schwartz and Claire Le Goues and Bogdan Vasilescu},
+  year          = 2024,
+  category      = papers,
+  eprint        = {2407.02733},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CR},
+  url           = {https://arxiv.org/abs/2407.02733},
+  abstract      = {Decompilers are widely used by security researchers and
+  developers to reverse engineer executable code. While modern decompilers are
+  adept at recovering instructions, control flow, and function boundaries, some
+  useful information from the original source code, such as variable types and
+  names, is lost during the compilation process. Our work aims to predict these
+  variable types and names from the remaining information. \par We propose
+  STRIDE, a lightweight technique that predicts
+  variable names and types by matching sequences of decompiler
+  tokens to those found in training data. We evaluate it on three benchmark
+  datasets and find that STRIDE achieves comparable performance to
+  state-of-the-art machine learning models for both variable retyping and
+  renaming while being much simpler and faster. We perform a detailed comparison
+  with two recent SOTA transformer-based models in order to understand the
+  specific factors that make our technique effective. We implemented STRIDE in
+  fewer than 1000 lines of Python and have open-sourced it under a permissive
+  license at this https URL.},
+  downloads     = {https://arxiv.org/abs/2407.02733 arXiv Link;
+  https://github.com/hgarrereyn/STRIDE Github}
+}
+
 @inproceedings{gennari:2018,
   author    = {Jeffrey Gennari and Arie Gurfinkel and Temesghen
                Kahsai and Jorge A. Navas and Edward J. Schwartz},
@@ -821,7 +877,7 @@ Applications Conference}}
                Conference on Learning Representations},
   year      = 2022,
   category  = papers,
-  downloads = {https://arxiv.org/abs/2109.13498 Paper},
+  downloads = {https://arxiv.org/abs/2109.13498 arXiv Link},
   abstract  = {Program optimization is the process of modifying
                software to execute more
                efficiently. Superoptimizers attempt to find the
@@ -849,4 +905,3 @@ Applications Conference}}
                approach and a model pre-trained on compiler
                optimization demonstration.}
 }
-
