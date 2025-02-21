@@ -455,7 +455,914 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/">LangChain and Ollama Make Building Local Tool Calling Agents Easy. It&#x27;s a Shame They Don&#x27;t Work! (Part 1/?)</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>24<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/llm/">llm</a></div></div></div></div><div class="content markdown"><p>One of the most exciting possibilities of AI and LLMs are <em>agents</em>: tools that
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2025-02-21--lang-chain-and-ollama-make-building-local-tool-calling-agents-easy-it-s-a-shame-they-don-t-work-part-2/">LangChain and Ollama Make Building Local Tool Calling Agents Easy. It&#x27;s a Shame They Don&#x27;t Work! (Part 2/?)</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>28<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/llm/">llm</a></div></div></div></div><div class="content markdown"><p>In <a href="https://edmcman.github.io/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/">Part 1</a>, we showed that tool-calling agents built using open source LLMs and LangChain almost universally performed poorly.  They demonstrated strange behaviors such as responding to &quot;Hello.&quot; by making non-sensical tool calls.  In this blog post, we will try to determine why this happened.</p>
+<p>Rather than investigating every model at once, in this blog post I&#x27;m going to focus my effort on Llama 3.2.</p>
+<div class="table-of-contents">
+<ul>
+<li><a href="#hidden-setup">Hidden: Setup</a></li>
+<li><a href="#quantization">Quantization</a></li>
+<li><a href="#prompt-templates">Prompt Templates</a>
+<ul>
+<li><a href="#llama-32-based-prompt">Llama 3.2 Based Prompt</a></li>
+<li><a href="#llama-31-based-prompt">Llama 3.1 Based Prompt</a></li>
+<li><a href="#what-prompt-template-is-ollama-using">What prompt template is Ollama using?</a></li>
+<li><a href="#lets-build-our-own-ollama-prompt-template">Let&#x27;s build our own Ollama prompt template</a>
+<ul>
+<li><a href="#does-our-new-ollama-prompt-template-work-as-intended">Does our new Ollama prompt template work as intended?</a></li>
+<li><a href="#coming-clean">Coming Clean</a></li>
+</ul>
+</li>
+<li><a href="#recap">Recap</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a>
+<ul>
+<li><a href="#what-went-wrong">What went wrong?</a></li>
+<li><a href="#what-can-we-do-about-it">What can we do about it?</a>
+<ul>
+<li><a href="#standards">Standards</a></li>
+<li><a href="#ollama">Ollama</a></li>
+<li><a href="#benchmarks">Benchmarks</a></li>
+<li><a href="#llama">Llama</a></li>
+</ul>
+</li>
+<li><a href="#closing-thoughts">Closing Thoughts</a></li>
+</ul>
+</li>
+<li><a href="#tldr">TLDR</a></li>
+</ul>
+</div>
+<details>
+<summary>Hidden: Setup</summary>
+<!-- -->
+<h1 id="hidden-setup" style="position:relative"><a href="#hidden-setup" aria-label="hidden setup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hidden: Setup</h1>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">!pip install langgraph<span class="token operator">~</span><span class="token operator">=</span><span class="token number">0.2</span><span class="token number">.53</span> langchain<span class="token operator">-</span>ollama langchain<span class="token operator">-</span>huggingface python<span class="token operator">-</span>dotenv
+!pip install httpx<span class="token operator">==</span><span class="token number">0.27</span><span class="token number">.2</span> <span class="token comment"># temp</span>
+!apt<span class="token operator">-</span>get install <span class="token operator">-</span>y jq
+debug <span class="token operator">=</span> <span class="token boolean">False</span>
+sample_size <span class="token operator">=</span> <span class="token number">100</span>
+num_ctx <span class="token operator">=</span> <span class="token number">8192</span></code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> langchain_core<span class="token punctuation">.</span>tools <span class="token keyword">import</span> tool
+<span class="token keyword">from</span> langchain <span class="token keyword">import</span> hub
+<span class="token keyword">from</span> langchain_core<span class="token punctuation">.</span>messages <span class="token keyword">import</span> AIMessageChunk<span class="token punctuation">,</span> HumanMessage</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token decorator annotation punctuation">@tool</span>
+<span class="token keyword">def</span> <span class="token function">foobar</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Computes the foobar function on input and returns the result.&quot;&quot;&quot;</span>
+    <span class="token keyword">return</span> <span class="token builtin">input</span> <span class="token operator">+</span> <span class="token number">2</span>
+
+tools <span class="token operator">=</span> <span class="token punctuation">[</span>foobar<span class="token punctuation">]</span></code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> langgraph<span class="token punctuation">.</span>prebuilt <span class="token keyword">import</span> create_react_agent
+
+<span class="token keyword">def</span> <span class="token function">react_chat</span><span class="token punctuation">(</span>prompt<span class="token punctuation">,</span> model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  agent_executor <span class="token operator">=</span> create_react_agent<span class="token punctuation">(</span>model<span class="token punctuation">,</span> tools<span class="token punctuation">)</span>
+
+  response <span class="token operator">=</span> agent_executor<span class="token punctuation">.</span>invoke<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;messages&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span> prompt<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> response<span class="token punctuation">[</span><span class="token string">&#x27;messages&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span> response</code></pre></div>
+<p>Here we install ollama.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">!ollama <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span><span class="token operator">|</span> curl <span class="token operator">-</span>fsSL https<span class="token punctuation">:</span><span class="token operator">//</span>ollama<span class="token punctuation">.</span>com<span class="token operator">/</span>install<span class="token punctuation">.</span>sh <span class="token operator">|</span> sh</code></pre></div>
+<p>Make sure the ollama server is running.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">!ollama <span class="token operator">-</span>v
+!ollama ps <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span><span class="token operator">|</span> <span class="token punctuation">(</span>setsid env OLLAMA_DEBUG<span class="token operator">=</span><span class="token number">1</span> nohup ollama serve <span class="token operator">&amp;</span><span class="token punctuation">)</span>
+</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">!ollama pull llama3<span class="token punctuation">.</span><span class="token number">2</span> <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">basic_tool_question <span class="token operator">=</span> <span class="token string">&quot;Please evaluate foobar(30)&quot;</span>
+<span class="token keyword">def</span> <span class="token function">q1</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  last_msg<span class="token punctuation">,</span> _ <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>basic_tool_question<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">)</span>
+  r <span class="token operator">=</span> <span class="token string">&quot;32&quot;</span> <span class="token keyword">in</span> last_msg
+  <span class="token keyword">if</span> <span class="token keyword">not</span> r <span class="token keyword">and</span> debug<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;q1 debug: </span><span class="token interpolation"><span class="token punctuation">{</span>last_msg<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> r</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> langchain_core<span class="token punctuation">.</span>messages <span class="token keyword">import</span> ToolMessage
+
+basic_arithmetic_question <span class="token operator">=</span> <span class="token string">&quot;What is 12345 - 102?&quot;</span>
+greeting <span class="token operator">=</span> <span class="token string">&quot;Hello!&quot;</span>
+
+<span class="token keyword">def</span> <span class="token function">q2a</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  _<span class="token punctuation">,</span> result <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>basic_arithmetic_question<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span><span class="token builtin">isinstance</span><span class="token punctuation">(</span>msg<span class="token punctuation">,</span> ToolMessage<span class="token punctuation">)</span> <span class="token keyword">for</span> msg <span class="token keyword">in</span> result<span class="token punctuation">[</span><span class="token string">&#x27;messages&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">q2b</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  _<span class="token punctuation">,</span> result <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>greeting<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span><span class="token builtin">isinstance</span><span class="token punctuation">(</span>msg<span class="token punctuation">,</span> ToolMessage<span class="token punctuation">)</span> <span class="token keyword">for</span> msg <span class="token keyword">in</span> result<span class="token punctuation">[</span><span class="token string">&#x27;messages&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">q2</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> q2a<span class="token punctuation">(</span>model<span class="token punctuation">)</span> <span class="token keyword">and</span> q2b<span class="token punctuation">(</span>model<span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">q3a</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  result <span class="token operator">=</span> model<span class="token punctuation">.</span>invoke<span class="token punctuation">(</span>basic_arithmetic_question<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">&quot;12243&quot;</span> <span class="token keyword">in</span> result<span class="token punctuation">.</span>content
+
+<span class="token keyword">def</span> <span class="token function">q3b</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  last_msg<span class="token punctuation">,</span> _ <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>basic_arithmetic_question<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">)</span>
+  r <span class="token operator">=</span> <span class="token string">&quot;12243&quot;</span> <span class="token keyword">in</span> last_msg
+  <span class="token keyword">if</span> <span class="token keyword">not</span> r <span class="token keyword">and</span> debug<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;q3b debug: </span><span class="token interpolation"><span class="token punctuation">{</span>last_msg<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">&quot;12243&quot;</span> <span class="token keyword">in</span> last_msg
+
+<span class="token keyword">def</span> <span class="token function">q3</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># q3a ==&gt; q3b: If q3a, then q3b ought to be true as well.</span>
+  r <span class="token operator">=</span> <span class="token keyword">not</span> q3a<span class="token punctuation">(</span>model<span class="token punctuation">)</span> <span class="token keyword">or</span> q3b<span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> r</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">q4</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  last_msg<span class="token punctuation">,</span> _ <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>greeting<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">)</span>
+  c1 <span class="token operator">=</span> <span class="token builtin">any</span><span class="token punctuation">(</span>w <span class="token keyword">in</span> last_msg <span class="token keyword">for</span> w <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">&quot;Hi&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Hello&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;help you&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Welcome&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;welcome&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Greeting&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;assist&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  c2 <span class="token operator">=</span> <span class="token builtin">any</span><span class="token punctuation">(</span>w <span class="token keyword">in</span> last_msg <span class="token keyword">for</span> w <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">&quot;None of the&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  r <span class="token operator">=</span> c1 <span class="token keyword">and</span> <span class="token keyword">not</span> c2
+  <span class="token comment">#if not r:</span>
+  <span class="token keyword">if</span> debug<span class="token punctuation">:</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;q4 debug: c1=</span><span class="token interpolation"><span class="token punctuation">{</span>c1<span class="token punctuation">}</span></span><span class="token string"> c2=</span><span class="token interpolation"><span class="token punctuation">{</span>c2<span class="token punctuation">}</span></span><span class="token string"> r=</span><span class="token interpolation"><span class="token punctuation">{</span>r<span class="token punctuation">}</span></span><span class="token string"> greeting? </span><span class="token interpolation"><span class="token punctuation">{</span>last_msg<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> r</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> tqdm<span class="token punctuation">.</span>notebook <span class="token keyword">import</span> tqdm
+<span class="token keyword">from</span> termcolor <span class="token keyword">import</span> colored
+
+<span class="token keyword">def</span> <span class="token function">do_bool_sample</span><span class="token punctuation">(</span>fun<span class="token punctuation">,</span> n<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token comment"># tqdm here if desired</span>
+    <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>fun<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> n
+  <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token number">0.0</span>
+
+<span class="token keyword">def</span> <span class="token function">run_experiment</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> name<span class="token punctuation">,</span> n<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  do <span class="token operator">=</span> <span class="token keyword">lambda</span> f<span class="token punctuation">:</span> do_bool_sample<span class="token punctuation">(</span>f<span class="token punctuation">,</span> model<span class="token operator">=</span>model<span class="token punctuation">,</span> n<span class="token operator">=</span>n<span class="token punctuation">)</span>
+  d <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;q1&quot;</span><span class="token punctuation">:</span> do<span class="token punctuation">(</span>q1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;q2&quot;</span><span class="token punctuation">:</span> do<span class="token punctuation">(</span>q2<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;q3&quot;</span><span class="token punctuation">:</span> do<span class="token punctuation">(</span>q3<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;q4&quot;</span><span class="token punctuation">:</span> do<span class="token punctuation">(</span>q4<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;n&quot;</span><span class="token punctuation">:</span> n<span class="token punctuation">,</span>
+      <span class="token string">&quot;model&quot;</span><span class="token punctuation">:</span> name
+  <span class="token punctuation">}</span>
+  d<span class="token punctuation">[</span><span class="token string">&#x27;total&#x27;</span><span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">&#x27;q1&#x27;</span><span class="token punctuation">]</span> <span class="token operator">+</span> d<span class="token punctuation">[</span><span class="token string">&#x27;q2&#x27;</span><span class="token punctuation">]</span> <span class="token operator">+</span> d<span class="token punctuation">[</span><span class="token string">&#x27;q3&#x27;</span><span class="token punctuation">]</span> <span class="token operator">+</span> d<span class="token punctuation">[</span><span class="token string">&#x27;q4&#x27;</span><span class="token punctuation">]</span>
+  <span class="token keyword">return</span> d
+
+<span class="token keyword">def</span> <span class="token function">print_experiment</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  name <span class="token operator">=</span> results<span class="token punctuation">[</span><span class="token string">&#x27;model&#x27;</span><span class="token punctuation">]</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Question 1: Can the react agent use a tool correctly when explicitly asked? (</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">) success rate: </span><span class="token interpolation"><span class="token punctuation">{</span>results<span class="token punctuation">[</span><span class="token string">&#x27;q1&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">) success rate: </span><span class="token interpolation"><span class="token punctuation">{</span>results<span class="token punctuation">[</span><span class="token string">&#x27;q2&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">) success rate: </span><span class="token interpolation"><span class="token punctuation">{</span>results<span class="token punctuation">[</span><span class="token string">&#x27;q3&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Question 4: Does the react agent lose the ability to chat? (</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">) success rate: </span><span class="token interpolation"><span class="token punctuation">{</span>results<span class="token punctuation">[</span><span class="token string">&#x27;q4&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">run_and_print_experiment</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  results <span class="token operator">=</span> run_experiment<span class="token punctuation">(</span>model<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+  print_experiment<span class="token punctuation">(</span>results<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> results</code></pre></div>
+</details>
+<h1 id="quantization" style="position:relative"><a href="#quantization" aria-label="quantization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quantization</h1>
+<p>You probably know that modern neural networks can be pretty large, and that is why special GPUs with lots of memory are in high demand right now.  So how are we able to run some of these models on our computers, which don&#x27;t have these special GPUs, using Ollama?</p>
+<p>One reason is because Ollama uses <strong>quantized</strong> models, which are numerically
+compressed to use less memory.  For example, the <a href="https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct">original Llama 3.2-3b-Instruct
+model</a> uses <a href="https://en.wikipedia.org/wiki/Bfloat16_floating-point_format">bfloat16
+tensors</a> which
+require 16-bits to store each parameter.  On <a href="https://ollama.com/library/llama3.2">Ollama&#x27;s Llama 3.2
+model page</a>, you can see the quantization is
+listed as Q4_K_M.  At a high-level, this squeezes each 16-bit parameter down to
+4-bits.  And somehow it still works!</p>
+<p>Or does it?  Maybe this is why our tool-callling doesn&#x27;t work?</p>
+<p>One simple way to test this is to evaluate a quantized version versus a non-quantized version.  Luckily, <a href="https://huggingface.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF">this repository</a> on HuggingFace happens to have both quantized and non-quantized models in a format that Ollama can process.  So we can evaluate both of them using <a href="https://edmcman.github.io/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/#eds-really-dumb-tool-calling-benchmark-%EF%B8%8F">Ed&#x27;s Really Dumb Tool-calling Benchmark ™️ that I introduced in Part 1</a>.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> langchain_ollama <span class="token keyword">import</span> ChatOllama
+
+quant_models <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&quot;hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16&quot;</span><span class="token punctuation">,</span> <span class="token comment"># non-quantized</span>
+  <span class="token string">&quot;hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M&quot;</span><span class="token punctuation">,</span> <span class="token comment">#quantized</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> m <span class="token keyword">in</span> quant_models<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Model: </span><span class="token interpolation"><span class="token punctuation">{</span>m<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  !ollama pull <span class="token punctuation">{</span>m<span class="token punctuation">}</span> <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null
+  r <span class="token operator">=</span> run_and_print_experiment<span class="token punctuation">(</span>ChatOllama<span class="token punctuation">(</span>model<span class="token operator">=</span>m<span class="token punctuation">,</span> num_ctx<span class="token operator">=</span>num_ctx<span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">,</span> n<span class="token operator">=</span>sample_size<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">Model: hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16
+Question 1: Can the react agent use a tool correctly when explicitly asked? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16) success rate: 0.91
+Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16) success rate: 0.0
+Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16) success rate: 0.36
+Question 4: Does the react agent lose the ability to chat? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16) success rate: 0.12
+{&#x27;q1&#x27;: 0.91, &#x27;q2&#x27;: 0.0, &#x27;q3&#x27;: 0.36, &#x27;q4&#x27;: 0.12, &#x27;n&#x27;: 100, &#x27;model&#x27;: &#x27;hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:F16&#x27;, &#x27;total&#x27;: 1.3900000000000001}
+Model: hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M
+Question 1: Can the react agent use a tool correctly when explicitly asked? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M) success rate: 0.99
+Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M) success rate: 0.0
+Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M) success rate: 0.51
+Question 4: Does the react agent lose the ability to chat? (hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M) success rate: 0.06
+{&#x27;q1&#x27;: 0.99, &#x27;q2&#x27;: 0.0, &#x27;q3&#x27;: 0.51, &#x27;q4&#x27;: 0.06, &#x27;n&#x27;: 100, &#x27;model&#x27;: &#x27;hf.co/prithivMLmods/Llama-3.2-3B-Instruct-GGUF:Q4_K_M&#x27;, &#x27;total&#x27;: 1.56}
+</pre></div>
+<p>Both models do poorly.  In fact, the quantized version does slightly better.</p>
+<p>Conclusion: Quantization is probably <em>not</em> the problem.</p>
+<h1 id="prompt-templates" style="position:relative"><a href="#prompt-templates" aria-label="prompt templates permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prompt Templates</h1>
+<p>Behind the scenes, LLMs need to be prompted in a <em>very</em> specific format to work well.  HuggingFace dubs this problem the <a href="https://huggingface.co/blog/chat-templates">silent performance killer</a>.  In response, they created &quot;chat templates&quot; which codify the format and live alongside the model to avoid any ambiguity.  Note: I call these &quot;prompt templates&quot;.</p>
+<p>We haven&#x27;t had to worry about prompt templates at all, because Ollama has been taking care of templating for us.  Maybe its prompt templates are problematic?</p>
+<p>To test this theory, we&#x27;re going to build some code to query Ollama but without using Ollama to format the prompt for us.  There are two purposes for this:</p>
+<ol>
+<li>
+<p>We will learn a bit how tool calling works and how it interacts with prompt templates.  I have a suspicion that prompt templates have something to do with the problem.</p>
+</li>
+<li>
+<p>We will avoid a lot of code that has been hiding behind abstraction.  This is the downside of abstraction: it makes things easier to build, but it&#x27;s harder to understand where the blame might lie when something fails.</p>
+</li>
+</ol>
+<h2 id="llama-32-based-prompt" style="position:relative"><a href="#llama-32-based-prompt" aria-label="llama 32 based prompt permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Llama 3.2 Based Prompt</h2>
+<p>Let&#x27;s start by examining the prompt template recommended for Llama 3.2, which is
+<a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/text_prompt_format.md#zero-shot-function-calling">this template for zero-shot function
+calling</a>
+from the <a href="https://github.com/meta-llama/llama-models">llama-models repository</a>.  We&#x27;ll talk more about this
+<a href="#prompt-confusion">later</a>, but Meta actually publishes conflicting prompt
+templates in different locations!  So to be clear, this is the llama-models Llama 3.2 prompt template.</p>
+<p>Here is the example from that page:</p>
+<div class="wrap-long-lines">
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+You are an expert in composing functions. You are given a question and a set of possible functions.
+Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
+If none of the function can be used, point it out. If the given question lacks the parameters required by the function,
+also point it out. You should only return the function call in tools call sections.
+
+If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+You SHOULD NOT include any other text in the response.
+
+Here is a list of functions in JSON format that you can invoke.
+
+[
+    {
+        &quot;name&quot;: &quot;get_weather&quot;,
+        &quot;description&quot;: &quot;Get weather info for places&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;dict&quot;,
+            &quot;required&quot;: [
+                &quot;city&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;city&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The name of the city to get the weather for&quot;
+                },
+                &quot;metric&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The metric for weather. Options are: celsius, fahrenheit&quot;,
+                    &quot;default&quot;: &quot;celsius&quot;
+                }
+            }
+        }
+    }
+]&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+What is the weather in SF and Seattle?&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;</code></pre></div>
+</div>
+<p>It&#x27;s worth adding a few notes here.  Modern LLMs are implemented as chat models,
+which means that they expect a conversation in the form of a list of messages
+that are sent by various roles.  The primary roles are the user and the assistant.
+But we can also see that there are <em>system</em> messages, which are hidden
+instructions that are sent to the LLM.  They provide instructions on how the LLM
+should behave.  In this prompt template, we can see that it also specifies how
+and when the LLM should interact with tools.</p>
+<p>On the same page is an example of the format in which the model should respond:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[get_weather(city=&#x27;San Francisco&#x27;, metric=&#x27;celsius&#x27;), get_weather(city=&#x27;Seattle&#x27;, metric=&#x27;celsius&#x27;)]&lt;|eot_id|&gt;</code></pre></div>
+<p>Let&#x27;s code this up and try it out.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">llama_32_example_funs <span class="token operator">=</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;[
+    {
+        &quot;name&quot;: &quot;get_weather&quot;,
+        &quot;description&quot;: &quot;Get weather info for places&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;dict&quot;,
+            &quot;required&quot;: [
+                &quot;city&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;city&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The name of the city to get the weather for&quot;
+                },
+                &quot;metric&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The metric for weather. Options are: celsius, fahrenheit&quot;,
+                    &quot;default&quot;: &quot;celsius&quot;
+                }
+            }
+        }
+    }
+]&quot;&quot;&quot;</span>
+
+<span class="token comment"># https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/text_prompt_format.md#input-prompt-format-1</span>
+<span class="token keyword">def</span> <span class="token function">llama_32_prompt_template</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> funs<span class="token operator">=</span>llama_32_example_funs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+You are an expert in composing functions. You are given a question and a set of possible functions.
+Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
+If none of the function can be used, point it out. If the given question lacks the parameters required by the function,
+also point it out. You should only return the function call in tools call sections.
+
+If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+You SHOULD NOT include any other text in the response.
+
+Here is a list of functions in JSON format that you can invoke.
+
+%s&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+%s&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;&quot;&quot;&quot;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>funs<span class="token punctuation">,</span> user<span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>llama_32_prompt_template<span class="token punctuation">(</span><span class="token string">&quot;What is the weather in new york?&quot;</span><span class="token punctuation">,</span> funs<span class="token operator">=</span>llama_32_example_funs<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+You are an expert in composing functions. You are given a question and a set of possible functions.
+Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
+If none of the function can be used, point it out. If the given question lacks the parameters required by the function,
+also point it out. You should only return the function call in tools call sections.
+
+If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+You SHOULD NOT include any other text in the response.
+
+Here is a list of functions in JSON format that you can invoke.
+
+[
+    {
+        &quot;name&quot;: &quot;get_weather&quot;,
+        &quot;description&quot;: &quot;Get weather info for places&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;dict&quot;,
+            &quot;required&quot;: [
+                &quot;city&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;city&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The name of the city to get the weather for&quot;
+                },
+                &quot;metric&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;The metric for weather. Options are: celsius, fahrenheit&quot;,
+                    &quot;default&quot;: &quot;celsius&quot;
+                }
+            }
+        }
+    }
+]&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+What is the weather in new york?&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+</pre></div>
+<p>Looks good.  Now we need some code to send the request to the Ollama API.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> json
+
+<span class="token keyword">def</span> <span class="token function">build_ollama_request</span><span class="token punctuation">(</span>full_prompt<span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f&quot;&quot;&quot;{{
+    &quot;model&quot;: \&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>model<span class="token punctuation">}</span></span><span class="token string">\&quot;,
+    &quot;prompt&quot;: </span><span class="token interpolation"><span class="token punctuation">{</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>full_prompt<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">,
+    &quot;raw&quot;: true,
+    &quot;stream&quot;: false
+  }}
+  &quot;&quot;&quot;</span></span>
+
+<span class="token keyword">def</span> <span class="token function">build_ollama_request_from_userprompt</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> template<span class="token punctuation">,</span> funs<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> build_ollama_request<span class="token punctuation">(</span>template<span class="token punctuation">(</span>user<span class="token punctuation">,</span> funs<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">send_request</span><span class="token punctuation">(</span>full_request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;req&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>full_request<span class="token punctuation">)</span>
+  !curl <span class="token operator">-</span>s http<span class="token punctuation">:</span><span class="token operator">//</span>localhost<span class="token punctuation">:</span><span class="token number">11434</span><span class="token operator">/</span>api<span class="token operator">/</span>generate <span class="token operator">-</span><span class="token operator">-</span>data<span class="token operator">-</span><span class="token builtin">ascii</span> <span class="token string">&quot;@req&quot;</span> <span class="token operator">|</span> jq <span class="token operator">-</span>M <span class="token string">&#x27;.response&#x27;</span>
+
+<span class="token keyword">def</span> <span class="token function">send_userprompt</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  request <span class="token operator">=</span> build_ollama_request_from_userprompt<span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+  send_request<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># A few sample prompts...</span>
+prompts <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;Use tools to find the weather in new york&quot;</span><span class="token punctuation">,</span> <span class="token comment"># llama 3.2 example</span>
+    <span class="token string">&quot;Use tools to get latest trending songs&quot;</span><span class="token punctuation">,</span> <span class="token comment"># llama 3.1 example</span>
+    basic_tool_question<span class="token punctuation">,</span> <span class="token comment"># Please evaluate foobar(30)</span>
+    greeting<span class="token punctuation">,</span> <span class="token comment"># Hello!</span>
+    basic_arithmetic_question <span class="token comment"># What is 12345 - 102?</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">try_prompts</span><span class="token punctuation">(</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> p <span class="token keyword">in</span> prompts<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Prompt: </span><span class="token interpolation"><span class="token punctuation">{</span>p<span class="token punctuation">}</span></span><span class="token string">\nResponse: &quot;</span></span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    send_userprompt<span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<p>In the list of example prompts, there are three tool calling examples.  We will
+be passing along the <code class="language-text">get_weather</code> tool definition. Obviously, commonsense tells
+us that the model should <em>not</em> attempt to list trending songs or evaluate
+<code class="language-text">foobar(30)</code> using <code class="language-text">get_weather</code>.  Let&#x27;s see how it does.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  try_prompts<span class="token punctuation">(</span>funs<span class="token operator">=</span>llama_32_example_funs<span class="token punctuation">,</span> template<span class="token operator">=</span>llama_32_prompt_template<span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">Prompt: Use tools to find the weather in new york
+Response: &quot;\n\n[get_weather(city=&#x27;New York&#x27;)]&quot;
+
+Prompt: Use tools to get latest trending songs
+Response: &quot;\n\n[get_weather(city=&#x27;trending songs&#x27;, metric=&#x27;&#x27;) ]&quot;
+
+Prompt: Please evaluate foobar(30)
+Response: &quot;\n\n[]&quot;
+
+Prompt: Hello!
+Response: &quot;\n\nNothing to see here. Would you like to ask a question or request a function call?&quot;
+
+Prompt: What is 12345 - 102?
+Response: &quot;\n\n[]&quot;
+
+</pre></div>
+<blockquote>
+<p>On Sunday, the weather is going to be sunny with a chance of rain in the legendary city of &quot;Trending Songs&quot;.</p>
+</blockquote>
+<p>Overall, this is pretty disappointing.  The model appears overly eager to call tools, even when it makes no sense, such as calling <code class="language-text">get_weather</code> on the city of &quot;trending songs&quot;.  Oops.  And it often responds unnaturally to &quot;Hello!&quot;.  It doesn&#x27;t respond at all to the arithmetic or foobar questions.</p>
+<h2 id="llama-31-based-prompt" style="position:relative"><a href="#llama-31-based-prompt" aria-label="llama 31 based prompt permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Llama 3.1 Based Prompt</h2>
+<p>Llama 3.2 is actually compatible with the Llama 3.1 prompt format for tool calling, so next let&#x27;s try the <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5">llama-models Llama 3.1 prompt template</a>.  Below is the example from that page.</p>
+<div class="wrap-long-lines">
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Environment: ipython
+
+Cutting Knowledge Date: December 2023
+Today Date: 21 September 2024
+
+You are a helpful assistant.
+&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Answer the user&#x27;s question by making use of the following functions if needed.
+If none of the function can be used, please say so.
+Here is a list of functions in JSON format:
+{
+    &quot;type&quot;: &quot;function&quot;,
+    &quot;function&quot;: {
+        &quot;name&quot;: &quot;trending_songs&quot;,
+        &quot;description&quot;: &quot;Returns the trending songs on a Music site&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: [
+                {
+                    &quot;n&quot;: {
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;description&quot;: &quot;The number of songs to return&quot;
+                    }
+                },
+                {
+                    &quot;genre&quot;: {
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;description&quot;: &quot;The genre of the songs to return&quot;
+                    }
+                }
+            ],
+            &quot;required&quot;: [&quot;n&quot;]
+        }
+    }
+}
+
+Return function calls in JSON format.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Use tools to get latest trending songs&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;</code></pre></div>
+</div>
+<p>Notice that the Llama 3.2 and 3.1 prompt templates have very little in common!</p>
+<p>Let&#x27;s code up the Llama 3.1 prompt and test it out.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">llama_31_example_funs <span class="token operator">=</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;{
+    &quot;type&quot;: &quot;function&quot;,
+    &quot;function&quot;: {
+        &quot;name&quot;: &quot;trending_songs&quot;,
+        &quot;description&quot;: &quot;Returns the trending songs on a Music site&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: [
+                {
+                    &quot;n&quot;: {
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;description&quot;: &quot;The number of songs to return&quot;
+                    }
+                },
+                {
+                    &quot;genre&quot;: {
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;description&quot;: &quot;The genre of the songs to return&quot;
+                    }
+                }
+            ],
+            &quot;required&quot;: [&quot;n&quot;]
+        }
+    }
+}
+&quot;&quot;&quot;</span>
+
+<span class="token comment"># https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5</span>
+<span class="token keyword">def</span> <span class="token function">llama_31_prompt_template</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> funs<span class="token operator">=</span>llama_31_example_funs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">return</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Environment: ipython
+
+Cutting Knowledge Date: December 2023
+Today Date: 21 September 2024
+
+You are a helpful assistant.
+&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Answer the user&#x27;s question by making use of the following functions if needed.
+If none of the function can be used, please say so.
+Here is a list of functions in JSON format:
+%s
+
+Return function calls in JSON format.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+%s&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+&quot;&quot;&quot;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>funs<span class="token punctuation">,</span> user<span class="token punctuation">)</span>
+</code></pre></div>
+<p>Now we&#x27;ll run the sample prompts again, but this time we&#x27;ll use the Llama 3.1 example function <code class="language-text">trending_songs</code> rather than <code class="language-text">get_weather</code>.  As before, commonsense tells us that we can&#x27;t use <code class="language-text">trending_songs</code> to predict the weather or compute <code class="language-text">foobar(30)</code>.  Let&#x27;s see how it does.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  try_prompts<span class="token punctuation">(</span>funs<span class="token operator">=</span>llama_31_example_funs<span class="token punctuation">,</span> template<span class="token operator">=</span>llama_31_prompt_template<span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">Prompt: Use tools to find the weather in new york
+Response: &quot;I can&#x27;t directly use the provided function to find the weather in New York as it is a location-based API and the given function is for getting trending songs, not weather information.&quot;
+
+Prompt: Use tools to get latest trending songs
+Response: &quot;{\&quot;type\&quot;: \&quot;function\&quot;, \&quot;name\&quot;: \&quot;trending_songs\&quot;, \&quot;parameters\&quot;: {\&quot;n\&quot;: \&quot;10\&quot;}}&quot;
+
+Prompt: Please evaluate foobar(30)
+Response: &quot;Since there is no `foobar` function available, the answer is: None&quot;
+
+Prompt: Hello!
+Response: &quot;Hello! How can I assist you today?&quot;
+
+Prompt: What is 12345 - 102?
+Response: &quot;I&#x27;m not aware of any function that can perform this calculation. The functions provided only include the `trending_songs` function, which is used to retrieve trending songs based on a specific number of songs and genre. It does not include arithmetic operations like subtraction. If you need help with a different type of calculation, please let me know!&quot;
+
+</pre></div>
+<p>These responses seems greatly improved compared to the Llama 3.2 prompt we tried.  The response to a greeting is more natural.  It also didn&#x27;t do silly things like stuffing &quot;trending songs&quot; into the <code class="language-text">get_weather</code> function calls.</p>
+<p>The only consistent problem I can see is that it didn&#x27;t even try to answer the arithmetic question.  Let&#x27;s see if we can fix that by slightly tweaking the wording of the prompt with the following diff:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span>Answer the user&#x27;s question by making use of the following functions if needed.
+<span class="token prefix deleted">-</span>If none of the function can be used, please say so.
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>Help and converse with the user.  If and only if the user asks a question that
+<span class="token prefix inserted">+</span>is relevant to one of the following functions, make use of them.  If none of
+<span class="token prefix inserted">+</span>the functions can be used, answer the query as best you can.</span></code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">llama_31_custom_prompt_template</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> funs<span class="token operator">=</span>llama_31_example_funs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">return</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Environment: ipython
+
+Cutting Knowledge Date: December 2023
+Today Date: 21 September 2024
+
+You are a helpful assistant.
+&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Help and converse with the user.  If and only if the user asks a question that
+is relevant to one of the following functions, make use of them.  If none of
+the functions can be used, answer the query as best you can.
+Here is a list of functions in JSON format:
+%s
+
+Return function calls in JSON format.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+%s&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+&quot;&quot;&quot;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>funs<span class="token punctuation">,</span> user<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  try_prompts<span class="token punctuation">(</span>funs<span class="token operator">=</span>llama_31_example_funs<span class="token punctuation">,</span> template<span class="token operator">=</span>llama_31_custom_prompt_template<span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">Prompt: Use tools to find the weather in new york
+Response: &quot;Since the provided function `trending_songs` is related to music and not weather, I&#x27;ll answer your question as best I can.\n\nAccording to current information, New York&#x27;s weather can be quite varied depending on the time of year. In general, winters are cold and snowy, while summers are hot and humid. Springs and autumns are generally mild.\n\nIf you&#x27;re looking for more specific or up-to-date weather information, I recommend checking a reliable weather website or app, such as AccuWeather or Weather.com, which can provide more accurate and current forecasts for New York City and surrounding areas.&quot;
+
+Prompt: Use tools to get latest trending songs
+Response: &quot;Here is a function call in JSON format that uses the `trending_songs` function to get the latest trending songs:\n\n```\n{\n  \&quot;type\&quot;: \&quot;function\&quot;,\n  \&quot;name\&quot;: \&quot;trending_songs\&quot;,\n  \&quot;parameters\&quot;: {\n    \&quot;n\&quot;: \&quot;10\&quot;\n  }\n}\n```&quot;
+
+Prompt: Please evaluate foobar(30)
+Response: &quot;Unfortunately, I don&#x27;t have any information about a `foobar` function. Could you please provide more context or details about this function? Is it defined somewhere else that I can access? Or would you like me to try and infer what the `foobar` function might do based on its name?&quot;
+
+Prompt: Hello!
+Response: &quot;Hello! How can I assist you today?&quot;
+
+Prompt: What is 12345 - 102?
+Response: &quot;Since no specific function can be used for this question, I&#x27;ll answer it directly:\n\nThe result of subtracting 102 from 12345 is 12343.&quot;
+
+</pre></div>
+<p>This seemed to work really well if you ignore the fact that it got the subtraction wrong 🤣</p>
+<p><a name="ollama-prompt"></a></p>
+<h2 id="what-prompt-template-is-ollama-using" style="position:relative"><a href="#what-prompt-template-is-ollama-using" aria-label="what prompt template is ollama using permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What prompt template is Ollama using?</h2>
+<p>So we found a prompt template that appears to be working well.  Let&#x27;s try to make Ollama use that prompt template.  To start, let&#x27;s investigate what prompt template it&#x27;s using &quot;by default&quot;.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_raw_prompt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  template <span class="token operator">=</span> !cat nohup<span class="token punctuation">.</span>out <span class="token operator">|</span> fgrep <span class="token string">&quot;chat request&quot;</span> <span class="token operator">|</span> sed <span class="token operator">-</span>e <span class="token string">&#x27;s/.*prompt=&quot;\(.*\)&quot;/\1/&#x27;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>s<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&#x27;unicode_escape&#x27;</span><span class="token punctuation">)</span> <span class="token keyword">for</span> s <span class="token keyword">in</span> template<span class="token punctuation">]</span>
+
+!ollama pull llama3<span class="token punctuation">.</span><span class="token number">2</span> <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null
+!<span class="token operator">&gt;</span>nohup<span class="token punctuation">.</span>out <span class="token comment"># Truncate ollama output</span>
+response <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>greeting<span class="token punctuation">,</span> model<span class="token operator">=</span>ChatOllama<span class="token punctuation">(</span>model<span class="token operator">=</span><span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">,</span> num_ctx<span class="token operator">=</span>num_ctx<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>get_raw_prompt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Cutting Knowledge Date: December 2023
+
+When you receive a tool call response, use the output to format an answer to the orginal user question.
+
+You are a helpful assistant with tool calling capabilities.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Given the following functions, please respond with a JSON for a function call with its proper arguments that best answers the given prompt.
+
+Respond in the format {&quot;name&quot;: function name, &quot;parameters&quot;: dictionary of argument name and its value}. Do not use variables.
+
+{&quot;type&quot;:&quot;function&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;foobar&quot;,&quot;description&quot;:&quot;Computes the foobar function on input and returns the result.&quot;,&quot;parameters&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;required&quot;:[&quot;input&quot;],&quot;properties&quot;:{&quot;input&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;description&quot;:&quot;&quot;}}}}}
+
+Hello!&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+
+</pre></div>
+<p>That doesn&#x27;t look like either of the prompt templates we used before, which both came from the <a href="https://github.com/meta-llama/llama-models">llama-models repository</a>.  After a bit of google-fu, we can see that it originated from the <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_1/#json-based-tool-calling">Llama 3.1 &quot;JSON based&quot; tool calling documentation on the llama website</a>.  But it&#x27;s <strong>not</strong> the same Llama 3.1 <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5">prompt template</a> that we used from the llama-models repository.</p>
+<p>This raises a few questions:</p>
+<ol>
+<li>
+<p>Why are there multiple prompt templates for Llama 3.1?</p>
+</li>
+<li>
+<p>Which prompt template is best?</p>
+</li>
+<li>
+<p>Why not use the prompt template for Llama 3.2, since we are using the Llama 3.2 model?</p>
+</li>
+</ol>
+<p><a name="prompt-confusion"></a>
+Let&#x27;s start by answering the first two questions.  In <a href="https://github.com/meta-llama/llama-stack-apps/issues/36">this github issue</a>, a user notes that there are at least three <em>different</em> prompt templates for Llama 3.1:</p>
+<ol>
+<li><a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_1#-tool-calling-(8b/70b/405b)-">The Llama 3.1 model website</a></li>
+<li><a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md">Meta&#x27;s llama-models repository</a></li>
+<li><a href="https://huggingface.co/meta-llama/Llama-3.1-8B/blob/main/tokenizer_config.json">The HuggingFace model&#x27;s chat
+template</a></li>
+</ol>
+<p>A Meta employee states that the <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5">template</a> in the llama-models repository is the correct one.  Fortunately, that&#x27;s what we have been using in this blog post.  (It&#x27;s almost as if I knew this in advance!)  But Ollama has been basing their template on the one from the model website.  That seems problematic!</p>
+<p>The last question, &quot;Why not use the prompt format for Llama 3.2?&quot; is pretty easy to answer as well.  Llama 3.2&#x27;s default prompt format responds using a pythonic function call syntax that Ollama can&#x27;t parse.  And, as we saw <a href="#llama-32-based-prompt">above</a> when we tested it manually, the Llama 3.2 prompt anecdotally did not seem to work well anyway.</p>
+<h2 id="lets-build-our-own-ollama-prompt-template" style="position:relative"><a href="#lets-build-our-own-ollama-prompt-template" aria-label="lets build our own ollama prompt template permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Let&#x27;s build our own Ollama prompt template</h2>
+<p>Now that we identified a prompt template that seems to work pretty well, let&#x27;s try to make Ollama use it.</p>
+<p>To start, let&#x27;s look at the default prompt template for the <code class="language-text">llama3.2</code> model in Ollama.  We already saw the instantiated prompt, but now let&#x27;s look at the template that Ollama uses to build the prompts.  You can see this below, or on the Ollama website <a href="https://ollama.com/library/llama3.2/blobs/966de95ca8a6">here</a>.</p>
+<div class="wrap-long-lines">
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Cutting Knowledge Date: December 2023
+
+{{ if .System }}{{ .System }}
+{{- end }}
+{{- if .Tools }}When you receive a tool call response, use the output to format an answer to the orginal user question.
+
+You are a helpful assistant with tool calling capabilities.
+{{- end }}&lt;|eot_id|&gt;
+{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 }}
+{{- if eq .Role &quot;user&quot; }}&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+{{- if and $.Tools $last }}
+
+Given the following functions, please respond with a JSON for a function call with its proper arguments that best answers the given prompt.
+
+Respond in the format {&quot;name&quot;: function name, &quot;parameters&quot;: dictionary of argument name and its value}. Do not use variables.
+
+{{ range $.Tools }}
+{{- . }}
+{{ end }}
+{{ .Content }}&lt;|eot_id|&gt;
+{{- else }}
+
+{{ .Content }}&lt;|eot_id|&gt;
+{{- end }}{{ if $last }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+{{ end }}
+{{- else if eq .Role &quot;assistant&quot; }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+{{- if .ToolCalls }}
+{{ range .ToolCalls }}
+{&quot;name&quot;: &quot;{{ .Function.Name }}&quot;, &quot;parameters&quot;: {{ .Function.Arguments }}}{{ end }}
+{{- else }}
+
+{{ .Content }}
+{{- end }}{{ if not $last }}&lt;|eot_id|&gt;{{ end }}
+{{- else if eq .Role &quot;tool&quot; }}&lt;|start_header_id|&gt;ipython&lt;|end_header_id|&gt;
+
+{{ .Content }}&lt;|eot_id|&gt;{{ if $last }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+{{ end }}
+{{- end }}
+{{- end }}</code></pre></div>
+</div>
+<p>It&#x27;s not just you.  It really is hard to read.  The above code is written in the Go template language.  I recommend using this <a href="https://repeatit.io/#/share/eyJ0ZW1wbGF0ZSI6Ijx8c3RhcnRfaGVhZGVyX2lkfD5zeXN0ZW08fGVuZF9oZWFkZXJfaWR8PlxuXG5DdXR0aW5nIEtub3dsZWRnZSBEYXRlOiBEZWNlbWJlciAyMDIzXG5cbnt7IGlmIC5TeXN0ZW0gfX17eyAuU3lzdGVtIH19XG57ey0gZW5kIH19XG57ey0gaWYgLlRvb2xzIH19V2hlbiB5b3UgcmVjZWl2ZSBhIHRvb2wgY2FsbCByZXNwb25zZSwgdXNlIHRoZSBvdXRwdXQgdG8gZm9ybWF0IGFuIGFuc3dlciB0byB0aGUgb3JnaW5hbCB1c2VyIHF1ZXN0aW9uLlxuXG5Zb3UgYXJlIGEgaGVscGZ1bCBhc3Npc3RhbnQgd2l0aCB0b29sIGNhbGxpbmcgY2FwYWJpbGl0aWVzLlxue3stIGVuZCB9fTx8ZW90X2lkfD5cbnt7LSByYW5nZSAkaSwgJF8gOj0gLk1lc3NhZ2VzIH19XG57ey0gJGxhc3QgOj0gZXEgKGxlbiAoc2xpY2UgJC5NZXNzYWdlcyAkaSkpIDEgfX1cbnt7LSBpZiBlcSAuUm9sZSBcInVzZXJcIiB9fTx8c3RhcnRfaGVhZGVyX2lkfD51c2VyPHxlbmRfaGVhZGVyX2lkfD5cbnt7LSBpZiBhbmQgJC5Ub29scyAkbGFzdCB9fVxuXG5HaXZlbiB0aGUgZm9sbG93aW5nIGZ1bmN0aW9ucywgcGxlYXNlIHJlc3BvbmQgd2l0aCBhIEpTT04gZm9yIGEgZnVuY3Rpb24gY2FsbCB3aXRoIGl0cyBwcm9wZXIgYXJndW1lbnRzIHRoYXQgYmVzdCBhbnN3ZXJzIHRoZSBnaXZlbiBwcm9tcHQuXG5cblJlc3BvbmQgaW4gdGhlIGZvcm1hdCB7XCJuYW1lXCI6IGZ1bmN0aW9uIG5hbWUsIFwicGFyYW1ldGVyc1wiOiBkaWN0aW9uYXJ5IG9mIGFyZ3VtZW50IG5hbWUgYW5kIGl0cyB2YWx1ZX0uIERvIG5vdCB1c2UgdmFyaWFibGVzLlxuXG57eyByYW5nZSAkLlRvb2xzIH19XG57ey0gLiB9fVxue3sgZW5kIH19XG57eyAuQ29udGVudCB9fTx8ZW90X2lkfD5cbnt7LSBlbHNlIH19XG5cbnt7IC5Db250ZW50IH19PHxlb3RfaWR8Plxue3stIGVuZCB9fXt7IGlmICRsYXN0IH19PHxzdGFydF9oZWFkZXJfaWR8PmFzc2lzdGFudDx8ZW5kX2hlYWRlcl9pZHw+XG5cbnt7IGVuZCB9fVxue3stIGVsc2UgaWYgZXEgLlJvbGUgXCJhc3Npc3RhbnRcIiB9fTx8c3RhcnRfaGVhZGVyX2lkfD5hc3Npc3RhbnQ8fGVuZF9oZWFkZXJfaWR8Plxue3stIGlmIC5Ub29sQ2FsbHMgfX1cbnt7IHJhbmdlIC5Ub29sQ2FsbHMgfX1cbntcIm5hbWVcIjogXCJ7eyAuRnVuY3Rpb24uTmFtZSB9fVwiLCBcInBhcmFtZXRlcnNcIjoge3sgLkZ1bmN0aW9uLkFyZ3VtZW50cyB9fX17eyBlbmQgfX1cbnt7LSBlbHNlIH19XG5cbnt7IC5Db250ZW50IH19XG57ey0gZW5kIH19e3sgaWYgbm90ICRsYXN0IH19PHxlb3RfaWR8Pnt7IGVuZCB9fVxue3stIGVsc2UgaWYgZXEgLlJvbGUgXCJ0b29sXCIgfX08fHN0YXJ0X2hlYWRlcl9pZHw+aXB5dGhvbjx8ZW5kX2hlYWRlcl9pZHw+XG5cbnt7IC5Db250ZW50IH19PHxlb3RfaWR8Pnt7IGlmICRsYXN0IH19PHxzdGFydF9oZWFkZXJfaWR8PmFzc2lzdGFudDx8ZW5kX2hlYWRlcl9pZHw+XG5cbnt7IGVuZCB9fVxue3stIGVuZCB9fVxue3stIGVuZCB9fSIsImlucHV0IjoiVG9vbHM6XG4gIC0gdHlwZTogZnVuY3Rpb25cbiAgICBmdW5jdGlvbjpcbiAgICAgIG5hbWU6IGZvb2JhclxuICAgICAgZGVzY3JpcHRpb246IENvbXB1dGVzIHRoZSBmb29iYXIgZnVuY3Rpb24gaW4gaW5wdXRcbiAgICAgIHBhcmFtZXRlcnM6XG4gICAgICAgIHR5cGU6IG9iamVjdFxuICAgICAgICBwcm9wZXJ0aWVzOlxuICAgICAgICAtIGlucHV0OlxuICAgICAgICAgICAgdHlwZTogaW50XG4gICAgICAgICAgICBkZXNjcmlwdGlvbjpcbiAgICAgICAgcmVxdWlyZWQ6XG4gICAgICAgIC0gaW5wdXRcblxuICBcbk1lc3NhZ2VzOlxuICAtIFJvbGU6IHVzZXJcbiAgICBDb250ZW50OiBXaGF0IGlzIGZvb2JhcigyMik/XG4gICAgXG4gIC0gUm9sZTogYXNzaXN0YW50XG4gICAgVG9vbENhbGxzOlxuICAgICAgLSBGdW5jdGlvbjpcbiAgICAgICAgICBOYW1lOiBmb29iYXJcbiAgICAgICAgICBBcmd1bWVudHM6XG4gICAgICAgICAgICBpbnB1dDogMjJcbiAgICAgICAgICBcbiAgLSBSb2xlOiB0b29sXG4gICAgQ29udGVudDogMjRcbiAgICBcbiAgLSBSb2xlOiBhc3Npc3RhbnRcbiAgICBDb250ZW50OiBmb29iYXIoMjIpID09IDI0XG4iLCJjb25maWciOnsidGVtcGxhdGUiOiJ0ZXh0IiwiZnVsbFNjcmVlbkhUTUwiOmZhbHNlLCJmdW5jdGlvbnMiOiJoZWxtIiwib3B0aW9ucyI6WyJsaXZlIl0sImlucHV0VHlwZSI6InlhbWwifX0=">interactive editor</a> to better understand how the template language works if you are interested.</p>
+<p>At a high level, the prompt template takes a sequence of messages and converts it into a prompt for the model.
+Some important notes:</p>
+<ul>
+<li><code class="language-text">ToolCalls</code> indicate the calls the model wants to make.  Ollama infers these by parsing the model&#x27;s responses.</li>
+<li>The <code class="language-text">tool</code> role contains the output of an executed tool.</li>
+<li>The <code class="language-text">user</code> and <code class="language-text">assistant</code> roles are self explanatory!</li>
+</ul>
+<p>With a lot of trial and error in the interactive template editor, I converted our earlier template into the Ollama format:</p>
+<div class="wrap-long-lines">
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Environment: ipython
+
+Cutting Knowledge Date: December 2023
+Today Date: 21 September 2024
+
+{{ if .System }}{{ .System }}
+{{- end -}}
+&lt;|eot_id|&gt;{{ if .Tools }}&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Help and converse with the user.  If and only if the user asks a question that
+is relevant to one of the following functions, make use of them.  If none of
+the functions can be used, answer the query as best you can.
+Here is a list of functions in JSON format:
+{{- range $.Tools }}
+{{ . }}{{ end }}
+
+Return function calls in JSON format.&lt;|eot_id|&gt;{{ end }}
+{{- range $i, $_ := .Messages }}
+
+{{- $last := eq (len (slice $.Messages $i)) 1 }}
+{{- if eq .Role &quot;user&quot; }}&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+{{ .Content }}&lt;|eot_id|&gt;
+{{- if $last }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+{{ end }}
+{{- else if eq .Role &quot;assistant&quot; }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+{{- if .ToolCalls }}
+&lt;|python_tag|&gt;{{- range .ToolCalls -}}
+{&quot;name&quot;: &quot;{{ .Function.Name }}&quot;, &quot;parameters&quot;: {{ .Function.Arguments }}}{{ end }}&lt;|eom_id|&gt;
+{{- else }}
+{{ .Content }}&lt;|eot_id|&gt;
+{{- end }}
+{{- else if eq .Role &quot;tool&quot; }}&lt;|start_header_id|&gt;ipython&lt;|end_header_id|&gt;
+
+{{ .Content }}&lt;|eot_id|&gt;{{ if $last }}&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+{{ end }}
+{{- end }}
+{{- end }}</code></pre></div>
+</div>
+<p>Now the big question -- does it actually work?</p>
+<h3 id="does-our-new-ollama-prompt-template-work-as-intended" style="position:relative"><a href="#does-our-new-ollama-prompt-template-work-as-intended" aria-label="does our new ollama prompt template work as intended permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Does our new Ollama prompt template work as intended?</h3>
+<p>First, let&#x27;s make a query and make sure that we get the right answer!</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">!<span class="token operator">&gt;</span>nohup<span class="token punctuation">.</span>out <span class="token comment"># Truncate ollama output</span>
+!ollama pull ejschwar<span class="token operator">/</span>llama3<span class="token punctuation">.</span><span class="token number">2</span><span class="token operator">-</span>better<span class="token operator">-</span>prompts<span class="token punctuation">:</span>llama3<span class="token punctuation">.</span><span class="token number">1</span><span class="token operator">-</span>tooling<span class="token operator">-</span>prompt<span class="token operator">-</span>customized <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null
+response <span class="token operator">=</span> react_chat<span class="token punctuation">(</span>basic_tool_question<span class="token punctuation">,</span> model<span class="token operator">=</span>ChatOllama<span class="token punctuation">(</span>model<span class="token operator">=</span><span class="token string">&quot;ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized&quot;</span><span class="token punctuation">,</span> num_ctx<span class="token operator">=</span>num_ctx<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">assert</span> <span class="token string">&quot;32&quot;</span> <span class="token keyword">in</span> response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">The result of the foobar function when called with 30 as input is 32.
+</pre></div>
+<p>Second, let&#x27;s take a peek at the prompt we sent to the LLM.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>get_raw_prompt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+Environment: ipython
+
+Cutting Knowledge Date: December 2023
+Today Date: 21 September 2024
+
+&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Help and converse with the user.  If and only if the user asks a question that
+is relevant to one of the following functions, make use of them.  If none of 
+the functions can be used, answer the query as best you can.
+Here is a list of functions in JSON format:
+{&quot;type&quot;:&quot;function&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;foobar&quot;,&quot;description&quot;:&quot;Computes the foobar function on input and returns the result.&quot;,&quot;parameters&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;required&quot;:[&quot;input&quot;],&quot;properties&quot;:{&quot;input&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;description&quot;:&quot;&quot;}}}}}
+
+Return function calls in JSON format.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Please evaluate foobar(30)&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+&lt;|python_tag|&gt;{&quot;name&quot;: &quot;foobar&quot;, &quot;parameters&quot;: {&quot;input&quot;:30}}&lt;|eom_id|&gt;&lt;|start_header_id|&gt;ipython&lt;|end_header_id|&gt;
+
+32&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+
+</pre></div>
+<p>Looks good to me!</p>
+<p>Alright, let&#x27;s run it through <a href="https://edmcman.github.io/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/#eds-really-dumb-tool-calling-benchmark-%EF%B8%8F">Ed&#x27;s Really Dumb Tool-calling Benchmark ™️</a>.  We&#x27;ll run the original Llama 3.2 model in Ollama (<code class="language-text">llama3.2</code>) and the Llama 3.1 tooling prompt too for comparison.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">models <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&quot;llama3.2&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt&quot;</span><span class="token punctuation">,</span> <span class="token comment"># based on the llama 3.1 tooling prompt</span>
+  <span class="token string">&quot;ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized&quot;</span><span class="token punctuation">,</span> <span class="token comment"># our improved prompt</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> m <span class="token keyword">in</span> models<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Testing model: </span><span class="token interpolation"><span class="token punctuation">{</span>m<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+  !ollama pull <span class="token punctuation">{</span>m<span class="token punctuation">}</span> <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null
+  r <span class="token operator">=</span> run_and_print_experiment<span class="token punctuation">(</span>ChatOllama<span class="token punctuation">(</span>model<span class="token operator">=</span>m<span class="token punctuation">,</span> num_ctx<span class="token operator">=</span>num_ctx<span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">,</span> n<span class="token operator">=</span>sample_size<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span></code></pre></div>
+<div class="jupyter jupyter-output-group">
+<pre class="jupyter jupyter-output jupyter-output-stream wrap-long-lines language-dummy">Testing model: llama3.2
+Question 1: Can the react agent use a tool correctly when explicitly asked? (llama3.2) success rate: 0.97
+Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (llama3.2) success rate: 0.0
+Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (llama3.2) success rate: 0.55
+Question 4: Does the react agent lose the ability to chat? (llama3.2) success rate: 0.09
+{&#x27;q1&#x27;: 0.97, &#x27;q2&#x27;: 0.0, &#x27;q3&#x27;: 0.55, &#x27;q4&#x27;: 0.09, &#x27;n&#x27;: 100, &#x27;model&#x27;: &#x27;llama3.2&#x27;, &#x27;total&#x27;: 1.61}
+Testing model: ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt
+Question 1: Can the react agent use a tool correctly when explicitly asked? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt) success rate: 1.0
+Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt) success rate: 0.15
+Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt) success rate: 0.51
+Question 4: Does the react agent lose the ability to chat? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt) success rate: 0.49
+{&#x27;q1&#x27;: 1.0, &#x27;q2&#x27;: 0.15, &#x27;q3&#x27;: 0.51, &#x27;q4&#x27;: 0.49, &#x27;n&#x27;: 100, &#x27;model&#x27;: &#x27;ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt&#x27;, &#x27;total&#x27;: 2.15}
+Testing model: ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized
+Question 1: Can the react agent use a tool correctly when explicitly asked? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized) success rate: 0.99
+Question 2: Does the react agent invoke a tool when it shouldn&#x27;t? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized) success rate: 0.99
+Question 3: Does the react agent lose the ability to answer questions unrelated to tools? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized) success rate: 0.68
+Question 4: Does the react agent lose the ability to chat? (ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized) success rate: 1.0
+{&#x27;q1&#x27;: 0.99, &#x27;q2&#x27;: 0.99, &#x27;q3&#x27;: 0.68, &#x27;q4&#x27;: 1.0, &#x27;n&#x27;: 100, &#x27;model&#x27;: &#x27;ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized&#x27;, &#x27;total&#x27;: 3.66}
+</pre></div>
+<p>The original Ollama prompt scored 1.61/4.0.
+The official Llama 3.1 tooling prompt scored 2.15/4.0, and my customized prompt scored 3.6/4.0.  I&#x27;d say that is an improvement!</p>
+<h3 id="coming-clean" style="position:relative"><a href="#coming-clean" aria-label="coming clean permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coming Clean</h3>
+<p>I do want to come clean.  I did not create that prompt template in one try.  It actually took many days of experimenting and debugging.</p>
+<p>(I find that this is often a dilemma when blogging.  Keeping track of everything you did is difficult, time-consuming, and often not that interesting.)</p>
+<p>Many things went wrong along the way, but here are a few issues that I remember:</p>
+<ul>
+<li><code class="language-text">Environment: ipython</code> is supposed to be for enabling <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#builtin-code-interpreter">Llama&#x27;s code interpreter</a>, which we aren&#x27;t using, but I wasn&#x27;t able to get the Llama 3.1 prompt to work well without it.</li>
+<li>Llama has some <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_1/#-special-tokens-">weird rules</a> for when to use <code class="language-text">&lt;|eom_id|&gt;</code> vs. <code class="language-text">&lt;|eot_id|&gt;</code>, and I got them wrong.  As a result, even though the initial prompt was correct, Llama could not &quot;parse&quot; the results to correctly build the final message.</li>
+<li>In Llama 3.1 prompts, when the model responds with a tool call, it is supposed to be prefixed with <code class="language-text">&lt;|python_tag|&gt;</code>.  Somewhat oddly (in my opinion), existing Ollama prompts &quot;rebuild&quot; the tool call response from the parsed values, rather than using the original message.  As a result, I had to add in the <code class="language-text">&lt;|python_tag|&gt;</code> or the model would become confused and struggle to build the final message to the user.</li>
+<li>In one template, I added an extra newline, and this caused a notable decrease in performance!  Yes, models really are that sensitive.</li>
+</ul>
+<h2 id="recap" style="position:relative"><a href="#recap" aria-label="recap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recap</h2>
+<p>Let&#x27;s recap all the things we had to do to get to this point:</p>
+<ol>
+<li>
+<p>We used the Llama 3.1 prompt template from the <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md">llama-models repository</a> and NOT the <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_1/#json-based-tool-calling">Llama 3.1 website</a>, which is Ollama&#x27;s prompt was based on.</p>
+</li>
+<li>
+<p>We modified the wording of the prompt to improve its responses to non-tool-calls like greetings and arithmetic.</p>
+</li>
+</ol>
+<p>And this was all just to improve the performance of one single model.  I&#x27;m tired, aren&#x27;t you?</p>
+<h1 id="conclusion" style="position:relative"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h1>
+<p>Prompts are definitely part of the reason why building tool calling agents did not work in <a href="https://edmcman.github.io/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/">Part 1</a>.  <a href="https://huggingface.co/blog/chat-templates">But HuggingFace raised the alarm about this a long time ago!</a>  So what went wrong?</p>
+<h2 id="what-went-wrong" style="position:relative"><a href="#what-went-wrong" aria-label="what went wrong permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What went wrong?</h2>
+<p>Now that tool-calling is becoming more popular, prompt templates must be
+considered a fundamental part of a model, just like the weights.  The reason for
+this is simple: the model developer is the only entity who has a clear incentive
+to ensure that their model works as well as possible.  Downstream consumers like
+Ollama do not have an incentive to make sure that prompt templates work as well
+as possible.  Unfortunately for Llama, Meta did not treat the prompt templates
+as a fundamental part of the model.  Meta did a poor job of documenting the
+prompt templates:  the example-based documentation is vague, and the multiple
+conflicting sources of information further confused the issue.  So right off the
+bat, Llama models are not bundled with a clear prompt template.</p>
+<p>Ollama did not help the situation.  Instead of adopting an existing template
+format such as HuggingFace&#x27;s, they decided to roll their own format based on Go
+templates.  On one hand, this is a natural decision since Ollama is written in
+Go. But now <em>someone</em> has to write a new prompt template for every model on
+Ollama.  Currently, it is the Ollama developers themselves who are creating
+these prompt templates.  But as I mentioned above, there is a concerning
+incentive mismatch: the Ollama developers don&#x27;t have an incentive to determine
+the best prompt format for every model. Here is a stark example where the Ollama
+developers have provided unhelpful and misleading
+<a href="https://github.com/ollama/ollama/issues/6127#issuecomment-2264155782">responses</a>
+when users reported that models were making non-sensical tool calls:</p>
+<blockquote>
+<p>Don&#x27;t bind tools if you don&#x27;t want [the Llama model to make] a tool call.</p>
+</blockquote>
+<p>Of course, as evidenced by this blog post, the real problem was that the Ollama
+developers themselves chose a prompt template that performed poorly on
+tool-calling. (I don&#x27;t mean to beat up on the Ollama project.  I think it&#x27;s a
+great project!  But they didn&#x27;t help themselves out in this area.)</p>
+<h2 id="what-can-we-do-about-it" style="position:relative"><a href="#what-can-we-do-about-it" aria-label="what can we do about it permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What can we do about it?</h2>
+<h3 id="standards" style="position:relative"><a href="#standards" aria-label="standards permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standards</h3>
+<p>We really do need a standard for prompt templates.  HuggingFace&#x27;s chat template
+is a good start, but it is not perfect.  While it describes how to format
+messages that should be sent to the model, it doesn&#x27;t define how to parse the
+model&#x27;s responses, which is equally important. As an example, I suspect that a
+major reason why Ollama&#x27;s Llama 3.2 model used a Llama 3.1 prompt template is
+because Ollama&#x27;s tool-call parser does not support the pythonic format used in
+the Llama 3.2 prompts.  Parsing tool-calls is currently very ad-hoc.</p>
+<p>Another problem with HuggingFace&#x27;s chat templates is language compatibility. I
+suspect that part of the reason why Ollama chose to use their own template
+format is convenience.  HuggingFace&#x27;s chat templates are based on jinja2, which
+is a template language for python.  But Ollama is written in Go. Perhaps we need
+a standard format that is more language agnostic.</p>
+<h3 id="ollama" style="position:relative"><a href="#ollama" aria-label="ollama permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ollama</h3>
+<p>Ollama should either adopt the HuggingFace template format or create a tool that
+can convert HuggingFace templates to Ollama templates.  The current system of
+manually converting templates is error prone and harmful.</p>
+<p>Ollama should also add information to their model cards about which prompt
+templates they adopted and why.  For example, the <a href="https://ollama.com/library/llama3.2">Llama 3.2 model
+card</a> does not mention that the prompt
+template is based on the Llama 3.1 prompt format, or why.</p>
+<h3 id="benchmarks" style="position:relative"><a href="#benchmarks" aria-label="benchmarks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks</h3>
+<p>Benchmarks such as the <a href="https://gorilla.cs.berkeley.edu/leaderboard.html">Berkeley Function-Calling
+Leaderboard</a> (BFCL) could also
+be doing more about the prompt problem.  For Llama, it appears that, similar to
+the Ollama developers, the BFCL developers have simply chosen a prompt and
+implemented it.  <a href="https://github.com/ShishirPatil/gorilla/blob/491359cbd6e176c52d16c7e18bdb97ecd9569d4c/berkeley-function-call-leaderboard/bfcl/model_handler/local_inference/llama_fc.py">Llama 3.1 and 3.3 appear to be based on a Llama HuggingFace
+chat
+template</a>
+while other versions use a generic prompt.</p>
+<p>We don&#x27;t know how or why they selected these prompts.  As with the Ollama
+developers, there is an incentive mismatch: they don&#x27;t have an incentive or
+responsibility to experiment. Perhaps there should be more incentive for model
+developers to fix the prompt templates in order to score better on the BFCL, but
+it doesn&#x27;t seem like that is how things works today.  Honestly, I don&#x27;t
+understand why; I would think that Meta would be embarrassed that the
+Llama-3.2-3B-Instruct model only scores 5.25% on the BFCL in Overall Multi Turn
+Accuracy.</p>
+<h3 id="llama" style="position:relative"><a href="#llama" aria-label="llama permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Llama</h3>
+<p>The Llama developers really need to do a better job documenting its prompt
+templates.  The example-based &quot;documentation&quot; is vague.  And more critically,
+there shouldn&#x27;t be conflicting information.  Even after <a href="https://github.com/meta-llama/llama-stack-apps/issues/36">they were
+notified</a> about it,
+the problem remains.  In the same github issue, it&#x27;s clear that people can&#x27;t
+reproduce Meta&#x27;s experimental results either.</p>
+<h2 id="closing-thoughts" style="position:relative"><a href="#closing-thoughts" aria-label="closing thoughts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Closing Thoughts</h2>
+<p>We largely got to the bottom of the problems in Llama 3.2, but this was just one
+of many models that performed poorly.  Are all of these models suffering from
+prompt template problems, or are there other problems as well?  Stay tuned to
+find out.</p>
+<h1 id="tldr" style="position:relative"><a href="#tldr" aria-label="tldr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TLDR</h1>
+<p>Better Ollama models for Llama 3.2 tool calling are available <a href="https://ollama.com/ejschwar/llama3.2-better-prompts">here</a>:</p>
+<ul>
+<li><code class="language-text">ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt</code> is based on <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5">this Llama 3.1 prompt</a></li>
+<li><code class="language-text">ejschwar/llama3.2-better-prompts:llama3.1-tooling-prompt-customized</code> is based on <a href="https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/prompt_format.md#input-prompt-format-5">this Llama 3.1 prompt</a> but slightly modifies the language to improve behavior on responding to queries unrelated to tools.</li>
+</ul></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2024-12-16--building-local-tool-calling-agents-is-easy-too-bad-they-do-not-work--part1/">LangChain and Ollama Make Building Local Tool Calling Agents Easy. It&#x27;s a Shame They Don&#x27;t Work! (Part 1/?)</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>24<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/llm/">llm</a></div></div></div></div><div class="content markdown"><p>One of the most exciting possibilities of AI and LLMs are <em>agents</em>: tools that
 allow LLMs to interact with various tools in order to solve problems.  You&#x27;ve
 probably seen them before, like when you ask ChatGPT to browse the web for you.</p>
 <p>In this blog post, we&#x27;ll take a look at how to build agents using LangChain.  They&#x27;ll work great using an OpenAI model.  And then we&#x27;ll try to run them locally using Ollama, using a variety of open models.  And they will almost all fail miserably.  They fail so bad that I created this blog post to convince myself I wasn&#x27;t imagining things.</p>
@@ -1007,10 +1914,10 @@ Top 5 models by total score:
 <p>YouTuber Mukul Tripathi also <a href="https://youtu.be/lBzhUl_1bYo?si=TXY-K9XvsfKgzsVM&amp;t=540">found</a> that Llama 3.2 does very poorly at answering questions when a tool is not required.  Confusingly, he also found that Llama 3.3 did not have the same problem though, which is not consistent with my findings.  Although he was using Ollama, he was not using it with LangChain.  I&#x27;ll have to look into that more.</p>
 <h1 id="so-what-is-the-problem" style="position:relative"><a href="#so-what-is-the-problem" aria-label="so what is the problem permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>So What Is The Problem?</h1>
 <p>Are open LLMs <em>really</em> that far behind at tool-calling?  Or perhaps only larger models can determine whether a tool should be used?  Maybe the quantization process used for Ollama is to blame?  Or is something else going on?</p>
-<p>We&#x27;ll explore the answer in a future blog post.  Stay tuned!</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="blue tag icon"></i><div style="font-weight:700" class="content"><a href="/blog/">llm<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/tags/llm/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>We&#x27;ll explore the answer in a future blog post.  Stay tuned!</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="blue tag icon"></i><div style="font-weight:700" class="content"><a href="/blog/">llm<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/tags/llm/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
             window.___chunkMapping="{\"app\":[\"/app-5999bda251a4fca7d1db.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-a5cfc33fbf08cd5073dc.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-9ae928ac49fa3fb174d8.js\"],\"component---src-pages-blog-tsx\":[],\"component---src-pages-contact-tsx\":[\"/component---src-pages-contact-tsx-2226e79b2cd74152d8c7.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-d98dc698cd871ecf9686.js\"],\"component---src-pages-notes-profiling-tsx\":[\"/component---src-pages-notes-profiling-tsx-65662a61e934dd99b5bb.js\"],\"component---src-pages-projects-tsx\":[\"/component---src-pages-projects-tsx-afa47e79b243afd25362.js\"],\"component---src-pages-publications-tsx\":[\"/component---src-pages-publications-tsx-395112fec6f75f56d3ef.js\"],\"component---src-templates-blog-page-tsx\":[\"/component---src-templates-blog-page-tsx-1a771412cc251d934dc7.js\"],\"component---src-templates-blog-post-tsx\":[\"/component---src-templates-blog-post-tsx-0ded506a05c3ceac4f7a.js\"],\"component---src-templates-tags-page-tsx\":[\"/component---src-templates-tags-page-tsx-a9327045b43b1527fb49.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="c6b58ead6f5beabf7447";</script><script src="/webpack-runtime-65c2cdc57c2a3dbec572.js" async></script><script src="/framework-e7350785641ee58ddf86.js" async></script><script src="/app-5999bda251a4fca7d1db.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="99011b103c6851c654f0";</script><script src="/webpack-runtime-65c2cdc57c2a3dbec572.js" async></script><script src="/framework-e7350785641ee58ddf86.js" async></script><script src="/app-5999bda251a4fca7d1db.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
