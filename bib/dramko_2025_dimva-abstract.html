@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement</title>
+</head>
+<body>
+
+<h1>Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement</h1>
+
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/dimva25.pdf">Paper</a>.
+</p>
+
+<p>
+&#8220;Quantifying and Mitigating the Impact of Obfuscations on
+Machine-Learning-Based Decompilation Improvement&#8221;
+by Luke Dramko, Deniz B&ouml;l&ouml;ni-Turgut, Claire Le Goues, and Edward Schwartz.
+In <em>Proceedings of the IEEE Conference on Detection of Intrusions,
+Malware, and Vulnerability Assessment</em>, 2025.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+Decompilers are tools that reverse the process of compilation, converting
+executable binaries into a high-level language like C. They are useful in
+situations where the original source code is unavailable, such as when
+analyzing malware, doing vulnerability research, and patching legacy
+software. Unfortunately, decompilation is necessarily incomplete, because
+the compiler discards many of the abstractions that make source code
+readable, like identifier names and types. A large body of existing work
+uses machine learning to predict missing names, types, and other
+abstractions in decompiled code. However, little of this work considers
+obfuscations: semantics-preserving transformations that obscure the
+functionality and design of a program. At the same time, obfuscations are
+common in practice, especially in malware. In this work, we perform a
+quantitative analysis of the impact that obfuscations have on decompiled
+code. Further, we investigate the degree to which training on obfuscated
+code mitigates the impact of obfuscations. We perform our experiments on
+three different models from the literature: DIRTY, HexT5, and VarBERT. We
+find that obfuscations do negatively impact machine learning models, but
+training on obfuscations can partially help recover lost accuracy.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="https://edmcman.github.io/papers/dimva25.pdf">Paper</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{dramko:2025:dimva,
+   author = {Luke Dramko and Deniz B{\"o}l{\"o}ni-Turgut and Claire Le
+	Goues and Edward Schwartz},
+   title = {Quantifying and Mitigating the Impact of Obfuscations on
+	Machine-Learning-Based Decompilation Improvement},
+   booktitle = {Proceedings of the {IEEE} Conference on Detection of
+	Intrusions, Malware, and Vulnerability Assessment},
+   year = {2025}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>

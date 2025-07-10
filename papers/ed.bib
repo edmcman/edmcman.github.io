@@ -369,6 +369,32 @@ Applications Conference}}
   downloads     = {https://arxiv.org/abs/2502.04536 arXiv Link}
 }
 
+@inproceedings{dramko:2025:dimva,
+  author = {Luke Dramko and Deniz B{\"o}l{\"o}ni-Turgut and Claire Le Goues and Edward Schwartz},
+  booktitle = dimva,
+  title = {Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement},
+  year = {2025},
+  category = papers,
+  downloads = {https://edmcman.github.io/papers/dimva25.pdf Paper},
+  abstract = {Decompilers are tools that reverse the process of compilation,
+converting executable binaries into a high-level language like C. They are
+useful in situations where the original source code is unavailable, such
+as when analyzing malware, doing vulnerability research, and patching
+legacy software. Unfortunately, decompilation is necessarily incomplete,
+because the compiler discards many of the abstractions that make source
+code readable, like identifier names and types. A large body of existing
+work uses machine learning to predict missing names, types, and other
+abstractions in decompiled code. However, little of this work considers obfuscations: semantics-preserving transformations that obscure the
+functionality and design of a program. At the same time, obfuscations
+are common in practice, especially in malware. In this work, we perform a quantitative analysis of the impact that obfuscations have on
+decompiled code. Further, we investigate the degree to which training
+on obfuscated code mitigates the impact of obfuscations. We perform
+our experiments on three different models from the literature: DIRTY,
+HexT5, and VarBERT. We find that obfuscations do negatively impact
+machine learning models, but training on obfuscations can partially help
+recover lost accuracy.}
+}
+
 @inproceedings{gennari:2018,
   author    = {Jeffrey Gennari and Arie Gurfinkel and Temesghen
                Kahsai and Jorge A. Navas and Edward J. Schwartz},
