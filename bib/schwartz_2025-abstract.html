@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Systematic Testing of C++ Abstraction Recovery Systems by Iterative Compiler Model Refinement</title>
+</head>
+<body>
+
+<h1>Systematic Testing of C++ Abstraction Recovery Systems by Iterative Compiler Model Refinement</h1>
+
+<p>
+<b>Download:</b>
+<a href="{https://edmcman.github.io/papers/sure25.pdf">Paper</a>.
+</p>
+
+<p>
+&#8220;Systematic Testing of C++ Abstraction Recovery Systems by Iterative
+Compiler Model Refinement&#8221;
+by Edward J. Schwartz, Cory F. Cohen, and Stephanie Schwartz.
+In <em>Proceedings of the 2025 Workshop on Software Understanding and
+Reverse Engineering</em>, 2025.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+C++ source code abstractions such as classes and methods greatly assist
+human analysts and automated algorithms alike when analyzing C++ programs.
+These abstractions are lost during the compilation process, but
+researchers have been developing tools to recover them using program
+analysis. Despite promising advances, this difficult problem remains
+unsolved, with state-of-the-art solutions self-reporting accuracies of 78%
+[32] and 77.5% [10] for different types of abstractions. 
+</p>
+
+<p>
+In this paper, we address this problem by proposing a new modelbased
+approach for systematically testing C++ abstraction recovery systems. Our
+high-level approach is to both jointly and iteratively refine the
+abstraction recovery system and a compiler model that introspects the
+compilation process. We built EmCee, a model of Microsoft&acirc;€™s Visual
+C++ compiler, to apply our technique to the popular C++ abstraction
+recovery systems VirtAnalyzer [10] and OOAnalyzer [32]. EmCee
+&#8220;parses&#8221; input files by interpreting them as answers to a
+series of multiple choice questions (inspired by the game &#8220;twenty
+questions&#8221;), which makes it very amenable to fuzzing. We use an
+off-the-shelf grey-box fuzzer to automatically generate test cases for
+EmCee that represent a variety of program structures and optimizations. We
+then use these test cases to evaluate the reasoning in VirtAnalyzer and
+OOAnalyzer for soundness problems, and correct any violations. Using our
+approach, we identified 27 soundness problems in OOAnalyzer and three in
+VirtAnalyzer.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="{https://edmcman.github.io/papers/sure25.pdf">Paper</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{schwartz:2025,
+   author = {Edward J. Schwartz and Cory F. Cohen and Stephanie Schwartz},
+   title = {Systematic Testing of C++ Abstraction Recovery Systems by
+	Iterative Compiler Model Refinement},
+   booktitle = {Proceedings of the 2025 Workshop on Software Understanding
+	and Reverse Engineering},
+   year = {2025}
+}
+</pre>
+
+
+
+<hr />
+
+<p>
+(This webpage was created with
+<a href="http://pag.csail.mit.edu/~mernst/software/#bibtex2web">bibtex2web</a>.)
+</p>
+
+<p>
+Back to <a href="./">publications</a>.
+</p>
+
+</body>
+</html>
