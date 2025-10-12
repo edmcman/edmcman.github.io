@@ -39,18 +39,17 @@ In this paper, we address this problem by proposing a new modelbased
 approach for systematically testing C++ abstraction recovery systems. Our
 high-level approach is to both jointly and iteratively refine the
 abstraction recovery system and a compiler model that introspects the
-compilation process. We built EmCee, a model of Microsoft&acirc;€™s Visual
-C++ compiler, to apply our technique to the popular C++ abstraction
-recovery systems VirtAnalyzer [10] and OOAnalyzer [32]. EmCee
-&#8220;parses&#8221; input files by interpreting them as answers to a
-series of multiple choice questions (inspired by the game &#8220;twenty
-questions&#8221;), which makes it very amenable to fuzzing. We use an
-off-the-shelf grey-box fuzzer to automatically generate test cases for
-EmCee that represent a variety of program structures and optimizations. We
-then use these test cases to evaluate the reasoning in VirtAnalyzer and
-OOAnalyzer for soundness problems, and correct any violations. Using our
-approach, we identified 27 soundness problems in OOAnalyzer and three in
-VirtAnalyzer.
+compilation process. We built EmCee, a model of Microsoft's Visual C++
+compiler, to apply our technique to the popular C++ abstraction recovery
+systems VirtAnalyzer [10] and OOAnalyzer [32]. EmCee &#8220;parses&#8221;
+input files by interpreting them as answers to a series of multiple choice
+questions (inspired by the game &#8220;twenty questions&#8221;), which
+makes it very amenable to fuzzing. We use an off-the-shelf grey-box fuzzer
+to automatically generate test cases for EmCee that represent a variety of
+program structures and optimizations. We then use these test cases to
+evaluate the reasoning in VirtAnalyzer and OOAnalyzer for soundness
+problems, and correct any violations. Using our approach, we identified 27
+soundness problems in OOAnalyzer and three in VirtAnalyzer.
 
 </p>
 <p>
