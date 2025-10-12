@@ -85,997 +85,1023 @@ Applications Conference}}
 @STRING{articles = {Magazine Articles}}
 
 @inproceedings{brumley:2011:bap,
-  author =	 {David Brumley and Ivan Jager and Thanassis Avgerinos
-                  and Edward J. Schwartz},
-  title =	 {BAP: A Binary Analysis Platform},
-  booktitle =	 cav,
-  year =	 2011,
-  category =	 papers,
-  downloads =	 {http://edmcman.github.io/papers/cav11.pdf
-                  Paper;http://edmcman.github.io/pres/cav11.pdf
-                  Slides},
-  abstract =	 {BAP is a publicly available infrastructure for
-                  performing program verification and analysis tasks
-                  on binary (i.e., executable) code. In this paper, we
-                  describe BAP as well as lessons learned from
-                  previous incarnations of binary analysis
-                  platforms. BAP explicitly represents all side
-                  effects of instructions in an intermediate language
-                  (IL), making syntax-directed analysis possible. We
-                  have used BAP to routinely generate and solve
-                  verification conditions that are hundreds of
-                  megabytes in size and encompass 100,000s of assembly
-                  instructions.}
+  author    = {David Brumley and Ivan Jager and Thanassis Avgerinos
+               and Edward J. Schwartz},
+  title     = {BAP: A Binary Analysis Platform},
+  booktitle = cav,
+  year      = 2011,
+  category  = papers,
+  downloads = {http://edmcman.github.io/papers/cav11.pdf
+               Paper;http://edmcman.github.io/pres/cav11.pdf
+               Slides},
+  abstract  = {BAP is a publicly available infrastructure for
+               performing program verification and analysis tasks
+               on binary (i.e., executable) code. In this paper, we
+               describe BAP as well as lessons learned from
+               previous incarnations of binary analysis
+               platforms. BAP explicitly represents all side
+               effects of instructions in an intermediate language
+               (IL), making syntax-directed analysis possible. We
+               have used BAP to routinely generate and solve
+               verification conditions that are hundreds of
+               megabytes in size and encompass 100,000s of assembly
+               instructions.}
 }
 
 @article{brumley:2014:aeg,
-  author =	 {Thanassis Avgerinos and Sang Kil Cha and Alexandre
-                  Rebert and Edward J. Schwartz and Maverick Woo and
-                  David Brumley},
-  title =	 {Automatic Exploit Generation},
-  journal =	 cacm,
-  year =	 2014,
-  volume =	 57,
-  category =	 articles,
-  abstract =	 {Attackers commonly exploit buggy programs to break
-                  into computers. Security-critical bugs pave the way
-                  for attackers to install trojans, propagate worms,
-                  and use victim computers to send spam and launch
-                  denial-of-service attacks. A direct way, therefore,
-                  to make computers more secure is to find
-                  security-critical bugs before they are exploited by
-                  attackers.  \par Unfortunately, bugs are
-                  plentiful. For example, the Ubuntu Linux
-                  bug-management database listed more than 103,000
-                  open bugs as of January 2013. Specific widely used
-                  programs (such as the Firefox Web browser and the
-                  Linux 3.x kernel) list 7,597 and 1,293 open bugs in
-                  their public bug trackers, respectively. Other
-                  projects, including those that are closed-source,
-                  likely involve similar statistics. These are just
-                  the bugs we know; there is always the persistent
-                  threat of zero-day exploits, or attacks against
-                  previously unknown bugs.  \par Among the thousands
-                  of known bugs, which should software developers fix
-                  first? Which are exploitable?},
-  downloads =
-                  {http://cacm.acm.org/magazines/2014/2/171687-automatic-exploit-generation/abstract
-                  CACM Link},
-  number =	 2,
-  pages =	 {74--84},
-  month =	 {February}
+  author    = {Thanassis Avgerinos and Sang Kil Cha and Alexandre
+               Rebert and Edward J. Schwartz and Maverick Woo and
+               David Brumley},
+  title     = {Automatic Exploit Generation},
+  journal   = cacm,
+  year      = 2014,
+  volume    = 57,
+  category  = articles,
+  abstract  = {Attackers commonly exploit buggy programs to break
+               into computers. Security-critical bugs pave the way
+               for attackers to install trojans, propagate worms,
+               and use victim computers to send spam and launch
+               denial-of-service attacks. A direct way, therefore,
+               to make computers more secure is to find
+               security-critical bugs before they are exploited by
+               attackers.  \par Unfortunately, bugs are
+               plentiful. For example, the Ubuntu Linux
+               bug-management database listed more than 103,000
+               open bugs as of January 2013. Specific widely used
+               programs (such as the Firefox Web browser and the
+               Linux 3.x kernel) list 7,597 and 1,293 open bugs in
+               their public bug trackers, respectively. Other
+               projects, including those that are closed-source,
+               likely involve similar statistics. These are just
+               the bugs we know; there is always the persistent
+               threat of zero-day exploits, or attacks against
+               previously unknown bugs.  \par Among the thousands
+               of known bugs, which should software developers fix
+               first? Which are exploitable?},
+  downloads = {http://cacm.acm.org/magazines/2014/2/171687-automatic-exploit-generation/abstract
+               CACM Link},
+  number    = 2,
+  pages     = {74--84},
+  month     = {February}
 }
 
 @inproceedings{chen:2022:icse,
-  author =	 {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz
-                  and Graham Neubig and Bogdan Vasilescu and Claire Le
-                  Goues},
-  title =	 {VarCLR: Variable Semantic Representation
-                  Pre-training via Contrastive Learning},
-  category =	 papers,
-  booktitle =	 icse,
-  year =	 2022,
-  abstract =	 {Variable names are critical for conveying intended
-                  program behavior. Machine learning-based program
-                  analysis methods use variable name representations
-                  for a wide range of tasks, such as suggesting new
-                  variable names and bug detection. Ideally, such
-                  methods could capture semantic relationships between
-                  names beyond syntactic similarity, e.g., the fact
-                  that the names average and mean are
-                  similar. Unfortunately, previous work has found that
-                  even the best of previous representation approaches
-                  primarily capture “relatedness” (whether two
-                  variables are linked at all), rather than
-                  “similarity” (whether they actually have the same
-                  meaning).  \par We propose VarCLR, a new approach
-                  for learning semantic representations of variable
-                  names that effectively captures variable similarity
-                  in this stricter sense. We observe that this problem
-                  is an excellent fit for contrastive learning, which
-                  aims to minimize the distance between explicitly
-                  similar inputs, while maximizing the distance
-                  between dissimilar inputs. This requires labeled
-                  training data, and thus we construct a novel,
-                  weakly-supervised variable renaming dataset mined
-                  from GitHub edits. We show that VarCLR enables the
-                  effective application of sophisticated,
-                  general-purpose language models like BERT, to
-                  variable name representation and thus also to
-                  related downstream tasks like variable name
-                  similarity search or spelling correction. VarCLR
-                  produces models that significantly outperform the
-                  state-of-the-art on IdBench, an existing benchmark
-                  that explicitly captures variable similarity (as
-                  distinct from relatedness). Finally, we contribute a
-                  release of all data, code, and pre-trained models,
-                  aiming to provide a plug-in replacement for variable
-                  representations used in either existing or future
-                  program analyses that rely on variable names.},
-  downloads =	 {https://edmcman.github.io/papers/icse22.pdf
-                  Paper;https://doi.org/10.1145/3510003.3510162 ACM
-                  Link;https://www.youtube.com/watch?v=WyB49EIcctY
-                  Video}
+  author    = {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz
+               and Graham Neubig and Bogdan Vasilescu and Claire Le
+               Goues},
+  title     = {VarCLR: Variable Semantic Representation
+               Pre-training via Contrastive Learning},
+  category  = papers,
+  booktitle = icse,
+  year      = 2022,
+  abstract  = {Variable names are critical for conveying intended
+               program behavior. Machine learning-based program
+               analysis methods use variable name representations
+               for a wide range of tasks, such as suggesting new
+               variable names and bug detection. Ideally, such
+               methods could capture semantic relationships between
+               names beyond syntactic similarity, e.g., the fact
+               that the names average and mean are
+               similar. Unfortunately, previous work has found that
+               even the best of previous representation approaches
+               primarily capture “relatedness” (whether two
+               variables are linked at all), rather than
+               “similarity” (whether they actually have the same
+               meaning).  \par We propose VarCLR, a new approach
+               for learning semantic representations of variable
+               names that effectively captures variable similarity
+               in this stricter sense. We observe that this problem
+               is an excellent fit for contrastive learning, which
+               aims to minimize the distance between explicitly
+               similar inputs, while maximizing the distance
+               between dissimilar inputs. This requires labeled
+               training data, and thus we construct a novel,
+               weakly-supervised variable renaming dataset mined
+               from GitHub edits. We show that VarCLR enables the
+               effective application of sophisticated,
+               general-purpose language models like BERT, to
+               variable name representation and thus also to
+               related downstream tasks like variable name
+               similarity search or spelling correction. VarCLR
+               produces models that significantly outperform the
+               state-of-the-art on IdBench, an existing benchmark
+               that explicitly captures variable similarity (as
+               distinct from relatedness). Finally, we contribute a
+               release of all data, code, and pre-trained models,
+               aiming to provide a plug-in replacement for variable
+               representations used in either existing or future
+               program analyses that rely on variable names.},
+  downloads = {https://edmcman.github.io/papers/icse22.pdf
+               Paper;https://doi.org/10.1145/3510003.3510162 ACM
+               Link;https://www.youtube.com/watch?v=WyB49EIcctY
+               Video}
 }
 
 @inproceedings{chen:2022:usenix,
-  author =	 {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz
-                  and Claire Le Goues and Graham Neubig and Bogdan
-                  Vasilescu},
-  title =	 {Augmenting Decompiler Output with Learned Variable
-                  Names and Types},
-  category =	 papers,
-  booktitle =	 usenixsec,
-  year =	 2022,
-  abstract =	 {A common tool used by security professionals for
-                  reverse-engineering binaries found in the wild is
-                  the decompiler. A decompiler attempts to reverse
-                  compilation, transforming a binary to a higher-level
-                  language such as C. High-level languages ease
-                  reasoning about programs by providing useful
-                  abstractions such as loops, typed variables, and
-                  comments, but these abstractions are lost during
-                  compilation. Decompilers are able to
-                  deterministically reconstruct structural properties
-                  of code, but comments, variable names, and custom
-                  variable types are technically impossible to
-                  recover.  \par In this paper we present DIRTY
-                  (DecompIled variable ReTYper), a novel technique for
-                  improving the quality of decompiler output that
-                  automatically generates meaningful variable names
-                  and types. Empirical evaluation on a novel dataset
-                  of C code mined from GitHub shows that DIRTY
-                  outperforms prior work approaches by a sizable
-                  margin, recovering the original names written by
-                  developers 66.4\% of the time and the original types
-                  75.8\% of the time.},
-  downloads =	 {https://edmcman.github.io/papers/usenix22.pdf Paper}
+  author    = {Qibin Chen and Jeremy Lacomis and Edward J. Schwartz
+               and Claire Le Goues and Graham Neubig and Bogdan
+               Vasilescu},
+  title     = {Augmenting Decompiler Output with Learned Variable
+               Names and Types},
+  category  = papers,
+  booktitle = usenixsec,
+  year      = 2022,
+  abstract  = {A common tool used by security professionals for
+               reverse-engineering binaries found in the wild is
+               the decompiler. A decompiler attempts to reverse
+               compilation, transforming a binary to a higher-level
+               language such as C. High-level languages ease
+               reasoning about programs by providing useful
+               abstractions such as loops, typed variables, and
+               comments, but these abstractions are lost during
+               compilation. Decompilers are able to
+               deterministically reconstruct structural properties
+               of code, but comments, variable names, and custom
+               variable types are technically impossible to
+               recover.  \par In this paper we present DIRTY
+               (DecompIled variable ReTYper), a novel technique for
+               improving the quality of decompiler output that
+               automatically generates meaningful variable names
+               and types. Empirical evaluation on a novel dataset
+               of C code mined from GitHub shows that DIRTY
+               outperforms prior work approaches by a sizable
+               margin, recovering the original names written by
+               developers 66.4\% of the time and the original types
+               75.8\% of the time.},
+  downloads = {https://edmcman.github.io/papers/usenix22.pdf Paper}
 }
 
 @article{dramko:2020,
-  author =	 {Luke Dramko and Jeremy Lacomis and Pengching Yin and
-                  Edward J. Schwartz and Miltiadis Allamanis and
-                  Graham Neubig and Bogdan Vasilescu and Claire Le
-                  Goues},
-  title =	 {{DIRE} and its Data: Neural Decompiled Variable
-                  Renamings with Respect to Software Class},
-  journal =	 tosem,
-  year =	 2022,
-  category =	 articles,
-  downloads =	 {https://doi.org/10.1145/3546946 ACM
-                  Link;https://edmcman.github.io/papers/tosem22.pdf
-                  PDF},
-  issue_date =	 {March 2023},
-  volume =	 32,
-  number =	 2
+  author     = {Luke Dramko and Jeremy Lacomis and Pengching Yin and
+                Edward J. Schwartz and Miltiadis Allamanis and
+                Graham Neubig and Bogdan Vasilescu and Claire Le
+                Goues},
+  title      = {{DIRE} and its Data: Neural Decompiled Variable
+                Renamings with Respect to Software Class},
+  journal    = tosem,
+  year       = 2022,
+  category   = articles,
+  downloads  = {https://doi.org/10.1145/3546946 ACM
+                Link;https://edmcman.github.io/papers/tosem22.pdf
+                PDF},
+  issue_date = {March 2023},
+  volume     = 32,
+  number     = 2
 }
 
 @inproceedings{dramko:2024,
-  author =	 {Luke Dramko and Jeremy Lacomis and Edward
-                  J. Schwartz and Bogdan Vasilescu and Claire Le
-                  Goues},
-  booktitle =	 usenixsec,
-  title =	 {A Taxonomy of C Decompiler Fidelity Issues},
-  year =	 2024,
-  category =	 papers,
-  downloads =	 {https://edmcman.github.io/papers/usenix24.pdf Paper},
-  abstract =	 {Decompilation is an important part of analyzing
-                  threats in computer security. Unfortunately,
-                  decompiled code contains less information than the
-                  corresponding original source code, which makes
-                  understanding it more difficult for the reverse
-                  engineers who manually perform threat
-                  analysis. Thus, the fidelity of decompiled code to
-                  the original source code matters, as it can
-                  influence reverse engineers' productivity. There is
-                  some existing work in predicting some of the missing
-                  information using statistical methods, but these
-                  focus largely on variable names and variable
-                  types. In this work, we more holistically evaluate
-                  decompiler output from C-language executables and
-                  use our findings to inform directions for future
-                  decompiler development. More specifically, we use
-                  opencoding techniques to identify defects in
-                  decompiled code beyond missing names and types. To
-                  ensure that our study is robust, we compare and
-                  evaluate four different decompilers.  Using thematic
-                  analysis, we build a taxonomy of decompiler
-                  defects. Using this taxonomy to reason about classes
-                  of issues, we suggest specific approaches that can
-                  be used to mitigate fidelity issues in decompiled
-                  code.}
+  author    = {Luke Dramko and Jeremy Lacomis and Edward
+               J. Schwartz and Bogdan Vasilescu and Claire Le
+               Goues},
+  booktitle = usenixsec,
+  title     = {A Taxonomy of C Decompiler Fidelity Issues},
+  year      = 2024,
+  category  = papers,
+  downloads = {https://edmcman.github.io/papers/usenix24.pdf Paper},
+  abstract  = {Decompilation is an important part of analyzing
+               threats in computer security. Unfortunately,
+               decompiled code contains less information than the
+               corresponding original source code, which makes
+               understanding it more difficult for the reverse
+               engineers who manually perform threat
+               analysis. Thus, the fidelity of decompiled code to
+               the original source code matters, as it can
+               influence reverse engineers' productivity. There is
+               some existing work in predicting some of the missing
+               information using statistical methods, but these
+               focus largely on variable names and variable
+               types. In this work, we more holistically evaluate
+               decompiler output from C-language executables and
+               use our findings to inform directions for future
+               decompiler development. More specifically, we use
+               opencoding techniques to identify defects in
+               decompiled code beyond missing names and types. To
+               ensure that our study is robust, we compare and
+               evaluate four different decompilers.  Using thematic
+               analysis, we build a taxonomy of decompiler
+               defects. Using this taxonomy to reason about classes
+               of issues, we suggest specific approaches that can
+               be used to mitigate fidelity issues in decompiled
+               code.}
 }
 
 @misc{dramko:2025:codealign,
-  title =	 {Fast, Fine-Grained Equivalence Checking for Neural
-                  Decompilers},
-  author =	 {Luke Dramko and Claire Le Goues and Edward
-                  J. Schwartz},
-  year =	 2025,
-  category =	 papers,
-  eprint =	 {2501.04811},
-  archiveprefix ={arXiv},
-  primaryclass = {cs.LG},
-  url =		 {https://arxiv.org/abs/2501.04811},
-  abstract =	 {Neural decompilers are machine learning models that
-                  reconstruct the source code from an executable
-                  program. Critical to the lifecycle of any machine
-                  learning model is an evaluation of its
-                  effectiveness. However, existing techniques for
-                  evaluating neural decompilation models have
-                  substantial weaknesses, especially when it comes to
-                  showing the correctness of the neural decompiler's
-                  predictions. To address this, we introduce
-                  codealign, a novel instruction-level code
-                  equivalence technique designed for neural
-                  decompilers. We provide a formal definition of a
-                  relation between equivalent instructions, which we
-                  term an equivalence alignment. We show how codealign
-                  generates equivalence alignments, then evaluate
-                  codealign by comparing it with symbolic
-                  execution. Finally, we show how the information
-                  codealign provides-which parts of the functions are
-                  equivalent and how well the variable names match-is
-                  substantially more detailed than existing
-                  state-of-the-art evaluation metrics, which report
-                  unitless numbers measuring similarity.},
-  downloads =	 {https://arxiv.org/abs/2501.04811 arXiv Link}
+  title         = {Fast, Fine-Grained Equivalence Checking for Neural
+                   Decompilers},
+  author        = {Luke Dramko and Claire Le Goues and Edward
+                   J. Schwartz},
+  year          = 2025,
+  category      = papers,
+  eprint        = {2501.04811},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2501.04811},
+  abstract      = {Neural decompilers are machine learning models that
+                   reconstruct the source code from an executable
+                   program. Critical to the lifecycle of any machine
+                   learning model is an evaluation of its
+                   effectiveness. However, existing techniques for
+                   evaluating neural decompilation models have
+                   substantial weaknesses, especially when it comes to
+                   showing the correctness of the neural decompiler's
+                   predictions. To address this, we introduce
+                   codealign, a novel instruction-level code
+                   equivalence technique designed for neural
+                   decompilers. We provide a formal definition of a
+                   relation between equivalent instructions, which we
+                   term an equivalence alignment. We show how codealign
+                   generates equivalence alignments, then evaluate
+                   codealign by comparing it with symbolic
+                   execution. Finally, we show how the information
+                   codealign provides-which parts of the functions are
+                   equivalent and how well the variable names match-is
+                   substantially more detailed than existing
+                   state-of-the-art evaluation metrics, which report
+                   unitless numbers measuring similarity.},
+  downloads     = {https://arxiv.org/abs/2501.04811 arXiv Link}
 }
 
 @inproceedings{dramko:2025:dimva,
-  author =	 {Luke Dramko and Deniz B{\"o}l{\"o}ni-Turgut and
-                  Claire Le Goues and Edward Schwartz},
-  booktitle =	 dimva,
-  title =	 {Quantifying and Mitigating the Impact of
-                  Obfuscations on Machine-Learning-Based Decompilation
-                  Improvement},
-  year =	 2025,
-  category =	 papers,
-  downloads =	 {https://edmcman.github.io/papers/dimva25.pdf Paper},
-  abstract =	 {Decompilers are tools that reverse the process of
-                  compilation, converting executable binaries into a
-                  high-level language like C. They are useful in
-                  situations where the original source code is
-                  unavailable, such as when analyzing malware, doing
-                  vulnerability research, and patching legacy
-                  software. Unfortunately, decompilation is
-                  necessarily incomplete, because the compiler
-                  discards many of the abstractions that make source
-                  code readable, like identifier names and types. A
-                  large body of existing work uses machine learning to
-                  predict missing names, types, and other abstractions
-                  in decompiled code. However, little of this work
-                  considers obfuscations: semantics-preserving
-                  transformations that obscure the functionality and
-                  design of a program. At the same time, obfuscations
-                  are common in practice, especially in malware. In
-                  this work, we perform a quantitative analysis of the
-                  impact that obfuscations have on decompiled
-                  code. Further, we investigate the degree to which
-                  training on obfuscated code mitigates the impact of
-                  obfuscations. We perform our experiments on three
-                  different models from the literature: DIRTY, HexT5,
-                  and VarBERT. We find that obfuscations do negatively
-                  impact machine learning models, but training on
-                  obfuscations can partially help recover lost
-                  accuracy.}
+  author    = {Luke Dramko and Deniz B{\"o}l{\"o}ni-Turgut and
+               Claire Le Goues and Edward Schwartz},
+  booktitle = dimva,
+  title     = {Quantifying and Mitigating the Impact of
+               Obfuscations on Machine-Learning-Based Decompilation
+               Improvement},
+  year      = 2025,
+  category  = papers,
+  downloads = {https://edmcman.github.io/papers/dimva25.pdf Paper},
+  abstract  = {Decompilers are tools that reverse the process of
+               compilation, converting executable binaries into a
+               high-level language like C. They are useful in
+               situations where the original source code is
+               unavailable, such as when analyzing malware, doing
+               vulnerability research, and patching legacy
+               software. Unfortunately, decompilation is
+               necessarily incomplete, because the compiler
+               discards many of the abstractions that make source
+               code readable, like identifier names and types. A
+               large body of existing work uses machine learning to
+               predict missing names, types, and other abstractions
+               in decompiled code. However, little of this work
+               considers obfuscations: semantics-preserving
+               transformations that obscure the functionality and
+               design of a program. At the same time, obfuscations
+               are common in practice, especially in malware. In
+               this work, we perform a quantitative analysis of the
+               impact that obfuscations have on decompiled
+               code. Further, we investigate the degree to which
+               training on obfuscated code mitigates the impact of
+               obfuscations. We perform our experiments on three
+               different models from the literature: DIRTY, HexT5,
+               and VarBERT. We find that obfuscations do negatively
+               impact machine learning models, but training on
+               obfuscations can partially help recover lost
+               accuracy.}
 }
 
 @misc{dramko:2025:idioms,
-  author =	 {Luke Dramko and Claire Le Goues and Edward
-                  J. Schwartz},
-  title =	 {Idioms: Neural Decompilation with Joint Code and
-                  Type Prediction},
-  year =	 2025,
-  category =	 papers,
-  eprint =	 {2502.04536},
-  archiveprefix ={arXiv},
-  primaryclass = {cs.SE},
-  url =		 {https://arxiv.org/abs/2502.04536},
-  abstract =	 {Decompilers are important tools for reverse
-                  engineers that help them analyze software at a
-                  higher level of abstraction than
-                  assembly. Unfortunately, because compilation is
-                  lossy, deterministic decompilers produce code that
-                  is missing many of the details that make source code
-                  readable in the first place, like variable names and
-                  types. Neural decompilers, on the other hand, offer
-                  the ability to statistically fill in these
-                  details. Existing work in neural decompilation,
-                  however, suffers from substantial drawbacks that
-                  limits its ability to handle real code: it is unable
-                  to handle user-defined composite types, which are
-                  essential to fully specifying many functions'
-                  semantics, or require test cases. In this work, we
-                  introduce a new training process to finetune any LLM
-                  into a neural decompiler capable of generating the
-                  appropriate user-defined types alongside the
-                  decompilation. We introduce a new dataset, Realtype,
-                  that includes substantially more complicated and
-                  realistic types than existing neural decompilation
-                  benchmarks. Motivated by the intuition that
-                  different parts of data structures can be operated
-                  upon by different parts of the program, we show that
-                  interprocedural context can help improve neural
-                  decompilers' ability to handle user-defined
-                  types. We show that our training process yields
-                  state-of-the-art results in neural decompilation. We
-                  also publicly release the Idioms series of finetuned
-                  neural decompilation models in support of open
-                  science. In summary, we identify the need for joint
-                  code and type prediction, show that it is a hard
-                  problem, and take the first steps towards solving
-                  it.},
-  downloads =	 {https://arxiv.org/abs/2502.04536 arXiv Link}
+  author        = {Luke Dramko and Claire Le Goues and Edward
+                   J. Schwartz},
+  title         = {Idioms: Neural Decompilation with Joint Code and
+                   Type Prediction},
+  year          = 2025,
+  category      = papers,
+  eprint        = {2502.04536},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.SE},
+  url           = {https://arxiv.org/abs/2502.04536},
+  abstract      = {Decompilers are important tools for reverse
+                   engineers that help them analyze software at a
+                   higher level of abstraction than
+                   assembly. Unfortunately, because compilation is
+                   lossy, deterministic decompilers produce code that
+                   is missing many of the details that make source code
+                   readable in the first place, like variable names and
+                   types. Neural decompilers, on the other hand, offer
+                   the ability to statistically fill in these
+                   details. Existing work in neural decompilation,
+                   however, suffers from substantial drawbacks that
+                   limits its ability to handle real code: it is unable
+                   to handle user-defined composite types, which are
+                   essential to fully specifying many functions'
+                   semantics, or require test cases. In this work, we
+                   introduce a new training process to finetune any LLM
+                   into a neural decompiler capable of generating the
+                   appropriate user-defined types alongside the
+                   decompilation. We introduce a new dataset, Realtype,
+                   that includes substantially more complicated and
+                   realistic types than existing neural decompilation
+                   benchmarks. Motivated by the intuition that
+                   different parts of data structures can be operated
+                   upon by different parts of the program, we show that
+                   interprocedural context can help improve neural
+                   decompilers' ability to handle user-defined
+                   types. We show that our training process yields
+                   state-of-the-art results in neural decompilation. We
+                   also publicly release the Idioms series of finetuned
+                   neural decompilation models in support of open
+                   science. In summary, we identify the need for joint
+                   code and type prediction, show that it is a hard
+                   problem, and take the first steps towards solving
+                   it.},
+  downloads     = {https://arxiv.org/abs/2502.04536 arXiv Link}
 }
 
 @inproceedings{gennari:2018,
-  author =	 {Jeffrey Gennari and Arie Gurfinkel and Temesghen
-                  Kahsai and Jorge A. Navas and Edward J. Schwartz},
-  title =	 {Executable Counterexamples in Software Model
-                  Checking},
-  booktitle =	 {Proceedings of the Working Conference on Verified
-                  Software: Theories, Tools, and Experiments},
-  year =	 2018,
-  category =	 papers,
-  downloads =	 {http://edmcman.github.io/papers/vstte18.pdf
-                  Paper;http://edmcman.github.io/pres/vstte18.pdf PDF
-                  Slides},
-  abstract =	 {Counterexamples --- execution traces of the system
-                  that illustrate how an error state can be reached
-                  from the initial state --- are essential for
-                  understanding verification failures. They are one of
-                  the most salient features of Model Checkers, which
-                  distinguish them from Abstract Interpretation and
-                  other Static Analysis techniques by providing a user
-                  with information on how to debug their system and/or
-                  the specification.  While in Hardware and Protocol
-                  verification, the counterexamples can be replayed in
-                  the system, in Software Model Checking (SMC)
-                  counterexamples take the form of a textual or
-                  semi-structured report. This is problematic since it
-                  complicates the debugging process by preventing
-                  developers from using existing processes and tools
-                  such as debuggers, fault localization, and fault
-                  minimization. \par In this paper, we argue that for
-                  SMC the most useful form of a counterexample is an
-                  executable mock environment that can be linked with
-                  the code under analysis (CUA) to produce an
-                  executable that exhibits the fault witnessed by the
-                  counterexample. A mock environment is different from
-                  a unit test since it can interface with the CUA at
-                  the function level, potentially allowing it to
-                  bypass complex logic that interprets program
-                  inputs. This makes mock environments easier to
-                  construct than unit tests. In this paper, we
-                  describe the automatic environment generation
-                  process that we have developed in the SeaHorn
-                  verification framework.  We identify key challenges
-                  for generating mock environments from SMC
-                  counterexamples of complex memory manipulating
-                  programs that use many external libraries and
-                  function calls. We validate our prototype on the
-                  verification benchmarks from Linux Device Drivers in
-                  SV-COMP.  Finally, we discuss open challenges and
-                  suggests avenues for future work.}
+  author    = {Jeffrey Gennari and Arie Gurfinkel and Temesghen
+               Kahsai and Jorge A. Navas and Edward J. Schwartz},
+  title     = {Executable Counterexamples in Software Model
+               Checking},
+  booktitle = {Proceedings of the Working Conference on Verified
+               Software: Theories, Tools, and Experiments},
+  year      = 2018,
+  category  = papers,
+  downloads = {http://edmcman.github.io/papers/vstte18.pdf
+               Paper;http://edmcman.github.io/pres/vstte18.pdf PDF
+               Slides},
+  abstract  = {Counterexamples --- execution traces of the system
+               that illustrate how an error state can be reached
+               from the initial state --- are essential for
+               understanding verification failures. They are one of
+               the most salient features of Model Checkers, which
+               distinguish them from Abstract Interpretation and
+               other Static Analysis techniques by providing a user
+               with information on how to debug their system and/or
+               the specification.  While in Hardware and Protocol
+               verification, the counterexamples can be replayed in
+               the system, in Software Model Checking (SMC)
+               counterexamples take the form of a textual or
+               semi-structured report. This is problematic since it
+               complicates the debugging process by preventing
+               developers from using existing processes and tools
+               such as debuggers, fault localization, and fault
+               minimization. \par In this paper, we argue that for
+               SMC the most useful form of a counterexample is an
+               executable mock environment that can be linked with
+               the code under analysis (CUA) to produce an
+               executable that exhibits the fault witnessed by the
+               counterexample. A mock environment is different from
+               a unit test since it can interface with the CUA at
+               the function level, potentially allowing it to
+               bypass complex logic that interprets program
+               inputs. This makes mock environments easier to
+               construct than unit tests. In this paper, we
+               describe the automatic environment generation
+               process that we have developed in the SeaHorn
+               verification framework.  We identify key challenges
+               for generating mock environments from SMC
+               counterexamples of complex memory manipulating
+               programs that use many external libraries and
+               function calls. We validate our prototype on the
+               verification benchmarks from Linux Device Drivers in
+               SV-COMP.  Finally, we discuss open challenges and
+               suggests avenues for future work.}
 }
 
 @misc{green:2024:stride,
-  title =	 {STRIDE: Simple Type Recognition In Decompiled
-                  Executables},
-  author =	 {Harrison Green and Edward J. Schwartz and Claire Le
-                  Goues and Bogdan Vasilescu},
-  year =	 2024,
-  category =	 papers,
-  eprint =	 {2407.02733},
-  archiveprefix ={arXiv},
-  primaryclass = {cs.CR},
-  url =		 {https://arxiv.org/abs/2407.02733},
-  abstract =	 {Decompilers are widely used by security researchers
-                  and developers to reverse engineer executable
-                  code. While modern decompilers are adept at
-                  recovering instructions, control flow, and function
-                  boundaries, some useful information from the
-                  original source code, such as variable types and
-                  names, is lost during the compilation process. Our
-                  work aims to predict these variable types and names
-                  from the remaining information. \par We propose
-                  STRIDE, a lightweight technique that predicts
-                  variable names and types by matching sequences of
-                  decompiler tokens to those found in training
-                  data. We evaluate it on three benchmark datasets and
-                  find that STRIDE achieves comparable performance to
-                  state-of-the-art machine learning models for both
-                  variable retyping and renaming while being much
-                  simpler and faster. We perform a detailed comparison
-                  with two recent SOTA transformer-based models in
-                  order to understand the specific factors that make
-                  our technique effective. We implemented STRIDE in
-                  fewer than 1000 lines of Python and have
-                  open-sourced it under a permissive license at this
-                  https URL.},
-  downloads =	 {https://arxiv.org/abs/2407.02733 arXiv Link;
-                  https://github.com/hgarrereyn/STRIDE Github}
+  title         = {STRIDE: Simple Type Recognition In Decompiled
+                   Executables},
+  author        = {Harrison Green and Edward J. Schwartz and Claire Le
+                   Goues and Bogdan Vasilescu},
+  year          = 2024,
+  category      = papers,
+  eprint        = {2407.02733},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CR},
+  url           = {https://arxiv.org/abs/2407.02733},
+  abstract      = {Decompilers are widely used by security researchers
+                   and developers to reverse engineer executable
+                   code. While modern decompilers are adept at
+                   recovering instructions, control flow, and function
+                   boundaries, some useful information from the
+                   original source code, such as variable types and
+                   names, is lost during the compilation process. Our
+                   work aims to predict these variable types and names
+                   from the remaining information. \par We propose
+                   STRIDE, a lightweight technique that predicts
+                   variable names and types by matching sequences of
+                   decompiler tokens to those found in training
+                   data. We evaluate it on three benchmark datasets and
+                   find that STRIDE achieves comparable performance to
+                   state-of-the-art machine learning models for both
+                   variable retyping and renaming while being much
+                   simpler and faster. We perform a detailed comparison
+                   with two recent SOTA transformer-based models in
+                   order to understand the specific factors that make
+                   our technique effective. We implemented STRIDE in
+                   fewer than 1000 lines of Python and have
+                   open-sourced it under a permissive license at this
+                   https URL.},
+  downloads     = {https://arxiv.org/abs/2407.02733 arXiv Link;
+                   https://github.com/hgarrereyn/STRIDE Github}
 }
 
 @inproceedings{jaffe:2018,
-  author =	 {Alan Jaffe and Jeremy Lacomis and Edward J. Schwartz
-                  and Claire Le Goues and Bogdan Vasilescu},
-  title =	 {Meaningful Variable Names for Decompiled Code: A
-                  Machine Translation Approach},
-  booktitle =	 {Proceedings of the {IEEE/ACM} International
-                  Conference on Program Comprehension},
-  year =	 2018,
-  category =	 papers,
-  abstract =	 {When code is compiled, information is lost,
-                  including some of the structure of the original
-                  source code as well as local identifier names.
-                  Existing decompilers can reconstruct much of the
-                  original source code, but typically use meaningless
-                  placeholder variables for identifier names. Using
-                  variable names which are more natural in the given
-                  context can make the code much easier to interpret,
-                  despite the fact that variable names have no effect
-                  on the execution of the program. In theory, it is
-                  impossible to recover the original identifier names
-                  since that information has been lost. However, most
-                  code is natural: it is highly repetitive and
-                  predictable based on the context.  In this paper we
-                  propose a technique that assigns variables
-                  meaningful names by taking advantage of this
-                  naturalness property. We consider decompiler output
-                  to be a noisy distortion of the original source
-                  code, where the original source code is transformed
-                  into the decompiler output. Using this noisy channel
-                  model, we apply standard statistical machine
-                  translation approaches to choose natural
-                  identifiers, combining a translation model trained
-                  on a parallel corpus with a language model trained
-                  on unmodified C code. We generate a large parallel
-                  corpus from 1.2 TB of C source code obtained from
-                  GitHub. Under the most conservative assumptions, our
-                  technique is still able to recover the original
-                  variable names up to 16.2\% of the time, which
-                  represents a lower bound for performance.},
-  downloads =	 {https://edmcman.github.io/papers/icpc18.pdf
-                  Paper;https://edmcman.github.io/pres/icpc18.pdf PDF
-                  Slides}
+  author    = {Alan Jaffe and Jeremy Lacomis and Edward J. Schwartz
+               and Claire Le Goues and Bogdan Vasilescu},
+  title     = {Meaningful Variable Names for Decompiled Code: A
+               Machine Translation Approach},
+  booktitle = {Proceedings of the {IEEE/ACM} International
+               Conference on Program Comprehension},
+  year      = 2018,
+  category  = papers,
+  abstract  = {When code is compiled, information is lost,
+               including some of the structure of the original
+               source code as well as local identifier names.
+               Existing decompilers can reconstruct much of the
+               original source code, but typically use meaningless
+               placeholder variables for identifier names. Using
+               variable names which are more natural in the given
+               context can make the code much easier to interpret,
+               despite the fact that variable names have no effect
+               on the execution of the program. In theory, it is
+               impossible to recover the original identifier names
+               since that information has been lost. However, most
+               code is natural: it is highly repetitive and
+               predictable based on the context.  In this paper we
+               propose a technique that assigns variables
+               meaningful names by taking advantage of this
+               naturalness property. We consider decompiler output
+               to be a noisy distortion of the original source
+               code, where the original source code is transformed
+               into the decompiler output. Using this noisy channel
+               model, we apply standard statistical machine
+               translation approaches to choose natural
+               identifiers, combining a translation model trained
+               on a parallel corpus with a language model trained
+               on unmodified C code. We generate a large parallel
+               corpus from 1.2 TB of C source code obtained from
+               GitHub. Under the most conservative assumptions, our
+               technique is still able to recover the original
+               variable names up to 16.2\% of the time, which
+               represents a lower bound for performance.},
+  downloads = {https://edmcman.github.io/papers/icpc18.pdf
+               Paper;https://edmcman.github.io/pres/icpc18.pdf PDF
+               Slides}
 }
 
 @inproceedings{lacomis:2019:DIRE,
-  author =	 {Jeremy Lacomis and Pengcheng Yin and Edward
-                  J. Schwartz and Miltiadis Allamanis and Claire Le
-                  Goues and Graham Neubig and Bogdan Vasilescu},
-  title =	 {{DIRE}: A Neural Approach to Decompiled Identifier
-                  Naming},
-  booktitle =	 ase,
-  year =	 2019,
-  category =	 papers,
-  abstract =	 {The decompiler is one of the most common tools for
-                  examining binaries without corresponding source
-                  code. It transforms binaries into high-level code,
-                  reversing the compilation process. Decompilers can
-                  reconstruct much of the information that is lost
-                  during the compilation process (e.g., structure and
-                  type information). Unfortunately, they do not
-                  reconstruct semantically meaningful variable names,
-                  which are known to increase code understandability.
-                  We propose the Decompiled Identifier Renaming Engine
-                  (DIRE), a novel probabilistic technique for variable
-                  name recovery that uses both lexical and structural
-                  information recovered by the decompiler. We also
-                  present a technique for generating corpora suitable
-                  for training and evaluating models of decompiled
-                  code renaming, which we use to create a corpus of
-                  164,632 unique x86-64 binaries generated from C
-                  projects mined from GitHub.  Our results show that
-                  on this corpus DIRE can predict variable names
-                  identical to the names in the original source code
-                  up to 74.3\% of the time.},
-  downloads =	 {https://edmcman.github.io/papers/ase19.pdf Paper}
+  author    = {Jeremy Lacomis and Pengcheng Yin and Edward
+               J. Schwartz and Miltiadis Allamanis and Claire Le
+               Goues and Graham Neubig and Bogdan Vasilescu},
+  title     = {{DIRE}: A Neural Approach to Decompiled Identifier
+               Naming},
+  booktitle = ase,
+  year      = 2019,
+  category  = papers,
+  abstract  = {The decompiler is one of the most common tools for
+               examining binaries without corresponding source
+               code. It transforms binaries into high-level code,
+               reversing the compilation process. Decompilers can
+               reconstruct much of the information that is lost
+               during the compilation process (e.g., structure and
+               type information). Unfortunately, they do not
+               reconstruct semantically meaningful variable names,
+               which are known to increase code understandability.
+               We propose the Decompiled Identifier Renaming Engine
+               (DIRE), a novel probabilistic technique for variable
+               name recovery that uses both lexical and structural
+               information recovered by the decompiler. We also
+               present a technique for generating corpora suitable
+               for training and evaluating models of decompiled
+               code renaming, which we use to create a corpus of
+               164,632 unique x86-64 binaries generated from C
+               projects mined from GitHub.  Our results show that
+               on this corpus DIRE can predict variable names
+               identical to the names in the original source code
+               up to 74.3\% of the time.},
+  downloads = {https://edmcman.github.io/papers/ase19.pdf Paper}
 }
 
 @article{manes:2019,
-  author =	 {Valentin J. M. {Man\`es} and HyungSeok {Han} and
-                  Choongwoo {Han} and Sang Kil {Cha} and Manuel
-                  {Egele} and Edward J. {Schwartz} and Maverick {Woo}},
-  title =	 {The Art, Science, and Engineering of Fuzzing: A
-                  Survey},
-  journal =	 tse,
-  year =	 2021,
-  volume =	 47,
-  issue =	 11,
-  category =	 papers,
-  abstract =	 {Among the many software testing techniques available
-                  today, fuzzing has remained highly popular due to
-                  its conceptual simplicity, its low barrier to
-                  deployment, and its vast amount of empirical
-                  evidence in discovering real-world software
-                  vulnerabilities. At a high level, fuzzing refers to
-                  a process of repeatedly running a program with
-                  generated inputs that may be syntactically or
-                  semantically malformed. While researchers and
-                  practitioners alike have invested a large and
-                  diverse effort towards improving fuzzing in recent
-                  years, this surge of work has also made it difficult
-                  to gain a comprehensive and coherent view of
-                  fuzzing. To help preserve and bring coherence to the
-                  vast literature of fuzzing, this paper presents a
-                  unified, general-purpose model of fuzzing together
-                  with a taxonomy of the current fuzzing
-                  literature. We methodically explore the design
-                  decisions at every stage of our model fuzzer by
-                  surveying the related literature and innovations in
-                  the art, science, and engineering that make
-                  modern-day fuzzers effective.},
-  downloads =	 {https://edmcman.github.io/papers/tse21.pdf Paper}
+  author    = {Valentin J. M. {Man\`es} and HyungSeok {Han} and
+               Choongwoo {Han} and Sang Kil {Cha} and Manuel
+               {Egele} and Edward J. {Schwartz} and Maverick {Woo}},
+  title     = {The Art, Science, and Engineering of Fuzzing: A
+               Survey},
+  journal   = tse,
+  year      = 2021,
+  volume    = 47,
+  issue     = 11,
+  category  = papers,
+  abstract  = {Among the many software testing techniques available
+               today, fuzzing has remained highly popular due to
+               its conceptual simplicity, its low barrier to
+               deployment, and its vast amount of empirical
+               evidence in discovering real-world software
+               vulnerabilities. At a high level, fuzzing refers to
+               a process of repeatedly running a program with
+               generated inputs that may be syntactically or
+               semantically malformed. While researchers and
+               practitioners alike have invested a large and
+               diverse effort towards improving fuzzing in recent
+               years, this surge of work has also made it difficult
+               to gain a comprehensive and coherent view of
+               fuzzing. To help preserve and bring coherence to the
+               vast literature of fuzzing, this paper presents a
+               unified, general-purpose model of fuzzing together
+               with a taxonomy of the current fuzzing
+               literature. We methodically explore the design
+               decisions at every stage of our model fuzzer by
+               surveying the related literature and innovations in
+               the art, science, and engineering that make
+               modern-day fuzzers effective.},
+  downloads = {https://edmcman.github.io/papers/tse21.pdf Paper}
 }
 
 @inproceedings{manes:2020,
-  author =	 {Valentin J. M. {Man\`es} and HyungSeok {Han} and
-                  Choongwoo {Han} and Sang Kil {Cha} and Manuel
-                  {Egele} and Edward J. {Schwartz} and Maverick {Woo}},
-  title =	 {The Art, Science, and Engineering of Fuzzing: A
-                  Survey},
-  booktitle =	 icse,
-  year =	 2020,
-  category =	 papers,
-  abstract =	 {Among the many software testing techniques available
-                  today, fuzzing has remained highly popular due to
-                  its conceptual simplicity, its low barrier to
-                  deployment, and its vast amount of empirical
-                  evidence in discovering real-world software
-                  vulnerabilities. At a high level, fuzzing refers to
-                  a process of repeatedly running a program with
-                  generated inputs that may be syntactically or
-                  semantically malformed. While researchers and
-                  practitioners alike have invested a large and
-                  diverse effort towards improving fuzzing in recent
-                  years, this surge of work has also made it difficult
-                  to gain a comprehensive and coherent view of
-                  fuzzing. To help preserve and bring coherence to the
-                  vast literature of fuzzing, this paper presents a
-                  unified, general-purpose model of fuzzing together
-                  with a taxonomy of the current fuzzing
-                  literature. We methodically explore the design
-                  decisions at every stage of our model fuzzer by
-                  surveying the related literature and innovations in
-                  the art, science, and engineering that make
-                  modern-day fuzzers effective.},
-  downloads =	 {https://edmcman.github.io/papers/tse21.pdf Paper}
+  author    = {Valentin J. M. {Man\`es} and HyungSeok {Han} and
+               Choongwoo {Han} and Sang Kil {Cha} and Manuel
+               {Egele} and Edward J. {Schwartz} and Maverick {Woo}},
+  title     = {The Art, Science, and Engineering of Fuzzing: A
+               Survey},
+  booktitle = icse,
+  year      = 2020,
+  category  = papers,
+  abstract  = {Among the many software testing techniques available
+               today, fuzzing has remained highly popular due to
+               its conceptual simplicity, its low barrier to
+               deployment, and its vast amount of empirical
+               evidence in discovering real-world software
+               vulnerabilities. At a high level, fuzzing refers to
+               a process of repeatedly running a program with
+               generated inputs that may be syntactically or
+               semantically malformed. While researchers and
+               practitioners alike have invested a large and
+               diverse effort towards improving fuzzing in recent
+               years, this surge of work has also made it difficult
+               to gain a comprehensive and coherent view of
+               fuzzing. To help preserve and bring coherence to the
+               vast literature of fuzzing, this paper presents a
+               unified, general-purpose model of fuzzing together
+               with a taxonomy of the current fuzzing
+               literature. We methodically explore the design
+               decisions at every stage of our model fuzzer by
+               surveying the related literature and innovations in
+               the art, science, and engineering that make
+               modern-day fuzzers effective.},
+  downloads = {https://edmcman.github.io/papers/tse21.pdf Paper}
 }
 
 @inproceedings{nord:2016,
-  author =	 {Robert L. Nord and Ipek Ozkaya and Edward
-                  J. Schwartz and Forrest Shull and Rick Kazman},
-  title =	 {Can Knowledge of Technical Debt Help Identify
-                  Software Vulnerabilities?},
-  booktitle =	 {Proceedings of the USENIX Workshop on Cyber Security
-                  Experimentation and Test},
-  year =	 2016,
-  category =	 papers,
-  downloads =	 {http://edmcman.github.io/papers/cset16.pdf Paper},
-  abstract =	 {Software vulnerabilities originating from design
-                  decisions are hard to find early and time consuming
-                  to fix later. We investigated whether the
-                  problematic design decisions themselves might be
-                  relatively easier to find, based on the concept of
-                  ``technical debt,'' i.e., design or implementation
-                  constructs that are expedient in the short term but
-                  make future changes and fixes more costly. If so,
-                  can knowing which components contain technical debt
-                  help developers identify and manage certain classes
-                  of vulnerabilities? This paper provides our approach
-                  for using knowledge of technical debt to identify
-                  software vulnerabilities that are difficult to find
-                  using only static analysis of the code. We present
-                  initial findings from a study of the Chromium open
-                  source project that motivates the need to examine a
-                  combination of evidence: quantitative static
-                  analysis of anomalies in code, qualitative
-                  classification of design consequences in issue
-                  trackers, and software development indicators in the
-                  commit history.}
+  author    = {Robert L. Nord and Ipek Ozkaya and Edward
+               J. Schwartz and Forrest Shull and Rick Kazman},
+  title     = {Can Knowledge of Technical Debt Help Identify
+               Software Vulnerabilities?},
+  booktitle = {Proceedings of the USENIX Workshop on Cyber Security
+               Experimentation and Test},
+  year      = 2016,
+  category  = papers,
+  downloads = {http://edmcman.github.io/papers/cset16.pdf Paper},
+  abstract  = {Software vulnerabilities originating from design
+               decisions are hard to find early and time consuming
+               to fix later. We investigated whether the
+               problematic design decisions themselves might be
+               relatively easier to find, based on the concept of
+               ``technical debt,'' i.e., design or implementation
+               constructs that are expedient in the short term but
+               make future changes and fixes more costly. If so,
+               can knowing which components contain technical debt
+               help developers identify and manage certain classes
+               of vulnerabilities? This paper provides our approach
+               for using knowledge of technical debt to identify
+               software vulnerabilities that are difficult to find
+               using only static analysis of the code. We present
+               initial findings from a study of the Chromium open
+               source project that motivates the need to examine a
+               combination of evidence: quantitative static
+               analysis of anomalies in code, qualitative
+               classification of design consequences in issue
+               trackers, and software development indicators in the
+               commit history.}
 }
 
 @inproceedings{schwartz:2010:anonymity,
-  author =	 {Edward J. Schwartz and David Brumley and Jonathan
-                  M. McCune},
-  title =	 {A Contractual Anonymity System},
-  booktitle =	 ndss,
-  year =	 2010,
-  category =	 papers,
-  downloads =	 {http://edmcman.github.io/papers/ndss10.pdf
-                  Paper;http://edmcman.github.io/pres/ndss10.pdf
-                  Slides},
-  abstract =	 {We propose, develop, and implement techniques for
-                  achieving contractual anonymity. In contractual
-                  anonymity, a user and service provider enter into an
-                  anonymity contract. The user is guaranteed anonymity
-                  and message unlinkability from the contractual
-                  anonymity system unless she breaks the contract. The
-                  service provider is guaranteed that it can identify
-                  users who break the contract. The significant
-                  advantages of our system are that 1) the service
-                  provider is not able to take any action toward a
-                  particular user (such as revealing her identity or
-                  blacklisting her future authentications) unless she
-                  violates her contract, 2) our system can enforce a
-                  variety of policies, and 3) our system is
-                  efficient.}
+  author    = {Edward J. Schwartz and David Brumley and Jonathan
+               M. McCune},
+  title     = {A Contractual Anonymity System},
+  booktitle = ndss,
+  year      = 2010,
+  category  = papers,
+  downloads = {http://edmcman.github.io/papers/ndss10.pdf
+               Paper;http://edmcman.github.io/pres/ndss10.pdf
+               Slides},
+  abstract  = {We propose, develop, and implement techniques for
+               achieving contractual anonymity. In contractual
+               anonymity, a user and service provider enter into an
+               anonymity contract. The user is guaranteed anonymity
+               and message unlinkability from the contractual
+               anonymity system unless she breaks the contract. The
+               service provider is guaranteed that it can identify
+               users who break the contract. The significant
+               advantages of our system are that 1) the service
+               provider is not able to take any action toward a
+               particular user (such as revealing her identity or
+               blacklisting her future authentications) unless she
+               violates her contract, 2) our system can enforce a
+               variety of policies, and 3) our system is
+               efficient.}
 }
 
 @inproceedings{schwartz:2010:dynamic,
-  author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
-                  Brumley},
-  title =	 {All You Ever Wanted to Know About Dynamic Taint
-                  Analysis and Forward Symbolic Execution (but might
-                  have been afraid to ask)},
-  booktitle =	 oakland,
-  year =	 2010,
-  category =	 papers,
-  downloads =	 {http://edmcman.github.io/papers/oakland10.pdf
-                  Paper;http://edmcman.github.io/pres/oakland10.pdf
-                  Slides},
-  abstract =	 {Dynamic taint analysis and forward symbolic
-                  execution are quickly becoming staple techniques in
-                  security analyses. Example applications of dynamic
-                  taint analysis and forward symbolic execution
-                  include malware analysis, input filter generation,
-                  test case generation, and vulnerability discovery.
-                  Despite the widespread usage of these two
-                  techniques, there has been little effort to formally
-                  define the algorithms and summarize the critical
-                  issues that arise when these techniques are used in
-                  typical security contexts.  \par The contributions
-                  of this paper are two-fold. First, we precisely
-                  describe the algorithms for dynamic taint analysis
-                  and forward symbolic execution as extensions to the
-                  runtime semantics of a general language. Second, we
-                  highlight important implementation choices, common
-                  pitfalls, and considerations when using these
-                  techniques in a security context.}
+  author    = {Edward J. Schwartz and Thanassis Avgerinos and David
+               Brumley},
+  title     = {All You Ever Wanted to Know About Dynamic Taint
+               Analysis and Forward Symbolic Execution (but might
+               have been afraid to ask)},
+  booktitle = oakland,
+  year      = 2010,
+  category  = papers,
+  downloads = {http://edmcman.github.io/papers/oakland10.pdf
+               Paper;http://edmcman.github.io/pres/oakland10.pdf
+               Slides},
+  abstract  = {Dynamic taint analysis and forward symbolic
+               execution are quickly becoming staple techniques in
+               security analyses. Example applications of dynamic
+               taint analysis and forward symbolic execution
+               include malware analysis, input filter generation,
+               test case generation, and vulnerability discovery.
+               Despite the widespread usage of these two
+               techniques, there has been little effort to formally
+               define the algorithms and summarize the critical
+               issues that arise when these techniques are used in
+               typical security contexts.  \par The contributions
+               of this paper are two-fold. First, we precisely
+               describe the algorithms for dynamic taint analysis
+               and forward symbolic execution as extensions to the
+               runtime semantics of a general language. Second, we
+               highlight important implementation choices, common
+               pitfalls, and considerations when using these
+               techniques in a security context.}
 }
 
 @inproceedings{schwartz:2011:rop,
-  author =	 {Edward J. Schwartz and Thanassis Avgerinos and David
-                  Brumley},
-  title =	 {{Q}: Exploit Hardening Made Easy},
-  booktitle =	 usenixsec,
-  downloads =	 {http://edmcman.github.io/papers/usenix11.pdf
-                  Paper;http://edmcman.github.io/papers/usenix11-update.pdf
-                  Update
-                  Note;http://edmcman.github.io/pres/usenix11.pdf PDF
-                  Slides;http://edmcman.github.io/pres/usenix11.pptx
-                  PPTX
-                  Slides;http://www.usenix.org/events/sec11/stream/schwartz/index.html
-                  Video;http://edmcman.github.io/pres/usenix11.mp3
-                  Audio},
-  year =	 2011,
-  category =	 papers,
-  abstract =	 {Prior work has shown that return oriented
-                  programming (ROP) can be used to bypass W^X, a
-                  software defense that stops shellcode, by reusing
-                  instructions from large libraries such as
-                  libc. Modern operating systems have since enabled
-                  address randomization (ASLR), which randomizes the
-                  location of libc, making these techniques unusable
-                  in practice. However, modern ASLR implementations
-                  leave smaller amounts of executable code
-                  unrandomized and it has been unclear whether an
-                  attacker can use these small code fragments to
-                  construct payloads in the general case.  \par In
-                  this paper, we show defenses as currently deployed
-                  can be bypassed with new techniques for
-                  automatically creating ROP payloads from small
-                  amounts of unrandomized code. We propose using
-                  semantic program verification techniques for
-                  identifying the functionality of gadgets, and design
-                  a ROP compiler that is resistant to missing gadget
-                  types. To demonstrate our techniques, we build Q, an
-                  end-to-end system that automatically generates ROP
-                  payloads for a given binary. Q can produce payloads
-                  for 80\% of Linux /usr/bin programs larger than
-                  20KB. We also show that Q can automatically perform
-                  exploit hardening: given an exploit that crashes
-                  with defenses on, Q outputs an exploit that bypasses
-                  both W^X and ASLR. We show that Q can harden nine
-                  real-world Linux and Windows exploits, enabling an
-                  attacker to automatically bypass defenses as
-                  deployed by industry for those programs.}
+  author    = {Edward J. Schwartz and Thanassis Avgerinos and David
+               Brumley},
+  title     = {{Q}: Exploit Hardening Made Easy},
+  booktitle = usenixsec,
+  downloads = {http://edmcman.github.io/papers/usenix11.pdf
+               Paper;http://edmcman.github.io/papers/usenix11-update.pdf
+               Update
+               Note;http://edmcman.github.io/pres/usenix11.pdf PDF
+               Slides;http://edmcman.github.io/pres/usenix11.pptx
+               PPTX
+               Slides;http://www.usenix.org/events/sec11/stream/schwartz/index.html
+               Video;http://edmcman.github.io/pres/usenix11.mp3
+               Audio},
+  year      = 2011,
+  category  = papers,
+  abstract  = {Prior work has shown that return oriented
+               programming (ROP) can be used to bypass W^X, a
+               software defense that stops shellcode, by reusing
+               instructions from large libraries such as
+               libc. Modern operating systems have since enabled
+               address randomization (ASLR), which randomizes the
+               location of libc, making these techniques unusable
+               in practice. However, modern ASLR implementations
+               leave smaller amounts of executable code
+               unrandomized and it has been unclear whether an
+               attacker can use these small code fragments to
+               construct payloads in the general case.  \par In
+               this paper, we show defenses as currently deployed
+               can be bypassed with new techniques for
+               automatically creating ROP payloads from small
+               amounts of unrandomized code. We propose using
+               semantic program verification techniques for
+               identifying the functionality of gadgets, and design
+               a ROP compiler that is resistant to missing gadget
+               types. To demonstrate our techniques, we build Q, an
+               end-to-end system that automatically generates ROP
+               payloads for a given binary. Q can produce payloads
+               for 80\% of Linux /usr/bin programs larger than
+               20KB. We also show that Q can automatically perform
+               exploit hardening: given an exploit that crashes
+               with defenses on, Q outputs an exploit that bypasses
+               both W^X and ASLR. We show that Q can harden nine
+               real-world Linux and Windows exploits, enabling an
+               attacker to automatically bypass defenses as
+               deployed by industry for those programs.}
 }
 
 @inproceedings{schwartz:2013,
-  author =	 {Edward J. Schwartz and JongHyup Lee and Maverick Woo
-                  and David Brumley},
-  title =	 {Native {x86} Decompilation using
-                  Semantics-Preserving Structural Analysis and
-                  Iterative Control-Flow Structuring},
-  booktitle =	 usenixsec,
-  downloads =	 {http://edmcman.github.io/papers/usenix13.pdf
-                  Paper;http://edmcman.github.io/pres/usenix13.pdf PDF
-                  Slides;http://edmcman.github.io/pres/usenix13.pptx
-                  PPTX Slides},
-  year =	 2013,
-  category =	 papers,
-  abstract =	 {There are many security tools and techniques for
-                  analyzing software, but many of them require access
-                  to source code. We propose leveraging decompilation,
-                  the study of recovering abstractions from compiled
-                  code, to apply existing source-based tools and
-                  techniques to compiled programs. A decompiler should
-                  focus on two properties to be used for
-                  security. First, it should recover abstractions as
-                  much as possible to minimize the complexity that
-                  must be handled by the security analysis that
-                  follows. Second, it should aim to recover these
-                  abstractions correctly.  \par Previous work in
-                  control-flow structuring, an abstraction recovery
-                  problem used in decompilers, does not provide either
-                  of these properties. Specifically, existing
-                  structuring algorithms are not semantics-preserving,
-                  which means that they cannot safely be used for
-                  decompilation without modification. Existing
-                  structural algorithms also miss opportunities for
-                  recovering control flow structure.  We propose a new
-                  structuring algorithm in this paper that addresses
-                  these problems.  \par We evaluate our decompiler,
-                  Phoenix, and our new structuring algorithm, on a set
-                  of 107 real world programs from GNU coreutils. Our
-                  evaluation is an order of magnitude larger than
-                  previous systematic studies of end-to-end
-                  decompilers. We show that our decompiler outperforms
-                  the de facto industry standard decompiler Hex-Rays
-                  in correctness by 114\%, and recovers 30x more
-                  control-flow structure than existing structuring
-                  algorithms in the literature.}
+  author    = {Edward J. Schwartz and JongHyup Lee and Maverick Woo
+               and David Brumley},
+  title     = {Native {x86} Decompilation using
+               Semantics-Preserving Structural Analysis and
+               Iterative Control-Flow Structuring},
+  booktitle = usenixsec,
+  downloads = {http://edmcman.github.io/papers/usenix13.pdf
+               Paper;http://edmcman.github.io/pres/usenix13.pdf PDF
+               Slides;http://edmcman.github.io/pres/usenix13.pptx
+               PPTX Slides},
+  year      = 2013,
+  category  = papers,
+  abstract  = {There are many security tools and techniques for
+               analyzing software, but many of them require access
+               to source code. We propose leveraging decompilation,
+               the study of recovering abstractions from compiled
+               code, to apply existing source-based tools and
+               techniques to compiled programs. A decompiler should
+               focus on two properties to be used for
+               security. First, it should recover abstractions as
+               much as possible to minimize the complexity that
+               must be handled by the security analysis that
+               follows. Second, it should aim to recover these
+               abstractions correctly.  \par Previous work in
+               control-flow structuring, an abstraction recovery
+               problem used in decompilers, does not provide either
+               of these properties. Specifically, existing
+               structuring algorithms are not semantics-preserving,
+               which means that they cannot safely be used for
+               decompilation without modification. Existing
+               structural algorithms also miss opportunities for
+               recovering control flow structure.  We propose a new
+               structuring algorithm in this paper that addresses
+               these problems.  \par We evaluate our decompiler,
+               Phoenix, and our new structuring algorithm, on a set
+               of 107 real world programs from GNU coreutils. Our
+               evaluation is an order of magnitude larger than
+               previous systematic studies of end-to-end
+               decompilers. We show that our decompiler outperforms
+               the de facto industry standard decompiler Hex-Rays
+               in correctness by 114\%, and recovers 30x more
+               control-flow structure than existing structuring
+               algorithms in the literature.}
 }
 
 @phdthesis{schwartz:2014:phd,
-  author =	 {Edward J. Schwartz},
-  title =	 {Abstraction Recovery for Scalable Static Binary
-                  Analysis},
-  school =	 {Carnegie Mellon University},
-  year =	 2014,
-  category =	 thesis,
-  downloads =	 {http://edmcman.github.io/papers/arthesis14.pdf
-                  Paper},
-  abstract =	 {Many source code tools help software programmers
-                  analyze programs as they are being developed, but
-                  such tools can no longer be applied once the final
-                  programs are shipped to the user. This greatly
-                  limits users, security experts, and anyone other
-                  than the programmer who wishes to perform additional
-                  testing and program analysis. This dissertation is
-                  concerned with the development of scalable
-                  techniques for statically analyzing binary programs,
-                  which can be employed by anyone who has access to
-                  the binary. Unfortunately, static binary analysis is
-                  often more difficult than static source code
-                  analysis because the abstractions that are the basis
-                  of source code programs, such as variables, types,
-                  functions, and control flow structure, are not
-                  explicitly present in binary programs. Previous
-                  approaches work around the the lack of abstractions
-                  by reasoning about the program at a lower level, but
-                  this approach has not scaled as well as equivalent
-                  source code techniques that use abstractions. \par
-                  This dissertation investigates an alternative
-                  approach to static binary analysis which is called
-                  abstraction recovery. The premise of abstraction
-                  recovery is that since many binaries are actually
-                  compiled from an abstract source language which is
-                  more suitable for analysis, the first step of static
-                  binary analysis should be to recover such
-                  abstractions. Abstraction recovery is shown to be
-                  feasible in two real-world applications. First, C
-                  abstractions are recovered by a newly developed
-                  decompiler. The second application recovers gadget
-                  abstractions to automatically generate
-                  return-oriented programming (ROP)
-                  attacks. Experiments using the decompiler
-                  demonstrate that recovering C abstractions improves
-                  scalability over low-level analysis, with
-                  applications such as verification and detection of
-                  buffer overflows seeing an average of 17x
-                  improvement.  Similarly, gadget abstractions speed
-                  up automated ROP attacks by 99x. Though some binary
-                  analysis problems do not lend themselves to
-                  abstraction recovery because they reason about
-                  low-level or syntactic details, abstraction recovery
-                  is an attractive alternative to conventional
-                  low-level analysis when users are interested in the
-                  behavior of the original abstract program from which
-                  a binary was compiled, which is often the case.}
+  author    = {Edward J. Schwartz},
+  title     = {Abstraction Recovery for Scalable Static Binary
+               Analysis},
+  school    = {Carnegie Mellon University},
+  year      = 2014,
+  category  = thesis,
+  downloads = {http://edmcman.github.io/papers/arthesis14.pdf
+               Paper},
+  abstract  = {Many source code tools help software programmers
+               analyze programs as they are being developed, but
+               such tools can no longer be applied once the final
+               programs are shipped to the user. This greatly
+               limits users, security experts, and anyone other
+               than the programmer who wishes to perform additional
+               testing and program analysis. This dissertation is
+               concerned with the development of scalable
+               techniques for statically analyzing binary programs,
+               which can be employed by anyone who has access to
+               the binary. Unfortunately, static binary analysis is
+               often more difficult than static source code
+               analysis because the abstractions that are the basis
+               of source code programs, such as variables, types,
+               functions, and control flow structure, are not
+               explicitly present in binary programs. Previous
+               approaches work around the the lack of abstractions
+               by reasoning about the program at a lower level, but
+               this approach has not scaled as well as equivalent
+               source code techniques that use abstractions. \par
+               This dissertation investigates an alternative
+               approach to static binary analysis which is called
+               abstraction recovery. The premise of abstraction
+               recovery is that since many binaries are actually
+               compiled from an abstract source language which is
+               more suitable for analysis, the first step of static
+               binary analysis should be to recover such
+               abstractions. Abstraction recovery is shown to be
+               feasible in two real-world applications. First, C
+               abstractions are recovered by a newly developed
+               decompiler. The second application recovers gadget
+               abstractions to automatically generate
+               return-oriented programming (ROP)
+               attacks. Experiments using the decompiler
+               demonstrate that recovering C abstractions improves
+               scalability over low-level analysis, with
+               applications such as verification and detection of
+               buffer overflows seeing an average of 17x
+               improvement.  Similarly, gadget abstractions speed
+               up automated ROP attacks by 99x. Though some binary
+               analysis problems do not lend themselves to
+               abstraction recovery because they reason about
+               low-level or syntactic details, abstraction recovery
+               is an attractive alternative to conventional
+               low-level analysis when users are interested in the
+               behavior of the original abstract program from which
+               a binary was compiled, which is often the case.}
 }
 
 @inproceedings{schwartz:2018:ooanalyzer,
-  author =	 {Edward J. Schwartz and Cory F. Cohen and Michael
-                  Duggan and Jeffrey Gennari and Jeffrey S. Havrilla
-                  and Charles Hines},
-  title =	 {Using Logic Programming to Recover {C++} Classes and
-                  Methods from Compiled Executables},
-  booktitle =	 ccs,
-  year =	 2018,
-  category =	 papers,
-  abstract =	 {High-level C++ source code abstractions such as
-                  classes and methods greatly assist human analysts
-                  and automated algorithms alike when analyzing C++
-                  programs. Unfortunately, these abstractions are lost
-                  when compiling C++ source code, which impedes the
-                  understanding of C++ executables. In this paper, we
-                  propose a system, OOAnalyzer, that uses an
-                  innovative new design to statically recover detailed
-                  C++ abstractions from executables in a scalable
-                  manner. \par OOAnalyzer's design is motivated by the
-                  observation that many human analysts reason about
-                  C++ programs by recognizing simple patterns in
-                  binary code and then combining these findings using
-                  logical inference, domain knowledge, and
-                  intuition. We codify this approach by combining a
-                  lightweight symbolic analysis with a flexible
-                  Prolog-based reasoning system. Unlike most existing
-                  work, OOAnalyzer is able to recover both polymorphic
-                  and non-polymorphic C++ classes. We show in our
-                  evaluation that OOAnalyzer assigns over 78\% of
-                  methods to the correct class on our test corpus,
-                  which includes both malware and real-world software
-                  such as Firefox and MySQL. These recovered
-                  abstractions can help analysts understand the
-                  behavior of C++ malware and cleanware, and can also
-                  improve the precision of program analyses on C++
-                  executables.},
-  downloads =	 {https://edmcman.github.io/papers/ccs18.pdf
-                  Paper;https://edmcman.github.io/pres/ccs18.pdf PDF
-                  Slides;https://edmcman.github.io/pres/ccs18.pptx
-                  PPTX
-                  Slides;https://www.youtube.com/watch?v=hnM252gU-g4
-                  Video}
+  author    = {Edward J. Schwartz and Cory F. Cohen and Michael
+               Duggan and Jeffrey Gennari and Jeffrey S. Havrilla
+               and Charles Hines},
+  title     = {Using Logic Programming to Recover {C++} Classes and
+               Methods from Compiled Executables},
+  booktitle = ccs,
+  year      = 2018,
+  category  = papers,
+  abstract  = {High-level C++ source code abstractions such as
+               classes and methods greatly assist human analysts
+               and automated algorithms alike when analyzing C++
+               programs. Unfortunately, these abstractions are lost
+               when compiling C++ source code, which impedes the
+               understanding of C++ executables. In this paper, we
+               propose a system, OOAnalyzer, that uses an
+               innovative new design to statically recover detailed
+               C++ abstractions from executables in a scalable
+               manner. \par OOAnalyzer's design is motivated by the
+               observation that many human analysts reason about
+               C++ programs by recognizing simple patterns in
+               binary code and then combining these findings using
+               logical inference, domain knowledge, and
+               intuition. We codify this approach by combining a
+               lightweight symbolic analysis with a flexible
+               Prolog-based reasoning system. Unlike most existing
+               work, OOAnalyzer is able to recover both polymorphic
+               and non-polymorphic C++ classes. We show in our
+               evaluation that OOAnalyzer assigns over 78\% of
+               methods to the correct class on our test corpus,
+               which includes both malware and real-world software
+               such as Firefox and MySQL. These recovered
+               abstractions can help analysts understand the
+               behavior of C++ malware and cleanware, and can also
+               improve the precision of program analyses on C++
+               executables.},
+  downloads = {https://edmcman.github.io/papers/ccs18.pdf
+               Paper;https://edmcman.github.io/pres/ccs18.pdf PDF
+               Slides;https://edmcman.github.io/pres/ccs18.pptx
+               PPTX
+               Slides;https://www.youtube.com/watch?v=hnM252gU-g4
+               Video}
 }
 
 @inproceedings{schwartz:2020:limbo,
-  author =	 {Edward J. Schwartz and Stephanie M. Schwartz and
-                  Cory F. Cohen and Jeffrey S. Gennari},
-  title =	 {A Generic Technique for Automatically Finding
-                  Defense-Aware Code Reuse Attacks},
-  booktitle =	 ccs,
-  category =	 papers,
-  year =	 2020,
-  abstract =	 {Code reuse attacks have been the subject of a
-                  substantial amount of research during the past
-                  decade. This research largely resulted from early
-                  work on Return-Oriented Programming (ROP), which
-                  showed that the then newly proposed Non-Executable
-                  Memory (NX) defense could be bypassed. More
-                  recently, the research community has been
-                  simultaneously investigating new defenses that are
-                  believed to thwart code reuse attacks, such as
-                  Control Flow Integrity (CFI), and defense-aware
-                  techniques for attacking these defenses, such as
-                  Data-Oriented Programming (DOP). Unfortunately, the
-                  feasibility of defense-aware attacks are very
-                  dependent on the behaviors of the attacked program,
-                  which makes it difficult for defenders to understand
-                  how much protection a defense such as CFI may
-                  provide.  To better understand this, researchers
-                  have introduced automated defense-aware code reuse
-                  attack systems. Unfortunately, the handful of
-                  existing systems implement a single fixed,
-                  defense-specific strategy that is complex and cannot
-                  be used to consider other defenses.  \par In this
-                  paper, we propose a generic framework for
-                  automatically discovering defense-aware code reuse
-                  attacks in executables. Unlike existing work, which
-                  utilizes hard-coded strategies for specific
-                  defenses, our framework can produce attacks for
-                  multiple defenses by analyzing the runtime behavior
-                  of the defense. The high-level insight behind our
-                  framework is that code reuse attacks can be defined
-                  as a state reachability problem, and that defenses
-                  prevent some transitions between states. We
-                  implement our framework as a tool named Limbo, which
-                  employs an existing binary concolic executor to
-                  solve the reachability problem. We evaluate Limbo
-                  and show that it excels when there is little code
-                  available for reuse, making it complementary to
-                  existing techniques. We show that, in such
-                  scenarios, Limbo outperforms existing systems that
-                  automate ROP attacks, as well as systems that
-                  automate DOP attacks in the presence of fine-grained
-                  CFI, despite having no special knowledge about ROP
-                  or DOP attacks.},
-  downloads =	 {https://edmcman.github.io/papers/ccs20.pdf
-                  Paper;https://1drv.ms/p/s!Aqt2XoeJv2c8rFUOkqr3eqNVHv4Y?e=Na2FTp
-                  View PPTX
-                  Slides;https://edmcman.github.io/pres/ccs20.pptx
-                  Download PPTX Slides;https://youtu.be/I9l4WL2OCms
-                  Video}
+  author    = {Edward J. Schwartz and Stephanie M. Schwartz and
+               Cory F. Cohen and Jeffrey S. Gennari},
+  title     = {A Generic Technique for Automatically Finding
+               Defense-Aware Code Reuse Attacks},
+  booktitle = ccs,
+  category  = papers,
+  year      = 2020,
+  abstract  = {Code reuse attacks have been the subject of a
+               substantial amount of research during the past
+               decade. This research largely resulted from early
+               work on Return-Oriented Programming (ROP), which
+               showed that the then newly proposed Non-Executable
+               Memory (NX) defense could be bypassed. More
+               recently, the research community has been
+               simultaneously investigating new defenses that are
+               believed to thwart code reuse attacks, such as
+               Control Flow Integrity (CFI), and defense-aware
+               techniques for attacking these defenses, such as
+               Data-Oriented Programming (DOP). Unfortunately, the
+               feasibility of defense-aware attacks are very
+               dependent on the behaviors of the attacked program,
+               which makes it difficult for defenders to understand
+               how much protection a defense such as CFI may
+               provide.  To better understand this, researchers
+               have introduced automated defense-aware code reuse
+               attack systems. Unfortunately, the handful of
+               existing systems implement a single fixed,
+               defense-specific strategy that is complex and cannot
+               be used to consider other defenses.  \par In this
+               paper, we propose a generic framework for
+               automatically discovering defense-aware code reuse
+               attacks in executables. Unlike existing work, which
+               utilizes hard-coded strategies for specific
+               defenses, our framework can produce attacks for
+               multiple defenses by analyzing the runtime behavior
+               of the defense. The high-level insight behind our
+               framework is that code reuse attacks can be defined
+               as a state reachability problem, and that defenses
+               prevent some transitions between states. We
+               implement our framework as a tool named Limbo, which
+               employs an existing binary concolic executor to
+               solve the reachability problem. We evaluate Limbo
+               and show that it excels when there is little code
+               available for reuse, making it complementary to
+               existing techniques. We show that, in such
+               scenarios, Limbo outperforms existing systems that
+               automate ROP attacks, as well as systems that
+               automate DOP attacks in the presence of fine-grained
+               CFI, despite having no special knowledge about ROP
+               or DOP attacks.},
+  downloads = {https://edmcman.github.io/papers/ccs20.pdf
+               Paper;https://1drv.ms/p/s!Aqt2XoeJv2c8rFUOkqr3eqNVHv4Y?e=Na2FTp
+               View PPTX
+               Slides;https://edmcman.github.io/pres/ccs20.pptx
+               Download PPTX Slides;https://youtu.be/I9l4WL2OCms
+               Video}
 }
 
 @inproceedings{shypula:2022,
-  author =	 {Alexander G. Shypula and Pengcheng Yin and Jeremy
-                  Lacomis and Claire Le Goues and Edward Schwartz an
-                  Graham Neubig},
-  title =	 {Learning to Superoptimize Real-World Programs},
-  booktitle =	 {Deep Learning for Code Workshop at the International
-                  Conference on Learning Representations},
-  year =	 2022,
-  category =	 papers,
-  downloads =	 {https://arxiv.org/abs/2109.13498 arXiv Link},
-  abstract =	 {Program optimization is the process of modifying
-                  software to execute more
-                  efficiently. Superoptimizers attempt to find the
-                  optimal program by employing significantly more
-                  expensive search and constraint solving
-                  techniques. Generally, these methods do not scale
-                  well to programs in real development scenarios, and
-                  as a result, superoptimization has largely been
-                  confined to small-scale, domain-specific, and/or
-                  synthetic program benchmarks. In this paper, we
-                  propose a framework to learn to superoptimize
-                  real-world programs by using neural
-                  sequence-to-sequence models. We created a dataset
-                  consisting of over 25K real-world x86-64 assembly
-                  functions mined from open-source projects and
-                  propose an approach, Self Imitation Learning for
-                  Optimization (SILO) that is easy to implement and
-                  outperforms a standard policy gradient learning
-                  approach on our dataset. Our method, SILO,
-                  superoptimizes 5.9\% of our test set when compared
-                  with the gcc version 10.3 compiler's aggressive
-                  optimization level -O3. We also report that SILO's
-                  rate of superoptimization on our test set is over
-                  five times that of a standard policy gradient
-                  approach and a model pre-trained on compiler
-                  optimization demonstration.}
+  author    = {Alexander G. Shypula and Pengcheng Yin and Jeremy
+               Lacomis and Claire Le Goues and Edward Schwartz an
+               Graham Neubig},
+  title     = {Learning to Superoptimize Real-World Programs},
+  booktitle = {Deep Learning for Code Workshop at the International
+               Conference on Learning Representations},
+  year      = 2022,
+  category  = papers,
+  downloads = {https://arxiv.org/abs/2109.13498 arXiv Link},
+  abstract  = {Program optimization is the process of modifying
+               software to execute more
+               efficiently. Superoptimizers attempt to find the
+               optimal program by employing significantly more
+               expensive search and constraint solving
+               techniques. Generally, these methods do not scale
+               well to programs in real development scenarios, and
+               as a result, superoptimization has largely been
+               confined to small-scale, domain-specific, and/or
+               synthetic program benchmarks. In this paper, we
+               propose a framework to learn to superoptimize
+               real-world programs by using neural
+               sequence-to-sequence models. We created a dataset
+               consisting of over 25K real-world x86-64 assembly
+               functions mined from open-source projects and
+               propose an approach, Self Imitation Learning for
+               Optimization (SILO) that is easy to implement and
+               outperforms a standard policy gradient learning
+               approach on our dataset. Our method, SILO,
+               superoptimizes 5.9\% of our test set when compared
+               with the gcc version 10.3 compiler's aggressive
+               optimization level -O3. We also report that SILO's
+               rate of superoptimization on our test set is over
+               five times that of a standard policy gradient
+               approach and a model pre-trained on compiler
+               optimization demonstration.}
 }
 
 @inproceedings{yang:2025,
-  author =	 {Yuwei Yang and Skyler Grandel and Jeremy Lacomis and
-                  Edward Schwartz and Bogdan Vasilescu and Claire Le
-                  Goues and Kevin Leach},
-  title =	 {A Human Study of Automatically Generated Decompiler
-                  Annotations},
-  booktitle =	 dsn,
-  year =	 2025,
-  category =	 papers,
-  abstract =	 {Reverse engineering is a crucial technique in
-                  software security, enabling professionals to analyze
-                  malware, identify vulnerabilities, and patch legacy
-                  software without access to source code. Although
-                  decompilers attempt to reconstruct high-level code
-                  from binaries, essential information, such as
-                  variable names and types, is often dissimilar from
-                  the original version, hindering readability and
-                  comprehension.  \par Recent advancements have
-                  employed AI to enhance decompiler output by
-                  recovering original variable names and types.
-                  Traditional evaluation of recovery techniques relies
-                  on measuring similarity between original and
-                  recovered names, assuming that higher similarity
-                  enhances readability. However, studies suggest that
-                  these ``intrinsic'' metrics may not accurately
-                  predict ``extrinsic'' outcomes like user
-                  comprehension or task performance, revealing a gap
-                  in understanding readability and cognitive load in
-                  reverse engineering.  \par This paper presents an
-                  extrinsic evaluation of machine-generated variable
-                  and type names, focusing on their impact on reverse
-                  engineers' comprehension of decompiled code. We
-                  conducted a user study with 40
-                  participants---including students and
-                  professionals---to assess code comprehension both
-                  with and without AI-generated variable and type name
-                  assistance.  Our findings indicate a lack of
-                  correlation between traditional machine learning
-                  metrics and actual comprehension gains, highlighting
-                  limitations in current evaluation
-                  techniques. Despite this, participants showed a
-                  preference for AI-augmented decompiler
-                  outputs. These insights contribute to understanding
-                  the effectiveness of automatic recovery techniques
-                  in enhancing reverse engineering tasks and
-                  underscore the need for comprehensive, user-centered
-                  evaluation frameworks.},
-  downloads =	 {https://edmcman.github.io/papers/dsn25.pdf Paper}
+  author    = {Yuwei Yang and Skyler Grandel and Jeremy Lacomis and
+               Edward Schwartz and Bogdan Vasilescu and Claire Le
+               Goues and Kevin Leach},
+  title     = {A Human Study of Automatically Generated Decompiler
+               Annotations},
+  booktitle = dsn,
+  year      = 2025,
+  category  = papers,
+  abstract  = {Reverse engineering is a crucial technique in
+               software security, enabling professionals to analyze
+               malware, identify vulnerabilities, and patch legacy
+               software without access to source code. Although
+               decompilers attempt to reconstruct high-level code
+               from binaries, essential information, such as
+               variable names and types, is often dissimilar from
+               the original version, hindering readability and
+               comprehension.  \par Recent advancements have
+               employed AI to enhance decompiler output by
+               recovering original variable names and types.
+               Traditional evaluation of recovery techniques relies
+               on measuring similarity between original and
+               recovered names, assuming that higher similarity
+               enhances readability. However, studies suggest that
+               these ``intrinsic'' metrics may not accurately
+               predict ``extrinsic'' outcomes like user
+               comprehension or task performance, revealing a gap
+               in understanding readability and cognitive load in
+               reverse engineering.  \par This paper presents an
+               extrinsic evaluation of machine-generated variable
+               and type names, focusing on their impact on reverse
+               engineers' comprehension of decompiled code. We
+               conducted a user study with 40
+               participants---including students and
+               professionals---to assess code comprehension both
+               with and without AI-generated variable and type name
+               assistance.  Our findings indicate a lack of
+               correlation between traditional machine learning
+               metrics and actual comprehension gains, highlighting
+               limitations in current evaluation
+               techniques. Despite this, participants showed a
+               preference for AI-augmented decompiler
+               outputs. These insights contribute to understanding
+               the effectiveness of automatic recovery techniques
+               in enhancing reverse engineering tasks and
+               underscore the need for comprehensive, user-centered
+               evaluation frameworks.},
+  downloads = {https://edmcman.github.io/papers/dsn25.pdf Paper}
+}
+
+@inproceedings{schwartz:2025,
+  author    = {Edward J. Schwartz and Cory F. Cohen and Stephanie
+               Schwartz},
+  booktitle = {Proceedings of the 2025 Workshop on Software Understanding and Reverse Engineering},
+  title     = {Systematic Testing of C++ Abstraction Recovery Systems by Iterative Compiler Model Refinement},
+  year      = {2025},
+  category  = papers,
+  abstract  = {C++ source code abstractions such as classes and methods greatly
+               assist human analysts and automated algorithms alike when analyzing C++ programs. These abstractions are lost during the compilation process, but researchers have been developing tools to recover
+               them using program analysis. Despite promising advances, this difficult problem remains unsolved, with state-of-the-art solutions
+               self-reporting accuracies of 78\% [32] and 77.5\% [10] for different
+               types of abstractions.
+               \par In this paper, we address this problem by proposing a new modelbased approach for systematically testing C++ abstraction recovery
+               systems. Our high-level approach is to both jointly and iteratively
+               refine the abstraction recovery system and a compiler model that
+               introspects the compilation process. We built EmCee, a model of
+               Microsoft’s Visual C++ compiler, to apply our technique to the popular C++ abstraction recovery systems VirtAnalyzer [10] and OOAnalyzer [32]. EmCee ``parses'' input files by interpreting them as
+               answers to a series of multiple choice questions (inspired by the
+               game ``twenty questions''), which makes it very amenable to fuzzing.
+               We use an off-the-shelf grey-box fuzzer to automatically generate
+               test cases for EmCee that represent a variety of program structures
+               and optimizations. We then use these test cases to evaluate the reasoning in VirtAnalyzer and OOAnalyzer for soundness problems,
+               and correct any violations. Using our approach, we identified 27
+               soundness problems in OOAnalyzer and three in VirtAnalyzer.},
+  downloads = {https://edmcman.github.io/papers/sure25.pdf Paper}
 }
