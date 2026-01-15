@@ -286,30 +286,30 @@ Applications Conference}}
 }
 
 @article{dramko:2025:codealign,
-  title         = {Fast, Fine-Grained Equivalence Checking for Neural
-                   Decompilers},
-  author        = {Luke Dramko and Claire Le Goues and Edward
-                   J. Schwartz},
-  year          = 2025,
-  category      = papers,
-  journal       = tosem,
-  url           = {https://doi.org/10.1145/3772368},
-  abstract      = {Neural decompilers are machine learning models that
-                  reconstruct the source code from an executable program. Critical to the
-                  lifecycle of any machine learning model is an evaluation of its effectiveness.
-                  However, existing techniques for evaluating neural decompilation models are
-                  generally inadequate, especially when it comes to showing the correctness of
-                  the neural decompiler's predictions. To address this, we introduce codealign,
-                  a novel instruction-level code equivalence technique designed for neural
-                  decompilers. We provide a formal definition of a relation between equivalent
-                  instructions, which we term an equivalence alignment. We show how codealign
-                  generates equivalence alignments, then evaluate codealign by comparing it with
-                  symbolic execution. Finally, we show how the information codealign
-                  provides-which parts of the functions are equivalent and how well the variable
-                  names match-is substantially more detailed than existing state-of-the-art
-                  evaluation metrics, which report unitless numbers measuring similarity.},
-  downloads     = {https://doi.org/10.1145/3772368 ACM Link;
-                   https://edmcman.github.io/papers/tosem25.pdf Paper}
+  title     = {Fast, Fine-Grained Equivalence Checking for Neural
+               Decompilers},
+  author    = {Luke Dramko and Claire Le Goues and Edward
+               J. Schwartz},
+  year      = 2025,
+  category  = papers,
+  journal   = tosem,
+  url       = {https://doi.org/10.1145/3772368},
+  abstract  = {Neural decompilers are machine learning models that
+               reconstruct the source code from an executable program. Critical to the
+               lifecycle of any machine learning model is an evaluation of its effectiveness.
+               However, existing techniques for evaluating neural decompilation models are
+               generally inadequate, especially when it comes to showing the correctness of
+               the neural decompiler's predictions. To address this, we introduce codealign,
+               a novel instruction-level code equivalence technique designed for neural
+               decompilers. We provide a formal definition of a relation between equivalent
+               instructions, which we term an equivalence alignment. We show how codealign
+               generates equivalence alignments, then evaluate codealign by comparing it with
+               symbolic execution. Finally, we show how the information codealign
+               provides-which parts of the functions are equivalent and how well the variable
+               names match-is substantially more detailed than existing state-of-the-art
+               evaluation metrics, which report unitless numbers measuring similarity.},
+  downloads = {https://doi.org/10.1145/3772368 ACM Link;
+               https://edmcman.github.io/papers/tosem25.pdf Paper}
 }
 
 @inproceedings{dramko:2025:dimva,
@@ -351,52 +351,44 @@ Applications Conference}}
                accuracy.}
 }
 
-@misc{dramko:2025:idioms,
+@inproceedings{dramko:2026:idioms,
   author        = {Luke Dramko and Claire Le Goues and Edward
                    J. Schwartz},
-  title         = {Idioms: Neural Decompilation with Joint Code and
-                   Type Prediction},
-  year          = 2025,
+  booktitle     = ndss,
+  title         = {Idioms: A Simple and Effective Framework for
+                   Turbo-Charging Local Neural Decompilation with
+                   Well-Defined Types},
+  year          = 2026,
   category      = papers,
   eprint        = {2502.04536},
   archiveprefix = {arXiv},
   primaryclass  = {cs.SE},
-  url           = {https://arxiv.org/abs/2502.04536},
-  abstract      = {Decompilers are important tools for reverse
-                   engineers that help them analyze software at a
-                   higher level of abstraction than
-                   assembly. Unfortunately, because compilation is
-                   lossy, deterministic decompilers produce code that
-                   is missing many of the details that make source code
-                   readable in the first place, like variable names and
-                   types. Neural decompilers, on the other hand, offer
-                   the ability to statistically fill in these
-                   details. Existing work in neural decompilation,
-                   however, suffers from substantial drawbacks that
-                   limits its ability to handle real code: it is unable
-                   to handle user-defined composite types, which are
-                   essential to fully specifying many functions'
-                   semantics, or require test cases. In this work, we
-                   introduce a new training process to finetune any LLM
-                   into a neural decompiler capable of generating the
-                   appropriate user-defined types alongside the
-                   decompilation. We introduce a new dataset, Realtype,
-                   that includes substantially more complicated and
-                   realistic types than existing neural decompilation
-                   benchmarks. Motivated by the intuition that
-                   different parts of data structures can be operated
-                   upon by different parts of the program, we show that
-                   interprocedural context can help improve neural
-                   decompilers' ability to handle user-defined
-                   types. We show that our training process yields
-                   state-of-the-art results in neural decompilation. We
-                   also publicly release the Idioms series of finetuned
-                   neural decompilation models in support of open
-                   science. In summary, we identify the need for joint
-                   code and type prediction, show that it is a hard
-                   problem, and take the first steps towards solving
-                   it.},
-  downloads     = {https://arxiv.org/abs/2502.04536 arXiv Link}
+  abstract      = {Decompilers help reverse engineers analyze software
+                   at a higher level of abstraction than assembly code.
+                   Unfortunately, because compilation is lossy, traditional
+                   decompilers, which are deterministic, produce code that lacks
+                   many characteristics that make source code readable in the
+                   first place, such as variable and type names. Neural
+                   decompilers offer the exciting possibility of statistically
+                   filling in these details. Unfortunately, existing work in
+                   neural decompilation suffers from substantial limitations
+                   that preclude its use on real code, such as the inability to
+                   provide definitions for user-defined composite types. In this
+                   work, we introduce IDIOMS, a simple, generalizable, and
+                   effective neural decompilation approach that can finetune any
+                   LLM into a neural decompiler capable of generating the
+                   appropriate user-defined type definitions alongside the
+                   decompiled code, and a new dataset, REALTYPE, that includes
+                   substantially more complicated and realistic types than
+                   existing neural decompilation benchmarks. We show that our
+                   approach yields state-of-the-art results in neural
+                   decompilation. On the most challenging existing
+                   benchmark—EXEBENCH—our model achieves 54.4\% accuracy vs.
+                   46.3\% for LLM4Decompile and 37.5\% for Nova; on REALTYPE,
+                   our model performs at least 95\% better.},
+  downloads     = {https://arxiv.org/abs/2502.04536 arXiv Link;
+                   https://github.com/squareslab/idioms Github;
+                   https://edmcman.github.io/papers/ndss26.pdf Paper}
 }
 
 @inproceedings{gennari:2018,
@@ -1093,5 +1085,5 @@ Applications Conference}}
                and optimizations. We then use these test cases to evaluate the reasoning in VirtAnalyzer and OOAnalyzer for soundness problems,
                and correct any violations. Using our approach, we identified 27
                soundness problems in OOAnalyzer and three in VirtAnalyzer.},
-  downloads = {https://edmcman.github.io/papers/sure25.pdf Paper},
+  downloads = {https://edmcman.github.io/papers/sure25.pdf Paper}
 }
