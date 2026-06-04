@@ -455,7 +455,267 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-05-28--towards-the-next-generation-oo-analyzer/">ASP: Towards the Next Generation OOAnalyzer</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>6<!-- --> min. read</span><div class="tags" style="display:inline-block"></div></div></div><div class="content markdown"><p><a href="https://edmcman.github.io/papers/ccs18.pdf">OOAnalyzer</a> is one of my favorite projects for a few reasons.  The underlying problem is deceptively <em>hard</em>.  If you look closely enough, OO executables have a <em>lot</em> of evidence in them.  When you consider each piece in isolation, it can seem simple.  But when you try to combine all of the evidence, you wind up with a combinatorial explosion of possibilities that is pruned by constraints in very complex ways.  I also like it because it&#x27;s a very practical problem.  People <em>actually use</em> OOAnalyzer, despite all of its limitations—a testament to how even flawed solutions to hard problems can be valuable.</p>
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">auto-bench: Benchmarking Quantized LLMs for Local Coding Agents Part 2</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>3<!-- --> min. read</span><div class="tags" style="display:inline-block"></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-28--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-1/index.md">Part 1</a>,
+I introduced auto-bench, a tool for benchmarking quantized LLMs for local coding
+agents, and shared some results from a preliminary study on a single instance
+from SWE-bench Verified.  The results showed that (1) KL Divergence doesn&#x27;t
+predict performance, and (2) quantizations can both outperform and underperform
+the original model.</p>
+<p>In this post, I&#x27;ll share some new results.  Like the other experiment, this one
+also focuses on <code class="language-text">Qwen3.5-2B</code>.  Unlike the other experiment, which tested a
+<a href="https://github.com/edmcman/auto-bench/blob/main/configs/qwen-2b-quant-sweep.jsonnet">single instance of SWE-bench Verified with eight
+attempts</a>,
+this experiment tests <a href="https://github.com/edmcman/auto-bench/blob/main/configs/qwen-2b-quant-sweep-full.jsonnet">all instances of SWE-bench Verified with one
+attempt</a>.</p>
+<h1 id="results" style="position:relative"><a href="#results" aria-label="results permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Results</h1>
+<p>Without further ado, here are the results.</p>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Quant</th><th>Resolved</th><th>%</th><th>PPL</th><th>KL</th><th>Runtime</th><th>Exceptions</th></tr></thead><tbody><tr><td>BF16</td><td>28/500</td><td>5.6%</td><td>13.38</td><td>—</td><td>547m 59s</td><td>Timeout(47), ExitCode(22), Verifier(2)</td></tr><tr><td>IQ4_NL</td><td>26/500</td><td>5.2%</td><td>13.67</td><td>0.0309</td><td>423m 21s</td><td>Timeout(29), ExitCode(16), Verifier(1)</td></tr><tr><td>IQ4_XS</td><td>24/500</td><td>4.8%</td><td>13.68</td><td>0.0318</td><td>493m 7s</td><td>Timeout(39), ExitCode(15), Reward(1), Verifier(2)</td></tr><tr><td>Q3_K_M</td><td>30/500</td><td>6.0%</td><td>14.33</td><td>0.0774</td><td>785m 43s</td><td>Timeout(67), ExitCode(21)</td></tr><tr><td>Q3_K_S</td><td>20/500</td><td>4.0%</td><td>15.08</td><td>0.1334</td><td>742m 25s</td><td>Timeout(73), ExitCode(25), Reward(1), Verifier(1)</td></tr><tr><td>Q4_0</td><td>24/500</td><td>4.8%</td><td>13.91</td><td>0.0454</td><td>407m 34s</td><td>Timeout(25), ExitCode(21), Verifier(1)</td></tr><tr><td>Q4_1</td><td>36/500</td><td>7.2%</td><td>13.68</td><td>0.0273</td><td>766m 19s</td><td>Timeout(59), ExitCode(16), Reward(1), Verifier(1)</td></tr><tr><td>Q4_K_M</td><td>27/500</td><td>5.4%</td><td>13.79</td><td>0.0230</td><td>357m 0s</td><td>Timeout(20), ExitCode(23), Verifier(2)</td></tr><tr><td>Q4_K_S</td><td>19/500</td><td>3.8%</td><td>13.78</td><td>0.0274</td><td>519m 39s</td><td>Timeout(38), ExitCode(23), Reward(1), Verifier(1)</td></tr><tr><td>Q5_K_M</td><td>62/500</td><td>12.4%</td><td>13.46</td><td>0.0082</td><td>784m 58s</td><td>Timeout(61), ExitCode(23), Reward(1), Verifier(1)</td></tr><tr><td>Q5_K_S</td><td>46/500</td><td>9.2%</td><td>13.49</td><td>0.0100</td><td>563m 27s</td><td>Timeout(30), ExitCode(25), Reward(1), Verifier(3)</td></tr><tr><td>Q6_K</td><td>58/500</td><td>11.6%</td><td>13.48</td><td>0.0035</td><td>820m 37s</td><td>Timeout(62), ExitCode(20), Verifier(1)</td></tr><tr><td>Q8_0</td><td>37/500</td><td>7.4%</td><td>13.39</td><td>0.0012</td><td>598m 13s</td><td>Timeout(46), ExitCode(17), Verifier(1)</td></tr><tr><td>UD-IQ2_M</td><td>1/500</td><td>0.2%</td><td>17.61</td><td>0.2677</td><td>1866m 13s</td><td>Timeout(300), ExitCode(24), Verifier(1)</td></tr><tr><td>UD-IQ2_XXS</td><td>1/500</td><td>0.2%</td><td>27.11</td><td>0.7018</td><td>2196m 49s</td><td>Timeout(371), ExitCode(19)</td></tr><tr><td>UD-IQ3_XXS</td><td>5/500</td><td>1.0%</td><td>15.31</td><td>0.1549</td><td>1481m 24s</td><td>Timeout(230), ExitCode(24), Verifier(1)</td></tr><tr><td>UD-Q2_K_XL</td><td>2/500</td><td>0.4%</td><td>17.15</td><td>0.2388</td><td>442m 51s</td><td>Timeout(29), ExitCode(27)</td></tr><tr><td>UD-Q3_K_XL</td><td>48/500</td><td>9.6%</td><td>13.94</td><td>0.0520</td><td>738m 44s</td><td>Timeout(57), ExitCode(19), Reward(1), Verifier(1)</td></tr><tr><td>UD-Q4_K_XL</td><td>57/500</td><td>11.4%</td><td>13.60</td><td>0.0164</td><td>759m 13s</td><td>Timeout(48), ExitCode(18), Reward(2), Verifier(2)</td></tr><tr><td>UD-Q5_K_XL</td><td>62/500</td><td>12.4%</td><td>13.51</td><td>0.0077</td><td>932m 37s</td><td>Timeout(71), ExitCode(18), Reward(2), Verifier(1)</td></tr><tr><td>UD-Q6_K_XL</td><td>29/500</td><td>5.8%</td><td>13.48</td><td>0.0020</td><td>539m 38s</td><td>Timeout(35), ExitCode(20), Verifier(1)</td></tr><tr><td>UD-Q8_K_XL</td><td>36/500</td><td>7.2%</td><td>13.37</td><td>0.0011</td><td>502m 1s</td><td>Setup(1), Timeout(35), ExitCode(23), Verifier(2)</td></tr><tr><td>vllm</td><td>26/500</td><td>5.2%</td><td>—</td><td>—</td><td>521m 14s</td><td>Timeout(49), ExitCode(11), Verifier(1)</td></tr></tbody></table>
+</div>
+<p>And the plot of % Resolved vs KL Divergence:</p>
+<p></p><figure class="gatsby-resp-image-figure">
+    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1500px">
+      <a class="gatsby-resp-image-link" href="/static/4c58095d7d34ce40ddad3dca09dd0911/aa440/kl_vs_resolves.png" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:60%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABcSAAAXEgFnn9JSAAABpUlEQVR42nVT2ZKjMAzM///bXg/ZbIhPLBnI5KpNJqTI0VsSAwxTtVQJoUZuyy15AQBd1+F2u40m8eX9HbFMKMsSVc7YbrdIKamdTifcuw5t244m616vFxby2u/3ICJkZpSJ4HxQv1yt4X2AMVaJcmYwM6qqwvXvSWPvva5tmgbP53MilAWSTMTjd11XSERaJTN9+mY0TY26nkwI7/f7RCjV5Zw1WUxiFyJCCIqLhZhgrdWKZGPxfRGk/5Xw8Xgo4WpdIMaoxxlImacNYlnqEeX/LOeTDEp4Pp/x9raDMU71cNaBUlJjqYAIMZaw1iETIYSoOSwVah6plxMpYdvesG8y2G8QTAG//g1yGzX2RvFoCvz8/g3LXz8QbYFkC5RmDXKF5ojPwWrnFzI2fZf7Ls50zL2WxAzjvDZEMIntR3f7XEKuPjScCGmmGX9p0jzOo5aDntJp6cdIKLsL6TC80xjNsQE31mG5+oPNxigmOstwK6FMvpAeDoeZ7XY79cfjcfSSN+BcNXqbBKvqRm+MEkqpMo9fH9Hker3icrmMXjC5Ef97/gEEsH/ic9EMVAAAAABJRU5ErkJggg==&#x27;);background-size:cover;display:block"></span>
+  <picture>
+          <source srcSet="/static/4c58095d7d34ce40ddad3dca09dd0911/e46ac/kl_vs_resolves.avif 450w /static/4c58095d7d34ce40ddad3dca09dd0911/9b8d4/kl_vs_resolves.avif 900w /static/4c58095d7d34ce40ddad3dca09dd0911/2b305/kl_vs_resolves.avif 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/avif"/><source srcSet="/static/4c58095d7d34ce40ddad3dca09dd0911/8626f/kl_vs_resolves.webp 450w /static/4c58095d7d34ce40ddad3dca09dd0911/131f1/kl_vs_resolves.webp 900w /static/4c58095d7d34ce40ddad3dca09dd0911/293e0/kl_vs_resolves.webp 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/webp"/>
+          <source srcSet="/static/4c58095d7d34ce40ddad3dca09dd0911/fc2a6/kl_vs_resolves.png 450w /static/4c58095d7d34ce40ddad3dca09dd0911/1cfc2/kl_vs_resolves.png 900w /static/4c58095d7d34ce40ddad3dca09dd0911/aa440/kl_vs_resolves.png 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/png"/>
+          <img class="gatsby-resp-image-image" src="/static/4c58095d7d34ce40ddad3dca09dd0911/aa440/kl_vs_resolves.png" alt="Percentage instances resolved vs. KL Divergence" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
+        </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Percentage instances resolved vs. KL Divergence</figcaption>
+  </figure><p></p>
+<h2 id="observations" style="position:relative"><a href="#observations" aria-label="observations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h2>
+<p>A few observations:</p>
+<ol>
+<li>The overall resolve rates are <em>low</em> across the board.  This is not a very powerful model.  I intentionally selected an easy problem instance for the Part 1 experiment.</li>
+<li>As in Part 1, many of the &quot;mid-range&quot; quantizations outperform the original model, yet small and large quantizations underperform.  This is consistent with the idea that some quantizations are actually beneficial, while others are harmful.</li>
+<li>Also as in Part 1, KL Divergence does not fully explain performance.</li>
+</ol>
+<h2 id="what-next" style="position:relative"><a href="#what-next" aria-label="what next permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What next?</h2>
+<p>This experiment largely confirmed the findings from Part 1 about the <code class="language-text">Qwen3.5-2B</code> model.  An open question is whether these results apply to other models as well.  I plan to run similar experiments on larger variants of the <code class="language-text">Qwen3.5</code> family next, but I won&#x27;t be evaluating every quantization.  Too much time is wasted on bad quantizations because they get stuck in endless loops.  Instead, I&#x27;ll probably try a select few quantizations, such as BF16, Q8_0, and Q5_K_M.  Although I am interested in understanding these peculiar behaviors, my primary goal is actually to find which models and quantizations are usable.</p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-05-28--towards-the-next-generation-oo-analyzer/">ASP: Towards the Next Generation OOAnalyzer</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>6<!-- --> min. read</span><div class="tags" style="display:inline-block"></div></div></div><div class="content markdown"><p><a href="https://edmcman.github.io/papers/ccs18.pdf">OOAnalyzer</a> is one of my favorite projects for a few reasons.  The underlying problem is deceptively <em>hard</em>.  If you look closely enough, OO executables have a <em>lot</em> of evidence in them.  When you consider each piece in isolation, it can seem simple.  But when you try to combine all of the evidence, you wind up with a combinatorial explosion of possibilities that is pruned by constraints in very complex ways.  I also like it because it&#x27;s a very practical problem.  People <em>actually use</em> OOAnalyzer, despite all of its limitations—a testament to how even flawed solutions to hard problems can be valuable.</p>
 <p>OOAnalyzer is a successor to an earlier project that predated me at SEI called ObjDigger.  OOAnalyzer&#x27;s big innovation was to use what we called &quot;hypothetical reasoning&quot; about ambiguous scenarios.  In a nutshell, we often faced a choice between several possibilities.  For example, class D inherits from class B, and we see class M in class D&#x27;s vftable.  We know that M is either a method of D or a method of B.  We can&#x27;t tell which one it is, but we can make a guess, and see if that leads to a contradiction.  If it does, then we know our guess was wrong, and we can eliminate that possibility and try the others.  This is a powerful technique that was partially enabled by our use of Prolog in OOAnalyzer, specifically Prolog&#x27;s backtracking search.</p>
 <p>That being said, OOAnalyzer&#x27;s hypothetical reasoning is not perfect.  One problem we encountered while developing OOAnalyzer was that there could be a long gap between a guess and when the contradiction is detected.  Let&#x27;s say we make a guess that eventually will cause a contradiction, but we must make 10 other boolean guesses before detecting the contradiction.  At that point, Prolog would backtrack the guesses, starting with the most recent guess.  Unfortunately, Prolog has no way of knowing that the actual cause was much further back, and it would waste time re-exploring <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span></span> models that were doomed to fail.  Over time, we began to shape the rules in OOAnalyzer to avoid this problem.  We ordered the rules so that any guess likely to lead to a contradiction would be detected immediately.  This worked, but also limited our reasoning power.</p>
 <p>Another problem with OOAnalyzer is how it decides on a final model.  The final model is simply the first one that allows all guesses (uncertainties) to be resolved and does not lead to a contradiction.  OOAnalyzer&#x27;s guessing rules are ordered so that the more important ones are made earlier, when they have less chance of conflicting with a previous decision.  But there is no guarantee that this model is the best one, or even close to it!  Over time, I formed the opinion that OOAnalyzer is really an <em>optimization</em> problem.  Our rules permit multiple models that could explain the evidence.  But some are better than others.  For example, many OO programs without vftables and vbtables can be explained by a model with no OO classes or methods.  This is valid, but not very useful for the analyst.</p>
@@ -1929,149 +2189,7 @@ crucial for maintaining the effectiveness of AI-powered security tools.</p>
 <li>Participants <strong>preferred</strong> code with annotations over plain decompiled output</li>
 </ul>
 <h2 id="read-more" style="position:relative"><a href="#read-more" aria-label="read more permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Read More</h2>
-<p>Interested in the full methodology and detailed results? <a href="https://edmcman.github.io/papers/dsn25.pdf">Download the complete paper</a> to dive deeper into our human study design, statistical analysis, and implications for future decompilation tools.</p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2025-05-02--re-compiling-ghidra-decompiler-output/">Re-compiling Decompiler Output</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>4<!-- --> min. read</span><div class="tags" style="display:inline-block"></div></div></div><div class="content markdown"><p>Many people seem to be unaware that decompilers have a decompilation export feature, which is particularly beneficial when you are trying to parse or recompile decompiled code.</p>
-<h1 id="ghidra" style="position:relative"><a href="#ghidra" aria-label="ghidra permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra</h1>
-<p>Here is a random function from <code class="language-text">/bin/ls</code> that I decompiled using Ghidra, and simply copied the output from the decompilation window:</p>
-<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">FUN_0010b1b0</span><span class="token punctuation">(</span>undefined8 <span class="token operator">*</span>param_1<span class="token punctuation">,</span>undefined8 <span class="token operator">*</span>param_2<span class="token punctuation">)</span>
-
-<span class="token punctuation">{</span>
-  <span class="token keyword">char</span> <span class="token operator">*</span>__s<span class="token punctuation">;</span>
-  <span class="token keyword">char</span> <span class="token operator">*</span>__s_00<span class="token punctuation">;</span>
-  <span class="token keyword">int</span> iVar1<span class="token punctuation">;</span>
-  <span class="token keyword">char</span> <span class="token operator">*</span>__s1<span class="token punctuation">;</span>
-  <span class="token keyword">char</span> <span class="token operator">*</span>__s2<span class="token punctuation">;</span>
-  <span class="token keyword">int</span> <span class="token operator">*</span>piVar2<span class="token punctuation">;</span>
-  
-  __s <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span>param_2<span class="token punctuation">;</span>
-  __s1 <span class="token operator">=</span> <span class="token function">strrchr</span><span class="token punctuation">(</span>__s<span class="token punctuation">,</span><span class="token number">0x2e</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  __s_00 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span>param_1<span class="token punctuation">;</span>
-  __s2 <span class="token operator">=</span> <span class="token function">strrchr</span><span class="token punctuation">(</span>__s_00<span class="token punctuation">,</span><span class="token number">0x2e</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>__s2 <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">0x0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    __s2 <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>__s1 <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">0x0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    __s1 <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  piVar2 <span class="token operator">=</span> <span class="token function">__errno_location</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">*</span>piVar2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  iVar1 <span class="token operator">=</span> <span class="token function">strcoll</span><span class="token punctuation">(</span>__s1<span class="token punctuation">,</span>__s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>iVar1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">strcoll</span><span class="token punctuation">(</span>__s<span class="token punctuation">,</span>__s_00<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>This code does not compile.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">gcc -c a.c
-a.c:1:19: error: unknown type name ‘undefined8’
-    1 | void FUN_0010b1b0(undefined8 *param_1,undefined8 *param_2)
-      |                   ^~~~~~~~~~
-a.c:1:39: error: unknown type name ‘undefined8’
-    1 | void FUN_0010b1b0(undefined8 *param_1,undefined8 *param_2)
-      |                                       ^~~~~~~~~~</code></pre></div>
-<p>However, we can use Ghidra&#x27;s decompiler exporter to decompile the function AND emit a header file that will define the types and declare the functions used in the decompiled code.  Unfortunately, this is a little bit awkward to do for one function.  I suggest the following process:</p>
-<ol>
-<li>In the CodeBrowser, select the function you want to decompile in the <em>Listing</em> (disassembly) window.</li>
-<li>In the CodeBrowser, navigate to <kbd>File</kbd> → <kbd>Export Program</kbd>.</li>
-<li>Select &quot;C/C++&quot; as the Format.</li>
-<li>Ensure that the &quot;Selection Only&quot; checkbox is checked.</li>
-<li>In the Options dialog, check both the &quot;Create Header File (.h)&quot; and &quot;Create C File (.c)&quot; options.</li>
-<li>Click <kbd>OK</kbd>.</li>
-</ol>
-<p>This will create a decompiled source file <code class="language-text">ls.c</code> containing type definitions for types used in the decompiled code, such as <code class="language-text">undefined8</code>.</p>
-<p></p><figure class="gatsby-resp-image-figure">
-    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:379px">
-      <a class="gatsby-resp-image-link" href="/static/2cd38cad9981e2765bd9cd6924ed9eab/811d1/image.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:56.46437994722956%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABq0lEQVR42mWSWYvjMBCE8///V/KkcXBMzDrxEVmKD9m6W4dnJmFxPANh96PoB0FRRat3lFJjjFIKXjjnlFJcaqGtUGbi8n8xLqU2VVXtuq7z3jPGkiRJ0/QDIdKxS0OSNMO0h7DEr2f4fLwLwjJrX1b1ag4hWGsJIRjjW9OMk7iPnPasZ1xop2z4R1wB164sq939fj+fz/v9HiGUpilCaJqmpmmyLEuSREr5fD6/3ng8HgCgta7rejUrpbbYaZoopQAgpSQtJqTV2oQQnHMxxmVZtimlVEo1TbPWvt1uRVGUZVkUBSHkeDy2GFMRRuXBrru01o7jWNc1pXQYBuec9341931/vV4RQlmWnU6nqqoQQpeiIDMM3IA1Wmvv/TAMh8Mhy7I8z7cia+2u62KM4YcYvF+W6L0LYJw1xlpjVj8AxBchBGMMAKzJlNL1YzkXQnAu6MCHWTGh6cjZvL5JpfQL/osQ4mdh4zhaa7Ux1hjMDLPfl3Y4XfAMn7fJK2O7riOEbBn2t4hzbk1+M2vMrI7Pqu2zPxXE75YHbV3b4jRN8zzfrnBrAQAY47/Tj1zXa4NJWgAAAABJRU5ErkJggg==&#x27;);background-size:cover;display:block"></span>
-  <picture>
-          <source srcSet="/static/2cd38cad9981e2765bd9cd6924ed9eab/a0d49/image.avif 379w" sizes="(max-width: 379px) 100vw, 379px" type="image/avif"/><source srcSet="/static/2cd38cad9981e2765bd9cd6924ed9eab/8a4f3/image.webp 379w" sizes="(max-width: 379px) 100vw, 379px" type="image/webp"/>
-          <source srcSet="/static/2cd38cad9981e2765bd9cd6924ed9eab/811d1/image.png 379w" sizes="(max-width: 379px) 100vw, 379px" type="image/png"/>
-          <img class="gatsby-resp-image-image" src="/static/2cd38cad9981e2765bd9cd6924ed9eab/811d1/image.png" alt="Export Program dialog" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
-        </picture>
-  </a>
-    </span>
-    <figcaption class="gatsby-resp-image-figcaption">Export Program dialog</figcaption>
-  </figure><p></p>
-<p>And if you try to compile the generated <code class="language-text">ls.c</code> file, it will compile successfully:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">gcc <span class="token parameter variable">-c</span> ls.c
-ls.c: In <span class="token keyword">function</span> ‘FUN_0010b1b0’:
-ls.c:630:10: warning: implicit declaration of <span class="token keyword">function</span> ‘strrchr’ <span class="token punctuation">[</span>-Wimplicit-function-declaration<span class="token punctuation">]</span>
-  <span class="token number">630</span> <span class="token operator">|</span>   __s1 <span class="token operator">=</span> strrchr<span class="token punctuation">(</span>__s,0x2e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">|</span>          ^~~~~~~
-ls.c:1:1: note: include ‘<span class="token operator">&lt;</span>string.h<span class="token operator">&gt;</span>’ or provide a declaration of ‘strrchr’
-  +++ <span class="token operator">|</span>+<span class="token comment">#include &lt;string.h&gt;</span>
-    <span class="token number">1</span> <span class="token operator">|</span> typedef unsigned char   undefined<span class="token punctuation">;</span>
-ls.c:630:10: warning: incompatible implicit declaration of built-in <span class="token keyword">function</span> ‘strrchr’ <span class="token punctuation">[</span>-Wbuiltin-declaration-mismatch<span class="token punctuation">]</span>
-  <span class="token number">630</span> <span class="token operator">|</span>   __s1 <span class="token operator">=</span> strrchr<span class="token punctuation">(</span>__s,0x2e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">|</span>          ^~~~~~~
-ls.c:630:10: note: include ‘<span class="token operator">&lt;</span>string.h<span class="token operator">&gt;</span>’ or provide a declaration of ‘strrchr’
-ls.c:639:12: warning: implicit declaration of <span class="token keyword">function</span> ‘__errno_location’ <span class="token punctuation">[</span>-Wimplicit-function-declaration<span class="token punctuation">]</span>
-  <span class="token number">639</span> <span class="token operator">|</span>   piVar2 <span class="token operator">=</span> __errno_location<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">|</span>            ^~~~~~~~~~~~~~~~
-ls.c:639:10: warning: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast <span class="token punctuation">[</span>-Wint-conversion<span class="token punctuation">]</span>
-  <span class="token number">639</span> <span class="token operator">|</span>   piVar2 <span class="token operator">=</span> __errno_location<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">|</span>          ^
-ls.c:641:11: warning: implicit declaration of <span class="token keyword">function</span> ‘strcoll’ <span class="token punctuation">[</span>-Wimplicit-function-declaration<span class="token punctuation">]</span>
-  <span class="token number">641</span> <span class="token operator">|</span>   iVar1 <span class="token operator">=</span> strcoll<span class="token punctuation">(</span>__s1,__s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">|</span>           ^~~~~~~</code></pre></div>
-<p>Hurray!</p>
-<p>This is slightly oversimplified.  You can see the compiler&#x27;s warnings that we did not have declarations for <code class="language-text">strrchr</code>, <code class="language-text">__errno_location</code>, and <code class="language-text">strcoll</code>.  Ghidra can generate these declarations, but didn&#x27;t because we used the &quot;Selection Only&quot; option.  To get these declarations, you can use an approach like the following:</p>
-<ol>
-<li>Use &quot;Export Program&quot; to export the entire program.  Under the &quot;Options&quot; dialog, check only the &quot;Create Header File (.h)&quot; option.</li>
-<li>Use &quot;Export Program&quot; to export only the function you care about, but this time check only the &quot;Create C File (.c)&quot; option.</li>
-<li>Remove type definitions from the generated C file, and instead include the generated header file.</li>
-<li>Cross your fingers.</li>
-</ol>
-<p></p><figure class="gatsby-resp-image-figure">
-    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:397px">
-      <a class="gatsby-resp-image-link" href="/static/02c5597cc7d1f5fb956f3440795864f9/4c04a/image-1.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:80.85642317380352%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsTAAALEwEAmpwYAAACRklEQVR42m2T2W7bMBRE/f9/lYcAhhOLsWXtoriIMuUoprhqcx8KiW2TtpkHghBwNJeDubvL5dI0DaW0ruu2bW+3W9u2nPM/F3+uYpTVqyilbdu+vr7u6rqepsk5Z4wpiiLLsjRNy7JMkiRNUwhhkiRlWSCE8X3Wxg7OWWuXZcmybIcQstYqpfq+L4ridDpFUYQQijdVVZVmWQUhrFB5M1IqpZSUchiGJEl2hBDnnFLKGDMMw+PxIIQAAIIgwBhHURQEQZHnsMIll0Iqo7VUahzHFcYYG2O8sz+bpkEIlWXJGOOcU0oxRoTSutO9VFpr9RU+n8/H4zFN06qqTqfT09NTURTn8xkAcNwUhucoTpJ2/BcmhBhjvENd14wxjDHnvGmauq7Xx1bVFu+t/rBqZf92nueZMfb8/OzdDpsAAJfLZb/fHw6HIAjSLM/4IPo1sV7KT9g5p7W21iKE1ni3+ctNhBCEUBiGjLHHMntN07QsSxzHv2CfNoSwKIooijwWBEGe5xjjMAwJIcuyfA9rrfM8D8MQAOB7AgDwPXl7e3t5OaRZnmxj6//HVkp1XYcxhhBSSjnncRwjhCilfpy1vOK7wD5L4tw4joNzzpp5nMZhvQ6btm8b+hVGCGmthRD9plsn3u9SKHPrRPchfHM80/+WEMJau765aZphGDZb2/Xmqn6wToEY3u1CxayMu17XnaOUum0lrLXGmHmey7LcUUr9X7WSvOvJfULXj8Mp472r3p2QuoIwiqIkSfxKSCn7vnfOpWn6E9WpXbSL4sGmAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
-  <picture>
-          <source srcSet="/static/02c5597cc7d1f5fb956f3440795864f9/97045/image-1.avif 397w" sizes="(max-width: 397px) 100vw, 397px" type="image/avif"/><source srcSet="/static/02c5597cc7d1f5fb956f3440795864f9/014b7/image-1.webp 397w" sizes="(max-width: 397px) 100vw, 397px" type="image/webp"/>
-          <source srcSet="/static/02c5597cc7d1f5fb956f3440795864f9/4c04a/image-1.png 397w" sizes="(max-width: 397px) 100vw, 397px" type="image/png"/>
-          <img class="gatsby-resp-image-image" src="/static/02c5597cc7d1f5fb956f3440795864f9/4c04a/image-1.png" alt="Export Program Options" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
-        </picture>
-  </a>
-    </span>
-    <figcaption class="gatsby-resp-image-figcaption">Export Program Options</figcaption>
-  </figure><p></p>
-<p>Unfortunately, this header file does not always compile.  Here are some errors that I obtained when trying to compile the header for <code class="language-text">/bin/ls</code>:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">In file included from FUN_0010b1b0.c:1:
-FUN_0010b1b0.h:671:6: warning: conflicting types for built-in function ‘__snprintf_chk’; expected ‘int(char *, long unsigned int,  int,  long unsigned int,  const char *, ...)’ [-Wbuiltin-declaration-mismatch]
-  671 | void __snprintf_chk(void);
-      |      ^~~~~~~~~~~~~~
-FUN_0010b1b0.h:682:5: error: ‘sigaction’ redeclared as different kind of symbol
-  682 | int sigaction(int __sig,sigaction *__act,sigaction *__oact);
-      |     ^~~~~~~~~
-FUN_0010b1b0.h:294:26: note: previous declaration of ‘sigaction’ with type ‘sigaction’
-  294 | typedef struct sigaction sigaction, *Psigaction;
-      |                          ^~~~~~~~~
-FUN_0010b1b0.h:695:6: warning: conflicting types for built-in function ‘dcgettext’; expected ‘char *(const char *, const char *, int)’ [-Wbuiltin-declaration-mismatch]
-  695 | void dcgettext(void);
-      |      ^~~~~~~~~
-[truncated]</code></pre></div>
-<p>This is probably because Ghidra&#x27;s type manager includes multiple definitions for
-some types, such as <code class="language-text">sigaction</code>.  I have opened a <a href="https://github.com/NationalSecurityAgency/ghidra/issues/8102">Ghidra
-issue</a> for these
-problems.  Hopefully the Ghidra developers will commit to fixing these problems
-in the header file, since it would significantly improve the usability of the
-decompiler output.</p>
-<p></p><figure class="gatsby-resp-image-figure">
-    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:490px">
-      <a class="gatsby-resp-image-link" href="/static/f0d0c57fc12bcc7665bbe30f3c0150be/41d3c/image-2.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:75.33333333333333%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/klEQVR42pWQzW6bQBSFeYqq66pK80R9iSrbLtNNI+UZGtVSF1Y3XlSqVCmqKogsY8wgbBwDMXj4iY0xmMbGMIMxDFPFldM/p2k/ncXdnHvuuczHD2/fnJ3V6/VarfZ+S6PR4DjO8zzHcVz32nbsmR+MLCMII0MFUJf00QRCqCgK0+Y+fWFZjmObzeb5+blhGJ7nhWGIEEp3YIxTlGCcpatlmiwRzhBC4/GYKTIUaKrtjgkpy7KkO6qq2jvfEQQBQ0iV43judzVN43leluVerxdF0X2eX8zf04o8u3bG7S0AAAhhp9MBAOi6btt2d4vruj9v/GHO0cKHMpDkiwsOADAcDoMgwBhnW9CWLMt+T87W6+mNb9u2rl06jqOqA9M0LcuiD3FrLkpyswonjnA5GAhCW5blfr8fhuE/diaUVvk6daDVarUEQRBF0ff9/3hYjuMpVIAksyzL87xhGEVRPHw2IVVZZMu5ZlsjWe6qg0Ecxwihv8fuOhclIQQl07Et6roKoTGf+3m+prSitLhHG0qr2d3ZVVVl6dqBkSQZzeaVonhRhCilhOzR7ZcoDYMZY1kj1519jT5PJscj87jbPRpevTDNo8nkZZKcrFav/9DJKn61WLwzbI8BQOh09On0VBQf9XoHpvlssznM80OMD9L0yT49RcnjefhcGvrfAGPlK9LpB3dzAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
-  <picture>
-          <source srcSet="/static/f0d0c57fc12bcc7665bbe30f3c0150be/e46ac/image-2.avif 450w /static/f0d0c57fc12bcc7665bbe30f3c0150be/500af/image-2.avif 490w" sizes="(max-width: 490px) 100vw, 490px" type="image/avif"/><source srcSet="/static/f0d0c57fc12bcc7665bbe30f3c0150be/8626f/image-2.webp 450w /static/f0d0c57fc12bcc7665bbe30f3c0150be/47e4b/image-2.webp 490w" sizes="(max-width: 490px) 100vw, 490px" type="image/webp"/>
-          <source srcSet="/static/f0d0c57fc12bcc7665bbe30f3c0150be/fc2a6/image-2.png 450w /static/f0d0c57fc12bcc7665bbe30f3c0150be/41d3c/image-2.png 490w" sizes="(max-width: 490px) 100vw, 490px" type="image/png"/>
-          <img class="gatsby-resp-image-image" src="/static/f0d0c57fc12bcc7665bbe30f3c0150be/41d3c/image-2.png" alt="Sigaction types in Ghidra Type Manager" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
-        </picture>
-  </a>
-    </span>
-    <figcaption class="gatsby-resp-image-figcaption">Sigaction types in Ghidra Type Manager</figcaption>
-  </figure><p></p>
-<p>Here is a <a href="https://github.com/edmcman/ghidra-scala-loader">ghidra-scala-loader</a> <a href="https://gist.github.com/edmcman/2c195e11b3904d7e1503fc4544b98386">script</a> that can do the above steps for you from the command line.</p>
-<h1 id="hex-rays" style="position:relative"><a href="#hex-rays" aria-label="hex rays permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hex-Rays</h1>
-<p>IDA/Hex-Rays has a similar feature, but it is much more straightforward.  Simply select <kbd>File</kbd> → <kbd>Create C File</kbd>, and it will generate a C file that includes all the necessary type definitions and function declarations.  It does include <code class="language-text">defs.h</code>, which is a file that contains type definitions for Hex-Rays.  You can find that in the Hex-Rays SDK or <a href="https://gist.github.com/edmcman/4edc6c9825cc2773762750e9a37ead60">elsewhere</a>.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->12<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"><div class="ui pagination menu"><a aria-current="page" style="cursor:pointer" class="active item" href="/blog/page/1/">1</a><a style="cursor:pointer" class="item" href="/blog/page/2/">2</a><a style="cursor:pointer" class="item" href="/blog/page/3/">3</a><a style="cursor:pointer" class="item" href="/blog/page/4/">4</a><a style="cursor:pointer" class="item" href="/blog/page/5/">5</a></div></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/page/1/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>Interested in the full methodology and detailed results? <a href="https://edmcman.github.io/papers/dsn25.pdf">Download the complete paper</a> to dive deeper into our human study design, statistical analysis, and implications for future decompilation tools.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->12<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"><div class="ui pagination menu"><a aria-current="page" style="cursor:pointer" class="active item" href="/blog/page/1/">1</a><a style="cursor:pointer" class="item" href="/blog/page/2/">2</a><a style="cursor:pointer" class="item" href="/blog/page/3/">3</a><a style="cursor:pointer" class="item" href="/blog/page/4/">4</a><a style="cursor:pointer" class="item" href="/blog/page/5/">5</a></div></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/page/1/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
