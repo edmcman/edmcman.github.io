@@ -558,7 +558,15 @@ disabled.</p>
 runs.  But <em>unexpectedly</em>, non-thinking runs outperformed thinking runs <em>across
 the board</em>. This is counterintuitive, since we would expect that thinking would
 improve performance.  That is how it&#x27;s supposed to work!</p>
-<p>One concern I had with this experiment was whether timeouts were affecting the results, that is, if given enough time, the thinking runs would eventually outperform the non-thinking runs.  I actually ended up running this several times, eventually with quite long timeouts.  Most of the remaining timeouts were due to thinking loops rather than legitimate reasoning timeouts.  So endless loops are a concern with this particular model on thinking runs.  But we see more differences in performance --- exactly 100 more problems were resolved by nonthinking-BF16 than thinking-BF16 --- that can&#x27;t be explained by the 15 observed timeouts in the thinking-BF16 run.</p>
+<p>One concern I had with this experiment was whether timeouts were affecting the
+results, that is, if given enough time, the thinking runs would eventually
+outperform the non-thinking runs.  I actually ended up running this several
+times, eventually with quite long timeouts.  Most of the remaining timeouts were
+due to thinking loops rather than legitimate reasoning timeouts.  So endless
+loops are a concern with this particular model on thinking runs.  But we see
+more differences in performance --- exactly 100 more problems were resolved by
+nonthinking-BF16 than thinking-BF16 --- that can&#x27;t be explained by the 15
+observed timeouts in the thinking-BF16 run.</p>
 <p>I asked AI to analyze the results and it found two problems.</p>
 <h2 id="problem-1-tool-call-parsing" style="position:relative"><a href="#problem-1-tool-call-parsing" aria-label="problem 1 tool call parsing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problem 1: Tool-call parsing</h2>
 <p>In thinking mode, llama.cpp is experiencing a malformed tool-call parse crash
@@ -660,10 +668,12 @@ this is because openhands returns exit code 0.</p>
 still be happening.  vllm has a different tool parsing mechanism than llama.cpp;
 it might be more forgiving.  For whatever reason, vllm-thinking is still
 underperforming vllm-nonthinking.</p>
-<h1 id="next-steps" style="position:relative"><a href="#next-steps" aria-label="next steps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next Steps</h1>
+<h2 id="next-steps" style="position:relative"><a href="#next-steps" aria-label="next steps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next Steps</h2>
 <p>I am going to try to confirm whether the redundant <code class="language-text">&lt;thinking&gt;</code> tag is generated
 by vllm-thinking.  If it is, then it suggests that the model is buggy.  Which
-would be weird --- the model defaults to thinking.</p>
+would be weird --- the model defaults to thinking.  (Update: I confirmed that
+vllm-thinking <em>does</em> generate the redundant <code class="language-text">&lt;thinking&gt;</code> tag, but its parser
+must be more forgiving than llama.cpp&#x27;s parser.)</p>
 <p>I am also going to investigate agents other than openhands.  I originally
 selected openhands because it is the first agent I was able to get to work with
 Harbor.  But at the time, Harbor was only compatible with an older branch of
