@@ -455,7 +455,275 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Benchmarking Quantized LLMs for Local Coding Agents Part 4: Investigating the Impact of Thinking on Qwen3.5-35B-A3B</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>5<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-08-19--benchmarking-quantized-ll-ms-for-local-coding-agents-part-5-do-qwens-recommended-sampling-parameters-explain-the-thinking-penalty/">Benchmarking Quantized LLMs for Local Coding Agents Part 5: Do Qwen&#x27;s Recommended Sampling Parameters Explain the Thinking Penalty?</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>3<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
+1</a> and <a href="/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">Part
+2</a>,
+I reported some peculiar behavior for quantized Qwen3.5-2B models.  In <a href="/blog/2026-07-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-3-investigating-the-performance-of-qwen3-5-35-b-a3-b-take-2/">Part
+3</a>
+I moved to Qwen3.5-35B-A3B, and in <a href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Part
+4</a>
+I found that turning <em>off</em> thinking made the model <em>better</em>, which is surprising.</p>
+<p>I also realized that I didn&#x27;t use the same sampling presets that Qwen did.  In
+this post, I re-ran the sweep with <a href="https://github.com/edmcman/auto-bench/blob/main/configs/lib/qwen35.libsonnet">all four sampling
+presets</a>:
+<code class="language-text">thinking-general</code> (1.0/0.95), <code class="language-text">thinking-coding</code> (0.6/0.95),
+<code class="language-text">nonthinking-general</code> (0.7/0.8), and <code class="language-text">nonthinking-reasoning</code> (1.0/0.95).  Qwen&#x27;s
+<a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">footnote parameters</a> correspond to <code class="language-text">thinking-general</code> and <code class="language-text">nonthinking-reasoning</code>
+--- the two I <em>hadn&#x27;t</em> used.</p>
+<h1 id="sweep-summary" style="position:relative"><a href="#sweep-summary" aria-label="sweep summary permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sweep Summary</h1>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Run</th><th>Resolved</th><th>%</th><th>PPL</th><th>KL</th><th>Runtime</th><th style="text-align:right">Exceptions</th></tr></thead><tbody><tr><td>nonthinking-general-BF16</td><td>272/500</td><td>54.4%</td><td>6.62</td><td>-0.0000</td><td>1114m 18s</td><td style="text-align:right">Timeout(2), ExitCode(22), Reward(4), Verifier(1)</td></tr><tr><td>nonthinking-general-Q5_K_M</td><td>250/500</td><td>50.0%</td><td>6.62</td><td>0.0083</td><td>1027m 24s</td><td style="text-align:right">Setup(1), Timeout(4), NetworkConnectionError(1), ExitCode(44), Reward(2), Verifier(1)</td></tr><tr><td>nonthinking-general-Q8_0</td><td>275/500</td><td>55.0%</td><td>6.61</td><td>0.0068</td><td>976m 38s</td><td style="text-align:right">Timeout(3), ExitCode(20), Reward(2), Verifier(2)</td></tr><tr><td>nonthinking-general-vllm</td><td>269/500</td><td>53.8%</td><td>—</td><td>—</td><td>928m 41s</td><td style="text-align:right">Timeout(10), ExitCode(30), Reward(2), Verifier(1)</td></tr><tr><td>nonthinking-reasoning-BF16</td><td>264/500</td><td>52.8%</td><td>6.62</td><td>-0.0000</td><td>1114m 15s</td><td style="text-align:right">Timeout(3), ExitCode(19), Reward(5)</td></tr><tr><td>nonthinking-reasoning-Q5_K_M</td><td>264/500</td><td>52.8%</td><td>6.62</td><td>0.0083</td><td>943m 24s</td><td style="text-align:right">Timeout(2), ExitCode(19), Reward(5), Verifier(1)</td></tr><tr><td>nonthinking-reasoning-Q8_0</td><td>269/500</td><td>53.8%</td><td>6.61</td><td>0.0068</td><td>950m 9s</td><td style="text-align:right">Timeout(1), ExitCode(21), Reward(3), Verifier(2)</td></tr><tr><td>nonthinking-reasoning-vllm</td><td>276/500</td><td>55.2%</td><td>—</td><td>—</td><td>869m 14s</td><td style="text-align:right">Timeout(13), ExitCode(19), Reward(1), Verifier(1)</td></tr><tr><td>thinking-coding-BF16</td><td>183/500</td><td>36.6%</td><td>6.62</td><td>-0.0000</td><td>1428m 38s</td><td style="text-align:right">Timeout(23), ExitCode(17), Reward(2), Verifier(1)</td></tr><tr><td>thinking-coding-Q5_K_M</td><td>198/500</td><td>39.6%</td><td>6.62</td><td>0.0083</td><td>1040m 1s</td><td style="text-align:right">Timeout(12), ExitCode(24), Reward(4), Verifier(1)</td></tr><tr><td>thinking-coding-Q8_0</td><td>196/500</td><td>39.2%</td><td>6.61</td><td>0.0068</td><td>971m 55s</td><td style="text-align:right">Timeout(10), ExitCode(20), Reward(2), Verifier(1)</td></tr><tr><td>thinking-coding-vllm</td><td>254/500</td><td>50.8%</td><td>—</td><td>—</td><td>1619m 34s</td><td style="text-align:right">Timeout(40), ExitCode(21), Reward(3), Verifier(1)</td></tr><tr><td>thinking-general-BF16</td><td>187/500</td><td>37.4%</td><td>6.62</td><td>—</td><td>1049m 8s</td><td style="text-align:right">Timeout(5), NetworkConnectionError(1), ExitCode(20), Reward(4), Verifier(1)</td></tr><tr><td>thinking-general-Q5_K_M</td><td>199/500</td><td>39.8%</td><td>6.62</td><td>0.0083</td><td>573m 14s</td><td style="text-align:right">ExitCode(19), Reward(2), Verifier(1)</td></tr><tr><td>thinking-general-Q8_0</td><td>211/500</td><td>42.2%</td><td>6.61</td><td>0.0068</td><td>711m 51s</td><td style="text-align:right">Timeout(2), ExitCode(19), Reward(4), Verifier(1)</td></tr><tr><td>thinking-general-vllm</td><td>243/500</td><td>48.6%</td><td>—</td><td>—</td><td>1694m 29s</td><td style="text-align:right">Timeout(47), ExitCode(20), Verifier(1)</td></tr></tbody></table>
+</div>
+<h1 id="finding-1-sampling-parameters-are-not-the-explanation" style="position:relative"><a href="#finding-1-sampling-parameters-are-not-the-explanation" aria-label="finding 1 sampling parameters are not the explanation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finding 1: Sampling parameters are not the explanation</h1>
+<p>Summing each preset across all four backends:</p>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Preset</th><th>Resolved</th><th>%</th></tr></thead><tbody><tr><td>nonthinking-reasoning</td><td>1073/2000</td><td>53.6%</td></tr><tr><td>nonthinking-general</td><td>1066/2000</td><td>53.3%</td></tr><tr><td>thinking-general</td><td>840/2000</td><td>42.0%</td></tr><tr><td>thinking-coding</td><td>831/2000</td><td>41.5%</td></tr></tbody></table>
+</div>
+<p>Non-thinking runs consistently perform significantly better than thinking runs.</p>
+<p>In contrast, the sampling parameters don&#x27;t seem to matter very much.</p>
+<p>So the results from Part 4 do not seem to be a mistake caused by using the wrong sampling parameters.</p>
+<h1 id="finding-2-the-thinking-penalty-is-worse-on-llamacpp" style="position:relative"><a href="#finding-2-the-thinking-penalty-is-worse-on-llamacpp" aria-label="finding 2 the thinking penalty is worse on llamacpp permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finding 2: The thinking penalty is worse on llama.cpp</h1>
+<p>Averaging each backend&#x27;s two non-thinking runs against its two thinking runs:</p>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Backend</th><th>Non-thinking avg</th><th>Thinking avg</th><th>Penalty (pp)</th></tr></thead><tbody><tr><td>llama.cpp BF16</td><td>268.0</td><td>185.0</td><td>16.6</td></tr><tr><td>llama.cpp Q8_0</td><td>272.0</td><td>203.5</td><td>13.7</td></tr><tr><td>llama.cpp Q5_K_M</td><td>257.0</td><td>198.5</td><td>11.7</td></tr><tr><td>vllm</td><td>272.5</td><td>248.5</td><td>4.8</td></tr></tbody></table>
+</div>
+<p>I would expect:</p>
+<ul>
+<li>The non-quantized (vllm) run should out-perform the other runs</li>
+<li>llama.cpp&#x27;s BF16 run should be fairly close to vllm</li>
+<li>More quantization should lead to lower accuracy, though <a href="https://edmcman.github.io/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">there is evidence this is not always true</a></li>
+</ul>
+<p>For non-thinking runs, this is spot on, considering a small amount of noise.  But thinking runs are different: vllm does significantly better.  This is probably because of the llama.cpp parsing bug discovered in <a href="https://edmcman.github.io/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Part 4</a>.</p>
+<h1 id="concluding-thoughts" style="position:relative"><a href="#concluding-thoughts" aria-label="concluding thoughts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concluding Thoughts</h1>
+<p>Despite being significantly more expensive, thinking mode seems to be worse for
+coding, which still surprises me.  This clearly isn&#x27;t true for frontier models.</p>
+<p>Sampling parameters don&#x27;t seem to be that critical.  Whether thinking is enabled
+is much more impactful.</p>
+<p>The best run here is <code class="language-text">nonthinking-reasoning-vllm</code> at 55.2%, compared to <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">Qwen&#x27;s
+claimed 70.0%</a>.  It&#x27;s still unclear what the difference is.</p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Benchmarking Quantized LLMs for Local Coding Agents Part 4: Investigating the Impact of Thinking on Qwen3.5-35B-A3B</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>5<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a aria-current="page" class="" href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
 1</a>
 and <a href="/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">Part
 2</a>,
@@ -1640,7 +1908,7 @@ attempt</a>.</p>
 <li>Generalization to other tasks: Would we see similar results on SWE-bench instances beyond Verified, or on other benchmarks like HumanEval or MBPP?</li>
 <li>Sampling parameter sensitivity: How much of the improvement from quantized models comes from properly-tuned sampling parameters? A controlled ablation would be valuable.</li>
 </ul>
-<p>I&#x27;m actively running experiments to answer these questions! The auto-bench framework is designed to scale to hundreds of model/quantization combinations and thousands of problem instances. Stay tuned for results on larger model families, more problem instances, and more task types.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="blue tag icon"></i><div style="font-weight:700" class="content"><a href="/blog/">autobench<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->8<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->13<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/tags/autobench/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>I&#x27;m actively running experiments to answer these questions! The auto-bench framework is designed to scale to hundreds of model/quantization combinations and thousands of problem instances. Stay tuned for results on larger model families, more problem instances, and more task types.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->10<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="blue tag icon"></i><div style="font-weight:700" class="content"><a href="/blog/">autobench<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->13<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/tags/autobench/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >

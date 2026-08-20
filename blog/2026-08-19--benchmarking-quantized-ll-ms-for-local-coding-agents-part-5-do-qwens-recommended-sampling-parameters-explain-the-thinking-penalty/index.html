@@ -455,41 +455,275 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><style id="__jsx-2624771933">.no-margin{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui text container"><div class="ui fluid card"><div data-gatsby-image-wrapper="" style="width:700px;height:300px" class="gatsby-image-wrapper"><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB20lEQVR42k2N0W6aAABF+f+3aUy7xmnTbU1Wu4mSWbQiICIIAgoICEiVdqhMBatMRIXFtQ9LTk5yH04ukL/N3cDkV1z5fHeTus6cyWfSuUwqm7n68unq9jqVv/yQv0jnLtLZj5f5LFwCH6FyDfxevvsGCJIoiqLU6w/1obHQpqvn6Wrtr7dbP9y8BsEm2u124T549QN3ediGx+RwiI+n5BQfoghge4og65L6JKqWotsje27Z7mgyN+13RvbcPE/Xmkwdhpp3aU/kNrKwkXtAUXuARvWSWQN1uDiE4Zcm7rG4x2JvXrGYx2B+B113iBVjtxAXb3hU8w/XifocUFAhcAQXzYcfegUcw5VZA/FJxG83vDPYGZqYc4Qr0DNugkK/sZrPUTOJcdgGUFSqkImUTQTSkbqMYVoLVQhcJ6s29TimC3ajZKP4sE1odEvlZjITrpfhLjge9777AhAaRpkkaTRJvdnvdnmKEjpdBZv95J9JblplZV7ut3mL7No6tTjuT0mSxHHyzzEAD+7r+j2qgewA5emnLjFtMzbbXxjEWOQhx+GlYYUe6OzAsdj/4ziOTwCoFlqKwEgqKxqsCNFcj5eqhtLZB9vlwojCrWPITcEixV/7KHqLkuT9+S8Um742JJbxYwAAAABJRU5ErkJggg==" alt=""/><picture><source type="image/webp" data-srcset="/static/ebd79983ac72bcaee00df0c4edd8ef0e/efd8f/image.webp 700w,/static/ebd79983ac72bcaee00df0c4edd8ef0e/93de6/image.webp 1400w" sizes="700px"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="700px" decoding="async" loading="lazy" data-src="/static/ebd79983ac72bcaee00df0c4edd8ef0e/becf2/image.png" data-srcset="/static/ebd79983ac72bcaee00df0c4edd8ef0e/becf2/image.png 700w,/static/ebd79983ac72bcaee00df0c4edd8ef0e/3df78/image.png 1400w" alt="cover image"/></picture><noscript><picture><source type="image/webp" srcSet="/static/ebd79983ac72bcaee00df0c4edd8ef0e/efd8f/image.webp 700w,/static/ebd79983ac72bcaee00df0c4edd8ef0e/93de6/image.webp 1400w" sizes="700px"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="700px" decoding="async" loading="lazy" src="/static/ebd79983ac72bcaee00df0c4edd8ef0e/becf2/image.png" srcSet="/static/ebd79983ac72bcaee00df0c4edd8ef0e/becf2/image.png 700w,/static/ebd79983ac72bcaee00df0c4edd8ef0e/3df78/image.png 1400w" alt="cover image"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><div class="content"><div class="header">Notes: Profiling</div><div class="meta"><span class="jsx-2624771933">Edward J. Schwartz</span><span class="jsx-2624771933">Computer Security Researcher</span><span class="jsx-2624771933">1<!-- --> min. read</span><div style="display:inline-block" class="jsx-2624771933 tags"><div class="ui label"><a href="/blog/tags/notes/">notes</a></div><div class="ui label"><a href="/blog/tags/profiling/">profiling</a></div></div></div></div><div class="content markdown"><p>At some point, I hope to create a Notes section on my website that will turn Markdown files into a list of notes. This is basically how the blog works. But, I&#x27;m kind of busy. And since Gatsby seems like it&#x27;s dead, I&#x27;m not sure that I want to invest a whole lot of time into it. (Although putting the notes in markdown seems like a good idea for compatibility.)</p>
-<p>Anyway, here is my first very short note on Profiling.</p>
-<h2 id="speedscope" style="position:relative"><a href="#speedscope" aria-label="speedscope permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SpeedScope</h2>
-<p><a href="https://www.speedscope.app/">SpeedScope</a> is an awesome tool for visualizing
-profiler output.  It has a flame graph view that is wonderful.  I also like to
-use the Sandwich view, sorting by total time and simply looking for the first
-function that I recognize.  This is often the culprit.</p>
-<p>The <a href="https://github.com/jlfwong/speedscope#usage">documentation</a> is pretty good.
-It also shows how to record profiles in compatible formats for most platforms.
-I mostly use <code class="language-text">py-spy</code> and <code class="language-text">perf</code>.</p>
-<h3 id="java" style="position:relative"><a href="#java" aria-label="java permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Java</h3>
-<p>The one notably missing platform is Java!  Luckily, it&#x27;s not too hard to convert Java&#x27;s async-profiler output to a format that SpeedScope can read.  Here&#x27;s how I do it:</p>
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><style id="__jsx-2624771933">.no-margin{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui text container"><div class="ui fluid card"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 5: Do Qwen&#x27;s Recommended Sampling Parameters Explain the Thinking Penalty?</div><div class="meta"><span class="jsx-2624771933">Edward J. Schwartz</span><span class="jsx-2624771933">Computer Security Researcher</span><span class="jsx-2624771933">3<!-- --> min. read</span><div style="display:inline-block" class="jsx-2624771933 tags"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
+1</a> and <a href="/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">Part
+2</a>,
+I reported some peculiar behavior for quantized Qwen3.5-2B models.  In <a href="/blog/2026-07-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-3-investigating-the-performance-of-qwen3-5-35-b-a3-b-take-2/">Part
+3</a>
+I moved to Qwen3.5-35B-A3B, and in <a href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Part
+4</a>
+I found that turning <em>off</em> thinking made the model <em>better</em>, which is surprising.</p>
+<p>I also realized that I didn&#x27;t use the same sampling presets that Qwen did.  In
+this post, I re-ran the sweep with <a href="https://github.com/edmcman/auto-bench/blob/main/configs/lib/qwen35.libsonnet">all four sampling
+presets</a>:
+<code class="language-text">thinking-general</code> (1.0/0.95), <code class="language-text">thinking-coding</code> (0.6/0.95),
+<code class="language-text">nonthinking-general</code> (0.7/0.8), and <code class="language-text">nonthinking-reasoning</code> (1.0/0.95).  Qwen&#x27;s
+<a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">footnote parameters</a> correspond to <code class="language-text">thinking-general</code> and <code class="language-text">nonthinking-reasoning</code>
+--- the two I <em>hadn&#x27;t</em> used.</p>
+<h1 id="sweep-summary" style="position:relative"><a href="#sweep-summary" aria-label="sweep summary permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sweep Summary</h1>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Run</th><th>Resolved</th><th>%</th><th>PPL</th><th>KL</th><th>Runtime</th><th style="text-align:right">Exceptions</th></tr></thead><tbody><tr><td>nonthinking-general-BF16</td><td>272/500</td><td>54.4%</td><td>6.62</td><td>-0.0000</td><td>1114m 18s</td><td style="text-align:right">Timeout(2), ExitCode(22), Reward(4), Verifier(1)</td></tr><tr><td>nonthinking-general-Q5_K_M</td><td>250/500</td><td>50.0%</td><td>6.62</td><td>0.0083</td><td>1027m 24s</td><td style="text-align:right">Setup(1), Timeout(4), NetworkConnectionError(1), ExitCode(44), Reward(2), Verifier(1)</td></tr><tr><td>nonthinking-general-Q8_0</td><td>275/500</td><td>55.0%</td><td>6.61</td><td>0.0068</td><td>976m 38s</td><td style="text-align:right">Timeout(3), ExitCode(20), Reward(2), Verifier(2)</td></tr><tr><td>nonthinking-general-vllm</td><td>269/500</td><td>53.8%</td><td>—</td><td>—</td><td>928m 41s</td><td style="text-align:right">Timeout(10), ExitCode(30), Reward(2), Verifier(1)</td></tr><tr><td>nonthinking-reasoning-BF16</td><td>264/500</td><td>52.8%</td><td>6.62</td><td>-0.0000</td><td>1114m 15s</td><td style="text-align:right">Timeout(3), ExitCode(19), Reward(5)</td></tr><tr><td>nonthinking-reasoning-Q5_K_M</td><td>264/500</td><td>52.8%</td><td>6.62</td><td>0.0083</td><td>943m 24s</td><td style="text-align:right">Timeout(2), ExitCode(19), Reward(5), Verifier(1)</td></tr><tr><td>nonthinking-reasoning-Q8_0</td><td>269/500</td><td>53.8%</td><td>6.61</td><td>0.0068</td><td>950m 9s</td><td style="text-align:right">Timeout(1), ExitCode(21), Reward(3), Verifier(2)</td></tr><tr><td>nonthinking-reasoning-vllm</td><td>276/500</td><td>55.2%</td><td>—</td><td>—</td><td>869m 14s</td><td style="text-align:right">Timeout(13), ExitCode(19), Reward(1), Verifier(1)</td></tr><tr><td>thinking-coding-BF16</td><td>183/500</td><td>36.6%</td><td>6.62</td><td>-0.0000</td><td>1428m 38s</td><td style="text-align:right">Timeout(23), ExitCode(17), Reward(2), Verifier(1)</td></tr><tr><td>thinking-coding-Q5_K_M</td><td>198/500</td><td>39.6%</td><td>6.62</td><td>0.0083</td><td>1040m 1s</td><td style="text-align:right">Timeout(12), ExitCode(24), Reward(4), Verifier(1)</td></tr><tr><td>thinking-coding-Q8_0</td><td>196/500</td><td>39.2%</td><td>6.61</td><td>0.0068</td><td>971m 55s</td><td style="text-align:right">Timeout(10), ExitCode(20), Reward(2), Verifier(1)</td></tr><tr><td>thinking-coding-vllm</td><td>254/500</td><td>50.8%</td><td>—</td><td>—</td><td>1619m 34s</td><td style="text-align:right">Timeout(40), ExitCode(21), Reward(3), Verifier(1)</td></tr><tr><td>thinking-general-BF16</td><td>187/500</td><td>37.4%</td><td>6.62</td><td>—</td><td>1049m 8s</td><td style="text-align:right">Timeout(5), NetworkConnectionError(1), ExitCode(20), Reward(4), Verifier(1)</td></tr><tr><td>thinking-general-Q5_K_M</td><td>199/500</td><td>39.8%</td><td>6.62</td><td>0.0083</td><td>573m 14s</td><td style="text-align:right">ExitCode(19), Reward(2), Verifier(1)</td></tr><tr><td>thinking-general-Q8_0</td><td>211/500</td><td>42.2%</td><td>6.61</td><td>0.0068</td><td>711m 51s</td><td style="text-align:right">Timeout(2), ExitCode(19), Reward(4), Verifier(1)</td></tr><tr><td>thinking-general-vllm</td><td>243/500</td><td>48.6%</td><td>—</td><td>—</td><td>1694m 29s</td><td style="text-align:right">Timeout(47), ExitCode(20), Verifier(1)</td></tr></tbody></table>
+</div>
+<h1 id="finding-1-sampling-parameters-are-not-the-explanation" style="position:relative"><a href="#finding-1-sampling-parameters-are-not-the-explanation" aria-label="finding 1 sampling parameters are not the explanation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finding 1: Sampling parameters are not the explanation</h1>
+<p>Summing each preset across all four backends:</p>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Preset</th><th>Resolved</th><th>%</th></tr></thead><tbody><tr><td>nonthinking-reasoning</td><td>1073/2000</td><td>53.6%</td></tr><tr><td>nonthinking-general</td><td>1066/2000</td><td>53.3%</td></tr><tr><td>thinking-general</td><td>840/2000</td><td>42.0%</td></tr><tr><td>thinking-coding</td><td>831/2000</td><td>41.5%</td></tr></tbody></table>
+</div>
+<p>Non-thinking runs consistently perform significantly better than thinking runs.</p>
+<p>In contrast, the sampling parameters don&#x27;t seem to matter very much.</p>
+<p>So the results from Part 4 do not seem to be a mistake caused by using the wrong sampling parameters.</p>
+<h1 id="finding-2-the-thinking-penalty-is-worse-on-llamacpp" style="position:relative"><a href="#finding-2-the-thinking-penalty-is-worse-on-llamacpp" aria-label="finding 2 the thinking penalty is worse on llamacpp permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finding 2: The thinking penalty is worse on llama.cpp</h1>
+<p>Averaging each backend&#x27;s two non-thinking runs against its two thinking runs:</p>
+<div style="text-align:center;overflow-x:auto">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Backend</th><th>Non-thinking avg</th><th>Thinking avg</th><th>Penalty (pp)</th></tr></thead><tbody><tr><td>llama.cpp BF16</td><td>268.0</td><td>185.0</td><td>16.6</td></tr><tr><td>llama.cpp Q8_0</td><td>272.0</td><td>203.5</td><td>13.7</td></tr><tr><td>llama.cpp Q5_K_M</td><td>257.0</td><td>198.5</td><td>11.7</td></tr><tr><td>vllm</td><td>272.5</td><td>248.5</td><td>4.8</td></tr></tbody></table>
+</div>
+<p>I would expect:</p>
 <ul>
-<li>Download <a href="https://github.com/async-profiler/async-profiler">async-profiler</a></li>
-<li>Create an output file in <code class="language-text">collapsed</code> format</li>
-<li>You can do this in several ways, such as:</li>
-<li><code class="language-text">./asprof start -i 1s Ghidra</code> followed by <code class="language-text">./asprof stop -o collapsed -f /tmp/out.prof.collapsed Ghidra</code></li>
-<li><code class="language-text">./asprof collect -d 60 -o collapsed -f /tmp/out.prof.collapsed Ghidra</code></li>
-<li>Then open <code class="language-text">out.prof.collapsed</code> in SpeedScope.</li>
+<li>The non-quantized (vllm) run should out-perform the other runs</li>
+<li>llama.cpp&#x27;s BF16 run should be fairly close to vllm</li>
+<li>More quantization should lead to lower accuracy, though <a href="https://edmcman.github.io/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">there is evidence this is not always true</a></li>
 </ul>
-<div><div style="cursor:pointer;position:relative"><figure class="gatsby-resp-image-figure">
-    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1437px">
-      <a class="gatsby-resp-image-link" href="/static/ebd79983ac72bcaee00df0c4edd8ef0e/bed7a/image.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:68.22222222222221%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAACW0lEQVR42nXOa3OaQBQGYP7/n2iTTGwyNbGi0aYigiLK1QsCEkEBRRMFQfAKwrZxUtM20zOz58N79tmz0M33wg0pp4vwJXz1Cb74nL2+yKauMqkUfJsufrvOpy/hmys4dZW5vcyk88U8V8VoDGUwtJTLQrIo9zuiJqmjmT5z9OVy7Xrbg3fcrqK9H4Xr6LiPws0uWESed4x2hyQMk+gI4mTtrSCqJ7KywsoKJz8JI0MeTyRzLI0n4msf9wxTNCeibkqWpfalabX8QhEeTwVtZt1hoZxWgrVSdvCYUQo5Dak4FO7SuEefO7aiMI8qr2leJ1/KyIKo+E1i12LCLg9ltGJGK94PCvdaIT9FHp0q4tXLbr3sEqhLom4dd+jalK/anbZSey7BNom5XcbqNl84FMoP0LyK5gboDxHHBQKX6kSPRIYNRKcfRuStgSBDgpAaeJ9t99i13j/sNlF4CPdb35lBpFoj1VpNxTiBbjUolmsotWGFnD22J1XGwFtcR1BwzmBJ61kKAABxnAAAklNBiHKHKhlSLvK8xNWemaZVb1sy7QpVTBthhkmwYpWUJ21+Olf+wTFU6dfpnsB0R4xQavB1tku1+Advbvvu2PenG3vW63TLrDkwnBM5nfPmRlcmxFmur+qeMx8+Laama4/Wy9lpSQwA0Bf+F1rlTPts3jErp5VmiyHt+TIECUiO53GcnH64GQYW7fj7GPxmf2DpLliYQ1Wf2/OPbwMAAmPlKs5rEn/AtPA18CwAjkkcnvL3MThVuI/22zD5O3/Dw6lyCAPwphLw4dL/+i/8E0Mq4xsc1G2mAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
-  <picture>
-          <source srcSet="/static/ebd79983ac72bcaee00df0c4edd8ef0e/e46ac/image.avif 450w /static/ebd79983ac72bcaee00df0c4edd8ef0e/9b8d4/image.avif 900w /static/ebd79983ac72bcaee00df0c4edd8ef0e/e2f16/image.avif 1437w" sizes="(max-width: 1437px) 100vw, 1437px" type="image/avif"/><source srcSet="/static/ebd79983ac72bcaee00df0c4edd8ef0e/8626f/image.webp 450w /static/ebd79983ac72bcaee00df0c4edd8ef0e/131f1/image.webp 900w /static/ebd79983ac72bcaee00df0c4edd8ef0e/00f91/image.webp 1437w" sizes="(max-width: 1437px) 100vw, 1437px" type="image/webp"/>
-          <source srcSet="/static/ebd79983ac72bcaee00df0c4edd8ef0e/fc2a6/image.png 450w /static/ebd79983ac72bcaee00df0c4edd8ef0e/1cfc2/image.png 900w /static/ebd79983ac72bcaee00df0c4edd8ef0e/bed7a/image.png 1437w" sizes="(max-width: 1437px) 100vw, 1437px" type="image/png"/>
-          <img class="gatsby-resp-image-image" src="/static/ebd79983ac72bcaee00df0c4edd8ef0e/bed7a/image.png" alt="Screenshot of profiling Ghidra" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
-        </picture>
-  </a>
-    </span>
-    <figcaption class="gatsby-resp-image-figcaption">Screenshot of profiling Ghidra</figcaption>
-  </figure></div></div>
-<p>The collapsed format takes a while to parse, so it might be worth it to export
-the native SpeedScope format.</p></div></div><div class="ui basic segment"><div id="disqus_thread"></div></div><div class="ui centered padded grid"><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-08-19--benchmarking-quantized-ll-ms-for-local-coding-agents-part-5-do-qwens-recommended-sampling-parameters-explain-the-thinking-penalty/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 5: Do Qwen&#x27;s Recommended Sampling Parameters Explain the Thinking Penalty?</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">3<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-08-08--the-end-of-oo-analyzer-asp-for-now/"><div class="content"><div class="header">The End of OOAnalyzer-ASP... For Now</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">4<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 4: Investigating the Impact of Thinking on Qwen3.5-35B-A3B</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">5<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-07-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-3-investigating-the-performance-of-qwen3-5-35-b-a3-b-take-2/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 3: Investigating the Performance of Qwen3.5-35B-A3B (Take 2)</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">6<!-- --> min read</div></div></div></div></div></a></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/2024-11-14--notes-profiling/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>For non-thinking runs, this is spot on, considering a small amount of noise.  But thinking runs are different: vllm does significantly better.  This is probably because of the llama.cpp parsing bug discovered in <a href="https://edmcman.github.io/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/">Part 4</a>.</p>
+<h1 id="concluding-thoughts" style="position:relative"><a href="#concluding-thoughts" aria-label="concluding thoughts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concluding Thoughts</h1>
+<p>Despite being significantly more expensive, thinking mode seems to be worse for
+coding, which still surprises me.  This clearly isn&#x27;t true for frontier models.</p>
+<p>Sampling parameters don&#x27;t seem to be that critical.  Whether thinking is enabled
+is much more impactful.</p>
+<p>The best run here is <code class="language-text">nonthinking-reasoning-vllm</code> at 55.2%, compared to <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">Qwen&#x27;s
+claimed 70.0%</a>.  It&#x27;s still unclear what the difference is.</p></div></div><div class="ui basic segment"><div id="disqus_thread"></div></div><div class="ui centered padded grid"><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-08-08--the-end-of-oo-analyzer-asp-for-now/"><div class="content"><div class="header">The End of OOAnalyzer-ASP... For Now</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">4<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-07-22--benchmarking-quantized-ll-ms-for-local-coding-agents-part-4-investigating-the-impact-of-thinking-on-qwen3-5-35-b-a3-b/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 4: Investigating the Impact of Thinking on Qwen3.5-35B-A3B</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">5<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-07-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-3-investigating-the-performance-of-qwen3-5-35-b-a3-b-take-2/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 3: Investigating the Performance of Qwen3.5-35B-A3B (Take 2)</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">6<!-- --> min read</div></div></div></div></div></a></div><div style="padding-bottom:1em"><a class="ui card" href="/blog/2026-06-12--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-3/"><div class="content"><div class="header">Benchmarking Quantized LLMs for Local Coding Agents Part 3: Investigating the Performance of Qwen3.5-35B-A3B (Take 1)</div></div><div class="extra content"><div class="ui comments"><div class="comment"><div class="content"><div class="avatar"><img alt="Avatar" src="/static/b0e73023d6a6055546d8e671edd67950/8ef0e/ed.png"/></div><div style="font-weight:400" class="author">Edward J. Schwartz</div><div style="margin:0" class="metadata">4<!-- --> min read</div></div></div></div></div></a></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/2026-08-19--benchmarking-quantized-ll-ms-for-local-coding-agents-part-5-do-qwens-recommended-sampling-parameters-explain-the-thinking-penalty/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
