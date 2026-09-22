@@ -455,7 +455,226 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a aria-current="page" class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a aria-current="page" class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-09-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-6-one-mystery-solved/">Benchmarking Quantized LLMs for Local Coding Agents Part 6: One Mystery Solved</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>4<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style id="__jsx-2176553742">.logo.jsx-2176553742{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:60px;width:60px;overflow:hidden;-webkit-transition:all 0.5s;transition:all 0.5s;}.logo.jsx-2176553742 img.jsx-2176553742{width:100%;}.logo-item{-webkit-transition:all 0.5s !important;transition:all 0.5s !important;}@media only screen and (max-width:767px){.logo-item{padding:0.2em !important;margin:0 !important;}}.type.jsx-2176553742{text-align:left;}.type.jsx-2176553742 h2{margin:0 !important;}</style><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="alternate" type="application/rss+xml" title="Edward J. Schwartz: Computer Science Researcher" href="/blog/rss.xml"/><title>Edward J. Schwartz: Computer Science Researcher</title><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><title data-react-helmet="true"></title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ui segment pushable"><div class="ui vertical labeled icon ui slide along left thin sidebar menu"><a class="item" href="/"><i aria-hidden="true" class="home icon"></i>About</a><a class="item" href="/publications/"><i aria-hidden="true" class="book icon"></i>Publications</a><a class="item" href="/projects/"><i aria-hidden="true" class="archive icon"></i>Projects</a><a aria-current="page" class="active item" href="/blog/"><i aria-hidden="true" class="newspaper icon"></i>Blog</a><a class="item" href="/contact/"><i aria-hidden="true" class="mail icon"></i>Contact</a></div><div style="min-height:100vh" class="pusher"><div class="ui basic segment masthead"><div class="ui large secondary menu"><a class="icon item mobile only"><i aria-hidden="true" class="sidebar icon"></i></a><div class="vertically fitted item mobile hidden logo-item"><div class="jsx-2176553742 logo"><img src="https://www.gravatar.com/avatar/13944326b651e8b820a4fd6a56611f2f" alt="Me" class="jsx-2176553742"/></div></div><div class="item logo-item"><div class="jsx-2176553742 type"><h2 class="ui header">Edward J. Schwartz</h2><h2 class="ui sub header">Computer Security Researcher</h2></div></div><div class="right menu"><a class="item mobile hidden" href="/"><i aria-hidden="true" class="grey home icon"></i> <!-- -->About</a><a class="item mobile hidden" href="/publications/"><i aria-hidden="true" class="grey book icon"></i> <!-- -->Publications</a><a class="item mobile hidden" href="/projects/"><i aria-hidden="true" class="grey archive icon"></i> <!-- -->Projects</a><a aria-current="page" class="active item mobile hidden" href="/blog/"><i aria-hidden="true" class="grey newspaper icon"></i> <!-- -->Blog</a><a class="item mobile hidden" href="/contact/"><i aria-hidden="true" class="grey mail icon"></i> <!-- -->Contact</a></div></div></div><div style="padding-bottom:60px"><div class="ui container"><div class="ui stackable equal width grid"><div class="twelve wide column"><div class="ui text container"><div class="ui container"><div class="ui cards"><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-09-22--on-verification-of-decompilation/">Some Rough Thoughts on Verification of Decompilation</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>7<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/decompilation/">decompilation</a></div><div class="ui label"><a href="/blog/tags/notes/">notes</a></div></div></div></div><div class="content markdown"><h1 id="motivation" style="position:relative"><a href="#motivation" aria-label="motivation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Motivation</h1>
+<p>I&#x27;ve been thinking a lot about verifying that a decompilation is &quot;correct&quot;.
+This problem is becoming increasingly important because many neural decompilers
+produce output that is <em>obviously</em> incorrect.  Wouldn&#x27;t it be nice if we could
+detect these cases, either when evaluating decompilers for a paper, or in
+practice?</p>
+<p>I have long wondered if we could use a simple dynamic technique to detect
+non-equivalent decompilations using something like Manuel Egele&#x27;s <a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-egele.pdf">blanket
+execution</a>
+or Godefroid&#x27;s <a href="https://patricegodefroid.github.io/public_psfiles/icse2014.pdf">micro
+execution</a>.  But
+every time that I think about this, I realize how many nuances there are, and I
+often forget my conclusions.  The idea of this post is to write down some
+insights so that I remember them.</p>
+<p>I would have liked to write a post that convinces someone other than me, but
+that was taking too long.  So instead, this is mostly a set of observations
+recorded for myself.  Maybe they will provide insight or make sense to others...
+I hope so, but I certainly understand if not.</p>
+<h1 id="the-idea" style="position:relative"><a href="#the-idea" aria-label="the idea permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Idea</h1>
+<p>The idea starts by assigning random values to registers and executing a binary
+function concretely.  When unassigned memory is referenced, intercept it and set
+it to something random. If both the reference decompilation and a candidate
+execute to an &quot;equivalent&quot; output state, the two programs are equivalent for
+that particular input.  This is a cheap test, so we can run with a lot of
+different random inputs.</p>
+<p>In other words, we replace the real callers with random ones.</p>
+<p>Here&#x27;s a simple example. Suppose the reference function is:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token class-name">uint32_t</span> <span class="token function">f_reference</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> a<span class="token punctuation">,</span> <span class="token class-name">uint32_t</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">2654435761u</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>b <span class="token operator">&lt;&lt;</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>b <span class="token operator">&gt;&gt;</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// rotate b left 13</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>and a broken candidate decompilation:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token class-name">uint32_t</span> <span class="token function">f_candidate</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> a<span class="token punctuation">,</span> <span class="token class-name">uint32_t</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">2654435761u</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span>b <span class="token operator">&lt;&lt;</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// BUG: rotate became a shift</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>For a random input <code class="language-text">a=0x6b8b4567, b=0x327b23c6</code>, the reference returns
+<code class="language-text">0xce416d78</code> and the candidate gives <code class="language-text">0xce416b37</code>.  Clearly these are not
+equivalent!</p>
+<p>Things get a little more complicated when you have a function call.  Blanket and
+micro execution both execute into the callee.  But I really wanted to keep
+testing isolated to the function in question (the caller here).</p>
+<p>So my idea was to model callees such that they return arbitrary but
+deterministic values for each input combination (e.g., hash them).  For example,
+let&#x27;s say we happened to call <code class="language-text">foo(10)</code>.  We might hash <code class="language-text">foo(10)</code> to the random
+value <code class="language-text">0x08cbc4a9</code>.  If the reference and candidate both call <code class="language-text">foo(10)</code> and use
+it in the same way, they should behave similarly.</p>
+<h1 id="observations" style="position:relative"><a href="#observations" aria-label="observations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h1>
+<h2 id="not-executing-callees" style="position:relative"><a href="#not-executing-callees" aria-label="not executing callees permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Not executing callees</h2>
+<p>There are two problems if you try to avoid executing callees.</p>
+<h3 id="structural-vs-physical-equality" style="position:relative"><a href="#structural-vs-physical-equality" aria-label="structural vs physical equality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structural vs. physical equality</h3>
+<p>The hashing scheme rests on an assumption: a callee invoked on the same input
+should return the same output.  But what counts as &quot;the same input&quot;?</p>
+<p>Consider:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token operator">*</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token operator">*</span><span class="token function">f_reference</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>out<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">strcpy</span><span class="token punctuation">(</span>out<span class="token punctuation">,</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">foo</span><span class="token punctuation">(</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token operator">*</span><span class="token function">f_candidate</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>out<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">strcpy</span><span class="token punctuation">(</span>out<span class="token punctuation">,</span> <span class="token string">&quot;goodbye&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">foo</span><span class="token punctuation">(</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>If we call <code class="language-text">f_reference</code> and <code class="language-text">f_candidate</code> on the same argument, are their
+respective calls to <code class="language-text">foo</code> on &quot;the same input&quot;?  In a technical sense, the values
+of <code class="language-text">out</code> will be equal according to the <code class="language-text">==</code> operator.  Let&#x27;s call this
+<em>physical equality</em>.</p>
+<p>But these two functions are obviously different, since <code class="language-text">out</code> will point to
+different strings; they are not <em>structurally equal</em>.  And physical equality is
+exactly what a hash of the argument registers gives us, so the hashing scheme
+would declare these two functions equivalent.</p>
+<p>To hash structurally instead, we would have to know how much of the buffer
+matters.  And without looking inside <code class="language-text">foo</code>, we really can&#x27;t tell how the pointer
+is going to be used.  Are all bytes going to be used up until a NULL terminator?
+Or perhaps a fixed hard-coded number of bytes will be accessed.  We can&#x27;t know.</p>
+<p>Conclusion: It&#x27;s hard to achieve structural equality without examining callee functions.</p>
+<h3 id="calling-conventions" style="position:relative"><a href="#calling-conventions" aria-label="calling conventions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calling Conventions</h3>
+<p>Even determining the inputs and outputs of a callee function is not possible
+without examining it.</p>
+<p>Here&#x27;s an example that shows that you can&#x27;t determine function signatures from
+looking at a function in isolation.  Below are two programs.  Both contain a
+caller and a callee.  In the first program, the callee takes one argument:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">long</span> <span class="token function">callee</span><span class="token punctuation">(</span><span class="token keyword">long</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> t <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword">long</span> <span class="token function">caller</span><span class="token punctuation">(</span><span class="token keyword">long</span> a<span class="token punctuation">,</span> <span class="token keyword">long</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">long</span> v <span class="token operator">=</span> c <span class="token operator">*</span> c<span class="token punctuation">;</span> <span class="token keyword">return</span> <span class="token function">callee</span><span class="token punctuation">(</span>a <span class="token operator">+</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">gcc -O2</code> compiles <code class="language-text">caller</code> to:</p>
+<div class="gatsby-highlight" data-language="nasm"><pre class="language-nasm"><code class="language-nasm"><span class="token label function">caller:</span>
+        imulq   <span class="token operator">%</span><span class="token register variable">rsi</span>, <span class="token operator">%</span><span class="token register variable">rsi</span>
+        addq    <span class="token operator">%</span><span class="token register variable">rsi</span>, <span class="token operator">%</span><span class="token register variable">rdi</span>
+        jmp     callee</code></pre></div>
+<p>In the second program, <code class="language-text">callee</code> takes two:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">long</span> <span class="token function">callee</span><span class="token punctuation">(</span><span class="token keyword">long</span> t<span class="token punctuation">,</span> <span class="token keyword">long</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> t <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">+</span> v<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword">long</span> <span class="token function">caller</span><span class="token punctuation">(</span><span class="token keyword">long</span> a<span class="token punctuation">,</span> <span class="token keyword">long</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">long</span> v <span class="token operator">=</span> c <span class="token operator">*</span> c<span class="token punctuation">;</span> <span class="token keyword">return</span> <span class="token function">callee</span><span class="token punctuation">(</span>a <span class="token operator">+</span> v<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">gcc -O2</code> compiles this <code class="language-text">caller</code> to the <strong>same</strong> three instructions:</p>
+<div class="gatsby-highlight" data-language="nasm"><pre class="language-nasm"><code class="language-nasm"><span class="token label function">caller:</span>
+        imulq   <span class="token operator">%</span><span class="token register variable">rsi</span>, <span class="token operator">%</span><span class="token register variable">rsi</span>
+        addq    <span class="token operator">%</span><span class="token register variable">rsi</span>, <span class="token operator">%</span><span class="token register variable">rdi</span>
+        jmp     callee</code></pre></div>
+<p>The two callers are indistinguishable, so we can&#x27;t infer a callee&#x27;s signature by
+looking at the caller&#x27;s code alone.  We would at least need to look at <code class="language-text">callee</code>.</p>
+<p>This matters because hashing a call requires knowing <em>what to hash</em>.  In the
+first program <code class="language-text">%rsi</code> is dead at the call; in the second it holds an argument.
+Hash too little and we miss a real difference; hash too much and we report a
+difference in a scratch register that nobody observes.</p>
+<h2 id="contextual-equivalence" style="position:relative"><a href="#contextual-equivalence" aria-label="contextual equivalence permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contextual equivalence</h2>
+<p>I argue that the right definition of equivalence for decompilation is if you
+swap the decompiled function in for the original, nothing changes.</p>
+<p>PL has a name for this idea: <em>contextual equivalence</em>.  Two functions <code class="language-text">f</code> and
+<code class="language-text">g</code> are contextually equivalent if, for every program context <code class="language-text">C</code>, <code class="language-text">C[f]</code> and
+<code class="language-text">C[g]</code> behave the same.  The context is everything around the function: its
+callers, its callees, and the globals.</p>
+<p>The nice thing about contextual equivalence is that it only cares about what the
+rest of the program can observe.  It doesn&#x27;t care which register holds a
+temporary value, or at which stack offset a local variable lives.  If the
+candidate keeps a value in <code class="language-text">%rcx</code> where the original used <code class="language-text">%rdx</code>, or puts a
+buffer at a different stack offset, that&#x27;s fine, as long as nothing else in the
+program can tell.</p>
+<!-- -->
+<!-- -->
+<p>One of the benefits of contextual equivalence for decompilation is that it allows
+us to define equivalence without talking about the rest of the program.  For
+example, suppose the reference function requires that its argument <code class="language-text">x</code> is not
+NULL:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">f_reference</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">*</span>x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Let&#x27;s assume that, in the rest of the program, every caller respects this and
+passes a non-NULL argument.</p>
+<p>Now consider a candidate that omits the check:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">f_candidate</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">*</span>x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>In this program, are <code class="language-text">f_reference</code> and <code class="language-text">f_candidate</code> equivalent?  On one hand,
+since callers never pass NULL, the assertion would never be triggered.  We can
+swap <code class="language-text">f_candidate</code> in for <code class="language-text">f_reference</code> <em>in this program</em> and the behavior won&#x27;t
+change.  But establishing that requires understanding the entire program.</p>
+<p>Contextual equivalence determines that these two functions are not equivalent
+because there is a context where <code class="language-text">x</code> is NULL that causes the behavior to differ,
+<em>even if this context does not occur in the particular program we are talking
+about</em>.  I argue that this is a good thing for two reasons:</p>
+<ol>
+<li>
+<p>Reverse engineers seek to understand the behaviors that are present
+statically in machine code.  Even if an <code class="language-text">assert</code> is &quot;irrelevant&quot;, in many
+cases it is important to understand that it is present.  Contextual
+equivalence gives us an elegant way to talk about what information is
+relevant.</p>
+</li>
+<li>
+<p>Because contextual equivalence is defined over any possible context, even
+those that are not possible in a specific program, we can decide whether two
+functions are contextually equivalent <em>without analyzing the rest of the
+program</em>.  This is important because it allows us to think about functions in
+isolation.</p>
+</li>
+</ol>
+<!-- -->
+<!-- -->
+<!-- -->
+<h3 id="contextual-equivalence-at-the-executable-level" style="position:relative"><a href="#contextual-equivalence-at-the-executable-level" aria-label="contextual equivalence at the executable level permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contextual equivalence at the executable level</h3>
+<p>There are some complications with applying contextual equivalence to executable
+code.  In the examples above, I provided the reference as C source code, because
+I think it&#x27;s easier to think about.  There are actually two types of contexts:
+an abstract C context and an executable context.  The glue between these two
+contexts is the ABI, which tells us how to map from the function prototype to
+the concrete (executable) context, but not the reverse.  To say if two functions
+are contextually equivalent, we thus need to know their prototype.</p>
+<p>The awkwardness in decompilation is that, in practice, the <em>reference</em> is
+assembly code.  It doesn&#x27;t have a prototype.  The best prototype we have is from
+the candidate decompilation.  Thus, the question of contextual equivalence
+becomes &quot;Is decompilation D (and its prototype) a possible decompilation for
+reference machine code R?&quot;.  And there can be multiple possible decompilations
+with different prototypes.</p>
+<p>Another point of awkwardness is that contextual equivalence is defined in terms
+of a function in isolation, but recovering a prototype at the binary level
+requires inter-procedural analysis.</p>
+<p>So, to recap:</p>
+<ul>
+<li>
+<p>Contextual equivalence allows us to think about a function&#x27;s equivalence in isolation.</p>
+</li>
+<li>
+<p>We care about the C context, so we need to know the reference function&#x27;s C prototype.</p>
+</li>
+<li>
+<p>We can&#x27;t recover the function&#x27;s C prototype by analyzing the function in isolation.</p>
+</li>
+</ul>
+<p>Put together, this is mildly circular: verifying a decompilation requires
+information that we can only get from the decompilation itself.</p>
+<h3 id="a-downside-to-contextual-equivalence" style="position:relative"><a href="#a-downside-to-contextual-equivalence" aria-label="a downside to contextual equivalence permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A downside to contextual equivalence</h3>
+<p>One downside to contextual equivalence is that it does not take implied
+preconditions into account.  Consider a program that contains:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">scales_poorly</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">work</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">scales_poorly</code> is obviously exponential in its argument, and the programmer
+decided to only call it on small numbers as a result.</p>
+<p>Unfortunately, contextual equivalence has no way of knowing this.  A testing
+technique based on random inputs might attempt to run <code class="language-text">scales_poorly</code> on large
+inputs, even though (1) it would be very expensive, and (2) the program does not
+normally do this.</p>
+<p>Symbolic execution could help this problem somewhat by forcing execution along
+short program paths instead of taking the paths of random inputs, but at the
+cost of significant engineering complexity.</p>
+<h1 id="conclusions-and-questions" style="position:relative"><a href="#conclusions-and-questions" aria-label="conclusions and questions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusions and Questions</h1>
+<ol>
+<li>
+<p>Function prototypes are a parameter to the decompilation validation process.
+If you have ground truth source code, you should use the prototype from that.
+Otherwise, you can use the prototype from the candidate decompilation.</p>
+</li>
+<li>
+<p>My thought experiment has led me to believe that you can have <em>structural
+equality</em> or you can <em>avoid executing callees</em>, but not both.  Is this
+actually true?</p>
+</li>
+</ol></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-09-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-6-one-mystery-solved/">Benchmarking Quantized LLMs for Local Coding Agents Part 6: One Mystery Solved</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>4<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>In <a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">Part
 1</a> and <a href="/blog/2026-06-04--auto-bench-benchmarking-quantized-ll-ms-for-local-coding-agents-part-2/">Part
 2</a>,
 I reported some peculiar behavior for quantized Qwen3.5-2B models.  In <a href="/blog/2026-07-04--benchmarking-quantized-ll-ms-for-local-coding-agents-part-3-investigating-the-performance-of-qwen3-5-35-b-a3-b-take-2/">Part
@@ -2062,333 +2281,10 @@ ever.</p>
     <figcaption class="gatsby-resp-image-figcaption">Screenshot of using MyFitnessPal integration in Claude</figcaption>
   </figure><p></p>
 <p>In claude.ai, I&#x27;ve created a project and been using memory to teach Claude about my diet, which is fortunately quite repetitive.</p>
-<p>Check out the <a href="https://github.com/edmcman/mcp-servers">docker-compose setup and MyFitnessPal MCP server fork on GitHub</a>. The MyFitnessPal MCP server is included as a submodule.</p></div></div><div class="ui fluid card"><div class="content"><div class="header"><a href="/blog/2026-05-15--commonsense-benchmarks-for-local-coding-agents/">auto-bench: Benchmarking Quantized LLMs for Local Coding Agents</a></div><div class="meta"><span>Edward J. Schwartz</span><span>Computer Security Researcher</span><span>7<!-- --> min. read</span><div class="tags" style="display:inline-block"><div class="ui label"><a href="/blog/tags/llm/">llm</a></div><div class="ui label"><a href="/blog/tags/ai/">ai</a></div><div class="ui label"><a href="/blog/tags/autobench/">autobench</a></div></div></div></div><div class="content markdown"><p>New open LLMs are released constantly and keep improving. Gemma 4 was recently claimed to be groundbreaking, but when I tried the quantized version for coding agents like <code class="language-text">opencode</code>, it was completely unusable—it gets stuck in output loops or unable to call tools with correct syntax. This is the norm, not an exception. Most quantized open LLMs I try for agentic AI simply don&#x27;t work. Finding a setup that does requires trial and error across model, quantization, and dozens of settings.</p>
-<p>I just want a command I can run to get a working LLM for my GPU. No hours of experimentation. No guessing at combinations. Just a proven setup. I couldn&#x27;t find one, so I built <code class="language-text">auto-bench</code>.</p>
-<h1 id="auto-bench" style="position:relative"><a href="#auto-bench" aria-label="auto bench permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>auto-bench</h1>
-<p>Auto-bench is a tool that allows you to define experiments, automatically run LLM inference servers with the proper settings, and execute a set of benchmarks against them.  Rather than reinventing the wheel, I&#x27;m currently using <a href="https://www.harborframework.com/">Harbor Framework</a> to run the tests.  Auto-bench has first-class support for quantized models.  This is important, because most existing benchmarks and leaderboards don&#x27;t consider quantization, even though that is how many people run models.</p>
-<p>My project is in its earliest stages, but I have at least one experiment to share: testing various quantizations of the <code class="language-text">Qwen3.5-2B</code> model on a single problem instance from SWE-bench Verified (swe-bench/sympy__sympy-22914). I deliberately selected an easy instance to see if quantized models can perform basic tool calls to solve an easy problem.</p>
-<p>Here is how this experiment is configured in auto-bench:</p>
-<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token comment"># Benchmark 22 quants of Qwen3.5-2B on a single SWE-bench instance</span>
-<span class="token comment"># Usage: auto-bench run configs/qwen-2b-quant-sweep.yaml</span>
-
-<span class="token key atrule">name</span><span class="token punctuation">:</span> qwen<span class="token punctuation">-</span>2b<span class="token punctuation">-</span>quant<span class="token punctuation">-</span>sweep
-<span class="token key atrule">backend_type</span><span class="token punctuation">:</span> llamacpp
-<span class="token key atrule">dataset</span><span class="token punctuation">:</span> SWE<span class="token punctuation">-</span>bench/SWE<span class="token punctuation">-</span>bench_Verified
-
-<span class="token key atrule">instance_ids</span><span class="token punctuation">:</span>
-  <span class="token punctuation">-</span> swe<span class="token punctuation">-</span>bench/sympy__sympy<span class="token punctuation">-</span><span class="token number">22914</span>
-
-<span class="token key atrule">model</span><span class="token punctuation">:</span>
-  <span class="token key atrule">name</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B
-  <span class="token key atrule">source</span><span class="token punctuation">:</span> huggingface
-  <span class="token key atrule">repo_id</span><span class="token punctuation">:</span> unsloth/Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>GGUF
-  <span class="token key atrule">sweep</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> BF16
-      <span class="token key atrule">filename</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>BF16.gguf
-    <span class="token punctuation">-</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> Q3_K_S
-      <span class="token key atrule">filename</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>Q3_K_S.gguf
-    <span class="token punctuation">-</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> Q5_K_M
-      <span class="token key atrule">filename</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>Q5_K_M.gguf
-    <span class="token punctuation">-</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> Q5_K_S
-      <span class="token key atrule">filename</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>Q5_K_S.gguf
-    <span class="token punctuation">-</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> Q6_K
-      <span class="token key atrule">filename</span><span class="token punctuation">:</span> Qwen3.5<span class="token punctuation">-</span>2B<span class="token punctuation">-</span>Q6_K.gguf
-    <span class="token comment"># ... 17 more quantizations</span>
-
-<span class="token key atrule">sampling</span><span class="token punctuation">:</span>
-  <span class="token key atrule">temperature</span><span class="token punctuation">:</span> <span class="token number">0.7</span>
-  <span class="token key atrule">top_p</span><span class="token punctuation">:</span> <span class="token number">0.8</span>
-  <span class="token key atrule">top_k</span><span class="token punctuation">:</span> <span class="token number">20</span>
-  <span class="token key atrule">min_p</span><span class="token punctuation">:</span> <span class="token number">0.0</span>
-  <span class="token key atrule">presence_penalty</span><span class="token punctuation">:</span> <span class="token number">1.5</span>
-  <span class="token key atrule">repetition_penalty</span><span class="token punctuation">:</span> <span class="token number">1.0</span>
-<span class="token key atrule">agent</span><span class="token punctuation">:</span>
-  <span class="token key atrule">agent</span><span class="token punctuation">:</span> openhands
-  <span class="token key atrule">env</span><span class="token punctuation">:</span> docker
-  <span class="token key atrule">attempts</span><span class="token punctuation">:</span> <span class="token number">4</span>
-  <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">1</span>
-  <span class="token key atrule">setup_multiplier</span><span class="token punctuation">:</span> <span class="token number">10.0</span>
-
-<span class="token key atrule">evaluation</span><span class="token punctuation">:</span>
-  <span class="token key atrule">run_evaluation</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre></div>
-<p>Part of my goal is to include <em>all</em> information needed to actually run the models properly.  For example, the <code class="language-text">sampling</code> section includes the sampling parameters that are recommended by Qwen for best performance, and these types of details can make a huge effect!  My vision is to eventually have a leaderboard that will provide you with a llama.cpp command-line to run the model with the proper settings, and then you can just copy and paste that command to get a working LLM for your coding agent.</p>
-<h1 id="results" style="position:relative"><a href="#results" aria-label="results permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Results</h1>
-<p>Before diving into the data, here&#x27;s what the columns mean:</p>
-<ul>
-<li>Resolved: Number of problem instances successfully resolved by the agent</li>
-<li>Total: Total number of attempts (8 in this case)</li>
-<li>% Resolved: Resolution rate as a percentage</li>
-<li>PPL (Perplexity): Measures the model&#x27;s confidence in its predictions. Lower is generally better, though surprisingly this doesn&#x27;t always correlate with task success</li>
-<li>KL: Kullback-Leibler divergence—how much the quantized model&#x27;s output distribution diverges from the original model&#x27;s. Lower is better, but as we&#x27;ll see, it&#x27;s not a strong predictor of task performance</li>
-<li>Runtime: Total time to run all attempts</li>
-<li>Exceptions: Types of errors encountered (e.g., timeouts, exit code errors)</li>
-</ul>
-<div style="text-align:center;overflow-x:auto">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Quant</th><th>Resolved</th><th>%</th><th>PPL</th><th>KL</th><th>Runtime</th><th>Exceptions</th></tr></thead><tbody><tr><td>BF16</td><td>0/8</td><td>0%</td><td>13.38</td><td>—</td><td>3m 37s</td><td>—</td></tr><tr><td>IQ4_NL</td><td>1/8</td><td>12.5%</td><td>13.67</td><td>0.0309</td><td>3m 53s</td><td>—</td></tr><tr><td>IQ4_XS</td><td>0/8</td><td>0%</td><td>13.68</td><td>0.0318</td><td>51m 53s</td><td>Timeout, ExitCode</td></tr><tr><td>Q3_K_M</td><td>2/8</td><td>25%</td><td>14.33</td><td>0.0774</td><td>51m 48s</td><td>Timeout</td></tr><tr><td>Q3_K_S</td><td>5/8</td><td>62.5%</td><td>15.08</td><td>0.1334</td><td>51m 39s</td><td>Timeout</td></tr><tr><td>Q4_0</td><td>4/8</td><td>50%</td><td>13.91</td><td>0.0454</td><td>19m 5s</td><td>—</td></tr><tr><td>Q4_1</td><td>3/8</td><td>37.5%</td><td>13.68</td><td>0.0273</td><td>11m 14s</td><td>—</td></tr><tr><td>Q4_K_M</td><td>1/8</td><td>12.5%</td><td>13.79</td><td>0.0230</td><td>4m 8s</td><td>ExitCode</td></tr><tr><td>Q4_K_S</td><td>2/8</td><td>25%</td><td>13.78</td><td>0.0274</td><td>4m 43s</td><td>—</td></tr><tr><td>Q5_K_M</td><td>8/8</td><td>100%</td><td>13.46</td><td>0.0082</td><td>51m 48s</td><td>Timeout</td></tr><tr><td>Q5_K_S</td><td>6/8</td><td>75%</td><td>13.49</td><td>0.0100</td><td>8m 53s</td><td>—</td></tr><tr><td>Q6_K</td><td>7/8</td><td>87.5%</td><td>13.48</td><td>0.0035</td><td>51m 54s</td><td>Timeout</td></tr><tr><td>Q8_0</td><td>4/8</td><td>50%</td><td>13.39</td><td>0.0012</td><td>51m 49s</td><td>Timeout</td></tr><tr><td>UD-IQ2_M</td><td>0/8</td><td>0%</td><td>17.61</td><td>0.2677</td><td>51m 56s</td><td>Timeout(5)</td></tr><tr><td>UD-IQ2_XXS</td><td>0/8</td><td>0%</td><td>27.11</td><td>0.7018</td><td>51m 58s</td><td>Timeout(6), ExitCode</td></tr><tr><td>UD-IQ3_XXS</td><td>0/8</td><td>0%</td><td>15.31</td><td>0.1549</td><td>51m 49s</td><td>Timeout</td></tr><tr><td>UD-Q2_K_XL</td><td>0/8</td><td>0%</td><td>17.15</td><td>0.2388</td><td>51m 49s</td><td>Timeout(2)</td></tr><tr><td>UD-Q3_K_XL</td><td>6/8</td><td>75%</td><td>13.94</td><td>0.0520</td><td>51m 56s</td><td>Timeout(2)</td></tr><tr><td>UD-Q4_K_XL</td><td>6/8</td><td>75%</td><td>13.60</td><td>0.0164</td><td>7m 40s</td><td>—</td></tr><tr><td>UD-Q5_K_XL</td><td>8/8</td><td>100%</td><td>13.51</td><td>0.0077</td><td>18m 2s</td><td>—</td></tr><tr><td>UD-Q6_K_XL</td><td>3/8</td><td>37.5%</td><td>13.48</td><td>0.0020</td><td>6m 51s</td><td>—</td></tr><tr><td>UD-Q8_K_XL</td><td>3/8</td><td>37.5%</td><td>13.37</td><td>0.0011</td><td>5m 49s</td><td>—</td></tr><tr><td>vllm</td><td>1/8</td><td>12.5%</td><td>—</td><td>—</td><td>6m 32s</td><td>—</td></tr></tbody></table>
-</div>
-<h2 id="the-base-model-is-broken" style="position:relative"><a href="#the-base-model-is-broken" aria-label="the base model is broken permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Base Model Is Broken</h2>
-<p>The most striking finding is that the unquantized base model (shown as <code class="language-text">vllm</code> in the results) achieves only 12.5% resolution—worse than most quantized versions. BF16, which is nearly the original model without quantization, also consistently fails at 0%. This suggests the base model is fundamentally broken for this coding task, but quantization somehow fixes it.</p>
-<p>Many medium-sized quantizations (Q5_K_M, UD-Q5_K_XL, Q6_K) achieve 100%, 100%, and 87.5% resolution respectively. Yet larger quantizations like Q8_0 fail again at 50%. This isn&#x27;t about bigger being better—it&#x27;s about finding the quantization that repairs the base model&#x27;s broken reasoning.</p>
-<h2 id="kl-divergence-doesnt-predict-success" style="position:relative"><a href="#kl-divergence-doesnt-predict-success" aria-label="kl divergence doesnt predict success permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>KL Divergence Doesn&#x27;t Predict Success</h2>
-<p>The KL (Kullback-Leibler) divergence column measures how much a quantized model&#x27;s output distribution diverges from the original. If the base model is broken for this task, then staying close to the original (low divergence) just means inheriting the same brokenness. That could explain why there&#x27;s no strong correlation between divergence and success.</p>
-<p>Q5_K_M achieves 100% resolution with low divergence (0.0082)—but so does UD-Q5_K_XL with similar low divergence. Meanwhile, BF16 (essentially 0 divergence, nearly the original) fails completely at 0%. Some high-divergence models like UD-IQ2_XXS fail too, but others like Q3_K_S achieve 62.5% with divergence of 0.1334.</p>
-<div><div style="cursor:pointer;position:relative"><figure class="gatsby-resp-image-figure">
-    <span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1500px">
-      <a class="gatsby-resp-image-link" href="/static/8b6d88fafd89f2ec3969f9355ec08e11/aa440/image.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:60%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZUlEQVR42pWRy0sDMRDG+6+LR0E86VVP3upBFNRDFYovUHzhQe0rmZlsmmy2zbraZTeJ7FprFVT8MQzDl/mYZNIIIRRFkeeTOqZorRljVMM5F0JIKfOvFEXR8N4bm7LTNj4+UBThzxDRrAaAOI4bwTuTPrODHby/QykRYL51Ps8zNfuyNM8Z39vG22sxVFS3/gkiGmMaRZ4nL69saxPOT0jp2eTfmU4ej0Zx9sI21uDwgGKDwP9hzrLMpOlgdQn2tskkyP9jds6Z0bi/sgi7W8IkVE+mWQAQIZH4qL++OYSQ2HSwvAA7TTEaEwIJUYWUJCJSmoRAxipFqe9m71w8toP1VWjtYySx3+PNTbi6gM4TdJ54u4XdTqV3O3B8VG2k3igwVn+V99baoZRaKQVcR0L1e5pQ3t9pPhietTVyZZJKubnUQ6nqThkJa2117RCCcy6E4L3/zCGUpbOTSencu+LmT+v8BlUtirVmkh48AAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
-  <picture>
-          <source srcSet="/static/8b6d88fafd89f2ec3969f9355ec08e11/e46ac/image.avif 450w /static/8b6d88fafd89f2ec3969f9355ec08e11/9b8d4/image.avif 900w /static/8b6d88fafd89f2ec3969f9355ec08e11/2b305/image.avif 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/avif"/><source srcSet="/static/8b6d88fafd89f2ec3969f9355ec08e11/8626f/image.webp 450w /static/8b6d88fafd89f2ec3969f9355ec08e11/131f1/image.webp 900w /static/8b6d88fafd89f2ec3969f9355ec08e11/293e0/image.webp 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/webp"/>
-          <source srcSet="/static/8b6d88fafd89f2ec3969f9355ec08e11/fc2a6/image.png 450w /static/8b6d88fafd89f2ec3969f9355ec08e11/1cfc2/image.png 900w /static/8b6d88fafd89f2ec3969f9355ec08e11/aa440/image.png 1500w" sizes="(max-width: 1500px) 100vw, 1500px" type="image/png"/>
-          <img class="gatsby-resp-image-image" src="/static/8b6d88fafd89f2ec3969f9355ec08e11/aa440/image.png" alt="KL Divergence vs number of resolved attempts" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0"/>
-        </picture>
-  </a>
-    </span>
-    <figcaption class="gatsby-resp-image-figcaption">KL Divergence vs number of resolved attempts</figcaption>
-  </figure></div></div>
-<p>The plot tells the story: failing models (0 resolved) scatter across the entire divergence range—some very close to the original, some far away. If you stayed loyal to a broken base model, you&#x27;d fail. If you accidentally diverged in the right way, you&#x27;d succeed. KL divergence alone can&#x27;t tell you which happened.</p>
-<h2 id="multiple-failure-modes" style="position:relative"><a href="#multiple-failure-modes" aria-label="multiple failure modes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple Failure Modes</h2>
-<p>There are two distinct failure modes visible in the results.</p>
-<h3 id="failure-mode-1-infinite-loops-agenttimeouterror" style="position:relative"><a href="#failure-mode-1-infinite-loops-agenttimeouterror" aria-label="failure mode 1 infinite loops agenttimeouterror permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Failure Mode 1: Infinite Loops (AgentTimeoutError)</h3>
-<p>Many quantizations exhibit infinite looping behavior, where the agent gets stuck generating the same outputs repeatedly and eventually hits the timeout limit. Models like UD-IQ2_M, UD-IQ2_XXS, IQ4_XS, and IQ3_XXS show multiple <code class="language-text">AgentTimeoutError</code> instances. Interestingly, this failure mode appears to correlate strongly with extremely aggressive quantization (e.g., IQ2 variants with very high KL divergence &gt; 0.26).</p>
-<h3 id="failure-mode-2-silent-failure" style="position:relative"><a href="#failure-mode-2-silent-failure" aria-label="failure mode 2 silent failure permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Failure Mode 2: Silent Failure</h3>
-<p>The second failure mode is when the agent runs to completion without timing out, but simply fails to correctly solve the problem. Models like BF16, UD-IQ2_XXS, and UD-IQ3_XXS never produce output loops, but they still achieve 0% resolution. This suggests that the quantization has degraded the model&#x27;s reasoning ability below a critical threshold where it can&#x27;t effectively reason about code, even if it&#x27;s still syntactically generating valid tool calls.</p>
-<h2 id="conclusion-the-base-model-is-broken-quantization-fixes-it" style="position:relative"><a href="#conclusion-the-base-model-is-broken-quantization-fixes-it" aria-label="conclusion the base model is broken quantization fixes it permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion: The Base Model Is Broken, Quantization Fixes It</h2>
-<p>The core finding is that the unquantized base model (12.5% resolution) and near-original BF16 (0% resolution) both fail for this coding task. Yet specific quantizations like Q5_K_M and UD-Q5_K_XL achieve 100%. Quantization isn&#x27;t degrading a working model—it&#x27;s repairing a broken one.</p>
-<p>Notice in the visualization: models that fail (0 resolved) scatter across the entire KL divergence range, from very close to the original all the way to extremely divergent. Models that succeed tend to cluster at low divergence. But the scatter on the left side proves you can&#x27;t predict failure from divergence—some quantizations stay very close to the original yet still fail.</p>
-<p>The lesson is that model quality for coding agents is challenging to predict. This is why auto-bench exists—to empirically measure what actually works for your specific use case.</p>
-<h2 id="open-questions-and-limitations" style="position:relative"><a href="#open-questions-and-limitations" aria-label="open questions and limitations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open Questions and Limitations</h2>
-<p>This experiment demonstrates an interesting phenomenon, but it&#x27;s based on a single problem instance from a single model family. The findings should be interpreted with appropriate caution:</p>
-<ul>
-<li>Generalization to other models: Do these patterns hold for Llama, Mistral, or other model families? The behaviors might be Qwen-specific.</li>
-<li>Generalization to other instances: I deliberately chose an easy instance to see if quantized models could work at all. Would the patterns hold on harder instances? SWE-bench Verified spans easy to extremely difficult problems.</li>
-<li>Generalization to other tasks: Would we see similar results on SWE-bench instances beyond Verified, or on other benchmarks like HumanEval or MBPP?</li>
-<li>Sampling parameter sensitivity: How much of the improvement from quantized models comes from properly-tuned sampling parameters? A controlled ablation would be valuable.</li>
-</ul>
-<p>I&#x27;m actively running experiments to answer these questions! The auto-bench framework is designed to scale to hundreds of model/quantization combinations and thousands of problem instances. Stay tuned for results on larger model families, more problem instances, and more task types.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->11<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/autobench/">autobench<!-- --> (<!-- -->7<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->10<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->13<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"><div class="ui pagination menu"><a style="cursor:pointer" class="active item" href="/blog/page/1/">1</a><a style="cursor:pointer" class="item" href="/blog/page/2/">2</a><a style="cursor:pointer" class="item" href="/blog/page/3/">3</a><a style="cursor:pointer" class="item" href="/blog/page/4/">4</a><a style="cursor:pointer" class="item" href="/blog/page/5/">5</a><a style="cursor:pointer" class="item" href="/blog/page/6/">6</a></div></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>Check out the <a href="https://github.com/edmcman/mcp-servers">docker-compose setup and MyFitnessPal MCP server fork on GitHub</a>. The MyFitnessPal MCP server is included as a submodule.</p></div></div></div></div></div></div><div class="four wide column"><div class="ui card"><div class="content"><div class="header">Tags</div></div><div class="content"><div role="list" class="ui list"><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/EVs/">EVs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/adventofcode/">adventofcode<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ai/">ai<!-- --> (<!-- -->11<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ansible/">ansible<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/artifacts/">artifacts<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/autobench/">autobench<!-- --> (<!-- -->7<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/binary analysis/">binary analysis<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bluesky/">bluesky<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/bqn/">bqn<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/cars/">cars<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompilation/">decompilation<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/decompiler/">decompiler<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/dogs/">dogs<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fostering/">fostering<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/fuzzing/">fuzzing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ghidra/">ghidra<!-- --> (<!-- -->3<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/home/">home<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/linux/">linux<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/llm/">llm<!-- --> (<!-- -->10<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notes/">notes<!-- --> (<!-- -->4<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/notion/">notion<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/papers/">papers<!-- --> (<!-- -->9<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/personal/">personal<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/pharos/">pharos<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/profiling/">profiling<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/programming/">programming<!-- --> (<!-- -->5<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/project/">project<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/prolog/">prolog<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/publications/">publications<!-- --> (<!-- -->6<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/quick thoughts/">quick thoughts<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rescue/">rescue<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/research/">research<!-- --> (<!-- -->13<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/reverse engineering/">reverse engineering<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/rust/">rust<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/skiing/">skiing<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/talks/">talks<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/travel/">travel<!-- --> (<!-- -->1<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/ubuntu/">ubuntu<!-- --> (<!-- -->2<!-- -->)</a></div></span><span role="listitem" class="item"><i aria-hidden="true" class="tag icon"></i><div class="content"><a href="/blog/tags/web/">web<!-- --> (<!-- -->3<!-- -->)</a></div></span></div></div></div></div><div class="centered row"><div class="ui pagination menu"><a style="cursor:pointer" class="active item" href="/blog/page/1/">1</a><a style="cursor:pointer" class="item" href="/blog/page/2/">2</a><a style="cursor:pointer" class="item" href="/blog/page/3/">3</a><a style="cursor:pointer" class="item" href="/blog/page/4/">4</a><a style="cursor:pointer" class="item" href="/blog/page/5/">5</a><a style="cursor:pointer" class="item" href="/blog/page/6/">6</a></div></div></div></div></div><div style="position:absolute;bottom:0;width:100%" class="ui secondary vertical segment"><div class="ui center aligned container"><p>Powered with <i aria-hidden="true" class="heart icon"></i> by Gatsby 5.0</p></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
             window.___chunkMapping="{\"app\":[\"/app-ba94f1172c6522b55ac5.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-a5cfc33fbf08cd5073dc.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-9ae928ac49fa3fb174d8.js\"],\"component---src-pages-blog-tsx\":[],\"component---src-pages-contact-tsx\":[\"/component---src-pages-contact-tsx-2226e79b2cd74152d8c7.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-d98dc698cd871ecf9686.js\"],\"component---src-pages-notes-profiling-tsx\":[\"/component---src-pages-notes-profiling-tsx-65662a61e934dd99b5bb.js\"],\"component---src-pages-projects-tsx\":[\"/component---src-pages-projects-tsx-afa47e79b243afd25362.js\"],\"component---src-pages-publications-tsx\":[\"/component---src-pages-publications-tsx-41652e491df4f945df7a.js\"],\"component---src-templates-blog-page-tsx\":[\"/component---src-templates-blog-page-tsx-1a771412cc251d934dc7.js\"],\"component---src-templates-blog-post-tsx\":[\"/component---src-templates-blog-post-tsx-0ded506a05c3ceac4f7a.js\"],\"component---src-templates-tags-page-tsx\":[\"/component---src-templates-tags-page-tsx-a9327045b43b1527fb49.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="7ea46a926e932d093c6e";</script><script src="/webpack-runtime-629a8b2ab3d02a189e76.js" async></script><script src="/framework-e7350785641ee58ddf86.js" async></script><script src="/app-ba94f1172c6522b55ac5.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="7e67681209b287729f01";</script><script src="/webpack-runtime-629a8b2ab3d02a189e76.js" async></script><script src="/framework-e7350785641ee58ddf86.js" async></script><script src="/app-ba94f1172c6522b55ac5.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
